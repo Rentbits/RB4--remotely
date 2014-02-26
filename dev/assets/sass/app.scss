@@ -1,6 +1,10 @@
 @import '_rb-app.scss';
 @import '_globals.scss';
 
+body {
+  background: #FFF;
+}
+
 .web-menu.nav-bar {
   background: $color-remotely-primary;
 }
