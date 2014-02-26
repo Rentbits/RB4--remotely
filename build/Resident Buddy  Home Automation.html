@@ -1,0 +1,1578 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Resident Buddy: Home Automation</title>
+	
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
+
+<link rel="shortcut icon" href="/rb4/assets/images/favicon.ico" type="image/x-icon" />
+
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+
+<link rel="stylesheet" href="/rb4/foundation/stylesheets/foundation.css" type="text/css"/>
+
+<link rel="stylesheet" href="/rb4/assets/stylesheets/app.css?v=4" type="text/css"/>
+<link rel="stylesheet" href="/rb4/assets/stylesheets/foundation-4-switch.css" type="text/css"/>
+
+<script src="/rb4/foundation/javascripts/foundation.min.js"></script>
+<script src="/rb4/foundation/javascripts/app.js"></script>
+<script src="/rb4/js/jquery.paginate.js"></script>
+<script src="/rb4/js/jquery.tabSlideOut.v1.3.js"></script>
+<script src="/rb4/js/jquery.formatter.js"></script>
+
+<script src="/rb4/js/rb.js"></script>
+
+<script type="text/javascript">
+	$('#featured').orbit({
+		animation : 'fade', // fade, horizontal-slide, vertical-slide, horizontal-push
+		animationSpeed : 800, // how fast animtions are
+		timer : true, // true or false to have the timer
+		advanceSpeed : 5000, // if timer is enabled, time between transitions 
+		pauseOnHover : true, // if you hover pauses the slider
+		startClockOnMouseOut : true, // if clock should start on MouseOut
+		startClockOnMouseOutAfter : 300, // how long after MouseOut should the timer start again
+		directionalNav : true, // manual advancing directional navs
+		captions : true, // do you want captions?
+		captionAnimation : 'fade', // fade, slideOpen, none
+		captionAnimationSpeed : 800, // if so how quickly should they animate in
+		bullets : false, // true or false to activate the bullet navigation
+		bulletThumbs : false, // thumbnails for the bullets
+		bulletThumbLocation : '', // location from this file where thumbs will be
+		afterSlideChange : function() {
+		}, // empty function 
+		fluid : true
+	// or set a aspect ratio for content slides (ex: '4x3') 
+	});
+	
+</script>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+
+<script type="text/javascript" src="/rb4/js/application.js"></script>
+
+<script type="text/javascript" src="/rb4/js/jquery.submitBlocking.js"></script>
+
+
+
+	
+		
+		
+	<meta name="layout" content="lo-2-10-columns"/>
+	
+	
+	<script src="/rb4/assets/js/iphone-style-checkboxes.js" type="text/javascript"></script><script src="/rb4/js/iphone-style-checkboxes-fallback.js" type="text/javascript"></script>
+
+		
+	
+	<script type="text/javascript">
+    $(function(){
+        $('.slide-out-div').tabSlideOut({
+            tabHandle: '.handle',                     //class of the element that will become your tab
+            pathToTabImage: "/rb4/assets/img/feedback-button.png", //path to the image for the tab //Optionally can be set using css
+            imageHeight: '122px',                     //height of tab image           //Optionally can be set using css
+            imageWidth: '40px',                       //width of tab image            //Optionally can be set using css
+            tabLocation: 'right',                      //side of screen where tab lives, top, right, bottom, or left
+            speed: 300,                               //speed of animation
+            action: 'click',                          //options: 'click' or 'hover', action to trigger animation
+            topPos: '420px',                          //position from the top/ use if tabLocation is left or right
+            rightPos: '20px',                          //position from left/ use if tabLocation is bottom or top
+            fixedPosition: true                      //options: true makes it stick(fixed position) on scroll
+        });
+
+    });
+</script>
+
+<style type="text/css">
+	.slide-out-div {
+		padding: 20px;
+		width: 380px;
+		height: 300px;
+		background: white;
+		border: 1px solid #29216d;
+		z-index : 999;
+	}
+</style>
+</head>
+
+
+<body>
+
+	
+		<div id="spinner" class="spinner" style="display: none; position: fixed; z-index: 9999; top: 0; left: 0; width: 100%; height: 100%; background: transparent url('/rb4/assets/images/loading-screen.gif') no-repeat center center;">
+	
+</div>
+	
+
+<div id="spinner" style="display: none; "></div>
+
+<div id="community-hat">
+	<div class="row">
+		<div class="twelve columns">
+			
+			<div id="rb4.1468.hat" data-version="3">
+
+<html>Hat</html>
+</div>
+
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+$(document).ready(function () {
+        $('.show_hide').click(function  (event) {
+	        event.preventDefault();
+	        $('.mobile-menu').slideToggle(0, "swing", function () {
+	                        //add a function once animation completes
+	                });
+        });
+});
+</script>
+
+<div class="row">
+	<div class="twelve columns mobile-menu" style="display:none;">
+		<ul class="nav-bar show-for-small">			
+			
+				<li><a href="/rb4/homeautomation/index" class="automation">Home Automation</a></li>
+			
+			
+				<li><a href="/rb4/maintenance/create" class="maintenance-m">Maintenance Request</a></li>
+			
+				
+				<li><a href="/rb4/exchange/index" class="market-place-m">The Exchange</a></li>
+			
+			
+				<li><a href="/rb4/event/calendar" class="events-m">Events</a></li>
+			
+			<li><a href="/rb4/resident/settings" class="settings-m">Settings</a></li>																
+			
+				<li><a href="/rb4/notice/list" class="notifications-m">Notifications</a></li>				
+								
+		</ul>
+	</div>
+</div>
+    
+<div id="page-header">
+    <div class="page-border">&nbsp;</div>
+	<div class="row">
+		<div class="twelve columns">
+			<div class="right tertiary-nav hide-for-small">
+				<div href="javascript:void(0)" id="user-dd" class="small button radius dropdown">
+					
+						Kelly 001 Sandoval in 1
+					
+					<span></span>
+					<ul>						
+						<li><a href="/rb4/resident/settings">Settings</a></li>
+						<li class="divider"></li>											
+						<li><a href="/rb4/login/logout" onclick="facebookLogout()">Sign Out</a></li>
+					</ul>					
+				</div>
+				
+					
+
+	
+
+
+	<a href="/rb4/notice/list" class="notifications-unread" onClick="_gaq.push(['_trackEvent', 'homepage', 'notif_icon', '', 1]);"> 7 Notifications</a>
+
+				
+			</div>
+			<div class="hide-for-small left logo-web-container">		
+											
+				<a href="/rb4/">
+					<img src="/rb4/assets/img/empty-image.png" alt="ResidentBuddy.com" class="left logo-image" />
+				</a>
+               <ul class="phone-menu left">
+                   <li><h2>Voice</h2></li>
+                   <li><p class="orange">(303) 647-4113</p></li>
+               </ul>
+            </div>
+			<div class="show-for-small mobile-menu-container">
+				<!-- mini menu -->
+				<div id="mobile-menu" class="right">
+					<ul id="menu-mini" class="button-group three-up">
+								
+							<li><a href="/rb4/payrent/index" class="button small special-m">Pay Rent</a></li>
+						
+						<li><a href="javascript:void(0)" class="button small show_hide"><img src="/rb4/assets/img/empty-image.png" class="m-menu-toggle"></a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="show-for-small logo-m-container" >
+				<a href="/rb4/">
+					<img src="/rb4/assets/img/empty-image.png" class="logo-m" />
+				</a>
+			</div>
+			<div class="show-for-small right sign-out-m">
+				<a href="/rb4/login/logout" onclick="facebookLogout()">Sign Out</a>
+			</div>
+			<ul id="web-menu"  class="nav-bar web-menu hide-for-small">				
+				
+				
+					<li class="special-button"><a href="/rb4/payrent/index">Pay Rent</a></li>
+				
+				
+					<li><a href="/rb4/homeautomation/index">Home Automation</a></li>
+				
+				
+					<li><a href="/rb4/maintenance/create">Maintenance Request</a></li>
+								
+				
+					<li class="has-flyout"><a href="/rb4/exchange/index">The Exchange</a>
+					    <a href="#" class="flyout-toggle"><span> </span></a>
+						<ul class="flyout" style="display: none;">
+							
+								<li class="forSale"><a href="/rb4/marketplace/list" class="forSale">For Sale</a></li>
+							
+							
+								<li class="petCare"><a href="/rb4/serviceride/list" class="rideShare">Ride Share</a></li>
+							
+							
+								<li class="rideShare"><a href="/rb4/servicechild/list" class="childCare">Child Care</a></li>
+							
+							
+								<li class="childCare"><a href="/rb4/servicepet/list" class="petCare">Pet Care</a></li>
+								
+						</ul></li>					
+				
+				
+					<li><a href="/rb4/event/calendar">Events</a></li>
+								
+												
+			</ul>
+		</div>
+	</div>
+</div>
+
+
+<!-- script for the sliding mobile menu -->
+<script type="text/javascript">
+$(document).ready(function() {
+	var controller = window.location.pathname.split('/')[2];
+	if (controller.length > 0) {
+		$('.mobile-menu li a').each(function(){
+			if ($(this).attr('href').indexOf(controller) != -1) {
+				$(this).parent().addClass('active');
+			}
+		});
+		$('#web-menu li a').each(function(){
+			if ($(this).attr('href').indexOf(controller) != -1) {
+				$(this).parent().addClass('active');
+				$(this).parents('.has-flyout').addClass('active');
+			}
+		});
+	}
+
+	
+	  window.fbAsyncInit = function() {
+	    FB.init({
+	      appId      : "641063125908485", // App ID
+	      channelUrl : "http://residentbuddy.com/channel.html", // Channel File
+	      status     : "0", // check login status
+	      cookie     : "1", // enable cookies to allow the server to access the session
+	      xfbml      : "1"  // parse XFBML
+	    });
+	    // Additional initialization code here
+	    
+		    FB.Event.subscribe('auth.authResponseChange', function() {
+		    	FB.getLoginStatus(function (response) {				  	  
+				  	  if(response.status === 'connected') {
+				  		var uid = response.authResponse.userID;
+		                var accessToken = response.authResponse.accessToken;	                	               
+		                FB.api('/me', function(response) {          
+		                	$.post('/rb4/resident/connectToFb?', {fbEmail:response.email, uid:uid, accessToken:accessToken, fbUserName:response.username, fbName:response.name}, function(data) {								
+		                		window.location.reload();	                			                	
+			                });
+		                });
+					  } else if(response.status === 'not_authorized') {
+						console.log('facebook: not_authorized')
+					  } else {
+						console.log('facebook: not logged in')
+					  }				  
+				});
+		    });
+	    		    	  			  		
+	  };	        
+	  // Load the SDK Asynchronously
+	  (function (data) {
+	          var jse, id = 'facebook-jssdk', ref = data.getElementsByTagName('script')[0];
+	          if (data.getElementById(id)) {
+	              return;
+	          }
+	          jse = data.createElement('script');
+	          jse.id = id;
+	          jse.async = true;
+	          jse.src = "//connect.facebook.net/en_US/all.js";
+	          ref.parentNode.insertBefore(jse, ref);
+	      }(document));
+});
+
+function facebookLogout() {
+	FB.getLoginStatus(function (response) {		  	  
+  	  if(response.status == 'connected') {			                         
+		FB.logout(function(response) {});            
+      }		  	 
+	});
+}
+
+</script>
+		
+	
+
+	
+		
+	
+		
+	
+	
+
+	<div id="page-wrapper">
+		
+		<div class='homepage automation'>
+			
+		<div class="">
+	      <div class="row">
+	        <div class="twelve columns left-col">
+	          <div class="panel radius">
+	            <div class="row">
+	              <div class="two columns tab-vert-col">
+	                
+		<!-- web tabs -->
+		<dl class="tabs vertical hide-for-small">
+			<dd class="active"><a href="#devices" class="devicesTab-vert">Devices</a></dd>
+			<!-- <dd><a href="#routine" class="routineTabs-vert">Routines</a></dd> -->
+			<!-- <dd><a href="#messages" class="messagesTabs-vert">Messages</a></dd> -->
+		</dl>
+		<!-- mobile tabs -->
+		<dl class="tabs show-for-small">
+			<dd class="active"><a href="#devices" class="devicesTab-hor">Devices</a></dd>
+			<!-- <dd><a href="#routine" class="routineTab-hor">Routines</a></dd> -->
+			<!-- <dd><a href="#messages" class="messagesTab-hor">Messages</a></dd> -->
+		</dl>
+	
+	              </div>
+	              <div class="ten columns tab-vert-content-col">
+	              	
+	
+	
+	
+	<ul class="tabs-content">
+	<li class="active" id="devicesTab" style="display: block;">
+		<div class="row slider-wrapper">
+			<div class="twelve columns device-list-wrapper">
+				
+
+<div id="device-list" style="left: 0px;">
+	<div class="alert-box success" style="display: none;" id="errors"></div>
+	<h6 class="device-list-title">All Devices</h6>
+	<ul class="device-list-main">
+		
+			
+			<li id="door-lock-24">
+				<div class="row default-state">
+					<div class="five mobile-two columns" id="residentName">
+						<h4 class="door-lock"><a href="/rb4/homeautomation/details/24">
+							<span id ="rname">Front Door Lock</span></a>
+						</h4>
+					</div>
+					<div class="three mobile-two columns">
+						<div class="switch small round">
+	<input id="switch-lock-24-0" name="switch-lock-24" type="radio" value="" onchange="changeLock(24, this.value);" checked="" />
+	<label for="switch-lock-24-0">Unlocked</label>
+	<input id="switch-lock-24-1" name="switch-lock-24" type="radio" value="1" onchange="changeLock(24, this.value);"  />
+	<label for="switch-lock-24-1">Locked</label>
+	<span></span>
+</div>
+<input class="switch no-custom" style="display: none;`" id="switch-lock-24" name="switch-lock-24" type="checkbox" value="" onkeydown="changeLock(24, this.value);" 
+	 disabled="disabled" data-checked-label="Locked" data-unchecked-label="Unlocked" 
+	data-checked-value="1" data-unchecked-value="" data-lazy-init="" />
+					</div>
+					<div class="three columns hide-for-small">
+						<a href="/rb4/homeautomation/details/24" class="button round small secondary right">Details</a>
+					</div>
+					<div class="one columns hide-for-small">
+						<img src="/rb4/assets/img/empty-image.png" class="device-edit" />
+					</div>
+				</div>
+				<div id="edit-state" class="row">
+					<div class="twelve columns">
+						<input type="text" class="left" id="name">
+						<input type="button" value="Done" class="edit-done right sans" onclick="saveName(24,'#door-lock-24')">
+					</div>
+					<div style="clear: both;"></div>
+				</div>
+			</li>
+		
+		
+			
+			<li id="outlet-2">
+				<div class="row default-state">
+					<div class="five mobile-two columns" id="residentName">
+						<h4 class="outlet"><a href="/rb4/homeautomation/details/2"><span id ="rname">Green Light</span></a></h4>
+					</div>
+					<div class="three mobile-two columns">
+						<div class="switch small round">
+	<input id="switch_on_off-2-0" name="switch_on_off-2" type="radio" value="" onchange="changeSwitchOnOff(2, this.value)"  />
+	<label for="switch_on_off-2-0">Off</label>
+	<input id="switch_on_off-2-1" name="switch_on_off-2" type="radio" value="1" onchange="changeSwitchOnOff(2, this.value)" checked="" />
+	<label for="switch_on_off-2-1">On</label>
+	<span></span>
+</div>
+<input class="switch no-custom" style="display: none;`" id="switch_on_off-2" name="switch_on_off-2" type="checkbox" value="1" onkeydown="changeSwitchOnOff(2, this.value)" 
+	checked="" disabled="disabled" data-checked-label="On" data-unchecked-label="Off" 
+	data-checked-value="1" data-unchecked-value="" data-lazy-init="" />
+					</div>
+					<div class="three columns hide-for-small">
+						<a href="/rb4/homeautomation/details/2" class="button round small secondary right">Details</a>
+					</div>
+					<div class="one columns hide-for-small">
+						<img src="/rb4/assets/img/empty-image.png" class="device-edit" />
+					</div>
+				</div>
+				<div id="edit-state" class="row">
+					<div class="twelve columns">
+						<input type="text" class="left" id="name">
+						<input type="button" value="Done" class="edit-done right sans" onclick="saveName(2,'#outlet-2')">
+					</div>
+					<div style="clear: both;"></div>
+				</div>
+			</li>
+		
+			
+			<li id="outlet-23">
+				<div class="row default-state">
+					<div class="five mobile-two columns" id="residentName">
+						<h4 class="outlet"><a href="/rb4/homeautomation/details/23"><span id ="rname">Orange Light</span></a></h4>
+					</div>
+					<div class="three mobile-two columns">
+						<div class="switch small round">
+	<input id="switch_on_off-23-0" name="switch_on_off-23" type="radio" value="" onchange="changeSwitchOnOff(23, this.value)" checked="" />
+	<label for="switch_on_off-23-0">Off</label>
+	<input id="switch_on_off-23-1" name="switch_on_off-23" type="radio" value="1" onchange="changeSwitchOnOff(23, this.value)"  />
+	<label for="switch_on_off-23-1">On</label>
+	<span></span>
+</div>
+<input class="switch no-custom" style="display: none;`" id="switch_on_off-23" name="switch_on_off-23" type="checkbox" value="" onkeydown="changeSwitchOnOff(23, this.value)" 
+	 disabled="disabled" data-checked-label="On" data-unchecked-label="Off" 
+	data-checked-value="1" data-unchecked-value="" data-lazy-init="" />
+					</div>
+					<div class="three columns hide-for-small">
+						<a href="/rb4/homeautomation/details/23" class="button round small secondary right">Details</a>
+					</div>
+					<div class="one columns hide-for-small">
+						<img src="/rb4/assets/img/empty-image.png" class="device-edit" />
+					</div>
+				</div>
+				<div id="edit-state" class="row">
+					<div class="twelve columns">
+						<input type="text" class="left" id="name">
+						<input type="button" value="Done" class="edit-done right sans" onclick="saveName(23,'#outlet-23')">
+					</div>
+					<div style="clear: both;"></div>
+				</div>
+			</li>
+		
+		
+			
+				
+
+
+
+
+
+	
+	
+
+
+
+
+
+<li id="moisture-3">
+  <div class="row default-state">
+    <div class="five mobile-two columns">      
+      <h4 class="moisture">
+      	
+      		<span id="rname"><a href="/rb4/homeautomation/sensorDetails/3">L Moisture Sensor</a></span>
+      	
+      </h4>
+    </div>
+    
+	    <div class="three mobile-two columns">
+	     
+	     	<p>Dry</p>
+	     
+	    </div>
+    
+    
+     
+     
+    	<div class="three columns hide-for-small">
+    	</div>
+    
+    <div class="three mobile-two columns hide-for-small">
+    	
+    		
+    		
+    	
+    	<a href="/rb4/homeautomation/sensorDetails/3" class="button round small secondary right">Details</a>
+    </div>
+    <div class="one columns hide-for-small">
+      <img src="/rb4/assets/img/empty-image.png" class="device-edit" />
+    </div>
+  </div>
+  <div id="edit-state" class="row">
+    <div class="twelve columns clear-fix">
+      <input type="text" class="left" id="name">
+      <input type="button" value="Done" class="edit-done right" onclick="saveName(3,'#moisture-3')">
+    </div>
+  </div> 
+</li>
+	        
+				
+
+
+
+
+
+	
+	
+
+
+
+
+
+<li id="moisture-35">
+  <div class="row default-state">
+    <div class="five mobile-two columns">      
+      <h4 class="moisture">
+      	
+      		<span id="rname"><a href="/rb4/homeautomation/sensorDetails/35">M Moisture Sensor</a></span>
+      	
+      </h4>
+    </div>
+    
+	    <div class="three mobile-two columns">
+	     
+	     	<p>Dry</p>
+	     
+	    </div>
+    
+    
+     
+     
+    	<div class="three columns hide-for-small">
+    	</div>
+    
+    <div class="three mobile-two columns hide-for-small">
+    	
+    		
+    		
+    	
+    	<a href="/rb4/homeautomation/sensorDetails/35" class="button round small primary right">Set up</a>
+    </div>
+    <div class="one columns hide-for-small">
+      <img src="/rb4/assets/img/empty-image.png" class="device-edit" />
+    </div>
+  </div>
+  <div id="edit-state" class="row">
+    <div class="twelve columns clear-fix">
+      <input type="text" class="left" id="name">
+      <input type="button" value="Done" class="edit-done right" onclick="saveName(35,'#moisture-35')">
+    </div>
+  </div> 
+</li>
+	        
+        
+       	
+       		
+       			
+
+
+
+
+
+
+	
+	
+
+
+
+
+<li id="motion-4">
+  <div class="row default-state">
+    <div class="five mobile-two columns">      
+      <h4 class="motion">
+      	
+      		<span id="rname"><a href="/rb4/homeautomation/sensorDetails/4">Motion Sensor</a></span>
+      	
+      </h4>
+    </div>
+    
+    
+	    <div class="three mobile-two columns">
+	     
+	     	<p>Active</p>
+	     
+	    </div>
+    
+     
+     
+    	<div class="three columns hide-for-small">
+    	</div>
+    
+    <div class="three mobile-two columns hide-for-small">
+    	
+    		
+    		
+    	
+    	<a href="/rb4/homeautomation/sensorDetails/4" class="button round small secondary right">Details</a>
+    </div>
+    <div class="one columns hide-for-small">
+      <img src="/rb4/assets/img/empty-image.png" class="device-edit" />
+    </div>
+  </div>
+  <div id="edit-state" class="row">
+    <div class="twelve columns clear-fix">
+      <input type="text" class="left" id="name">
+      <input type="button" value="Done" class="edit-done right" onclick="saveName(4,'#motion-4')">
+    </div>
+  </div> 
+</li>
+       		
+       	
+       	
+       		
+       			
+
+
+
+
+
+
+
+	
+	
+
+
+
+<li id="multi-36">
+  <div class="row default-state">
+    <div class="five mobile-two columns">      
+      <h4 class="multi">
+      	
+      		<span id="rname"><a href="/rb4/homeautomation/sensorDetails/36">Back Door Sensor</a></span>
+      	
+      </h4>
+    </div>
+    
+    
+     
+	    <div class="three mobile-two columns">
+	     
+	     	<p>Closed</p>
+	     
+	    </div>
+    
+     
+    	<div class="three columns hide-for-small">
+    	</div>
+    
+    <div class="three mobile-two columns hide-for-small">
+    	
+    		
+    		
+    	
+    	<a href="/rb4/homeautomation/sensorDetails/36" class="button round small secondary right">Details</a>
+    </div>
+    <div class="one columns hide-for-small">
+      <img src="/rb4/assets/img/empty-image.png" class="device-edit" />
+    </div>
+  </div>
+  <div id="edit-state" class="row">
+    <div class="twelve columns clear-fix">
+      <input type="text" class="left" id="name">
+      <input type="button" value="Done" class="edit-done right" onclick="saveName(36,'#multi-36')">
+    </div>
+  </div> 
+</li>
+       		
+       	
+       		
+       		
+       			
+
+
+
+
+
+
+
+
+	
+	
+
+
+<li id="fob-37">
+  <div class="row default-state">
+    <div class="five mobile-two columns">      
+      <h4 class="fob">
+      	
+      		<span id="rname"><a href="/rb4/homeautomation/sensorDetails/37">Presence Detector 1</a></span>
+      	
+      </h4>
+    </div>
+    
+    
+     
+     
+       <div class="three mobile-two columns">
+	     
+	     	<p>In Range</p>
+	     
+	    </div>
+    
+    <div class="three mobile-two columns hide-for-small">
+    	
+    		
+    		
+    	
+    	<a href="/rb4/homeautomation/sensorDetails/37" class="button round small secondary right">Details</a>
+    </div>
+    <div class="one columns hide-for-small">
+      <img src="/rb4/assets/img/empty-image.png" class="device-edit" />
+    </div>
+  </div>
+  <div id="edit-state" class="row">
+    <div class="twelve columns clear-fix">
+      <input type="text" class="left" id="name">
+      <input type="button" value="Done" class="edit-done right" onclick="saveName(37,'#fob-37')">
+    </div>
+  </div> 
+</li>
+       		
+       	
+	</ul>
+</div>
+<script type="text/javascript">
+function changeLock(deviceId , value) {
+	var url;
+	if (value) {
+		url = '/rb4/homeautomation/lock/' + deviceId;
+	} else {
+		url = '/rb4/homeautomation/unlock/' + deviceId;
+	}
+	$.get(url, function(data) {
+		if (data.indexOf('Exception') != -1) {
+			$("#errors").show();
+			$('#errors').html("There was an error. Please try again later");
+		}
+	});
+}
+
+function changeSwitchOnOff(deviceId, value) {
+	var url;
+	if (value) {
+		url = '/rb4/homeautomation/on/' + deviceId;
+	} else {
+		url = '/rb4/homeautomation/off/' + deviceId;
+	}
+	$.get(url, function(data) {
+		if (data == 'Error') {
+			$("#errors").show();
+			$('#errors').html("There was an error. Please try again later");
+		}
+	});
+}
+
+function saveName(unitDeviceId, element) {
+	var name= $(element).find("#name").val();
+	url = '/rb4/homeautomation/savename'+ "/" + unitDeviceId + "?name=" + name	 
+	$.get(url, function(data) {
+		if(data != 'Error') {
+			$(element).find("#rname").html(data);
+		}
+	});
+}
+
+function resetAddEventDialog(sensor) {
+	if(sensor == 'motion') {
+		$('#pair-ui').show();
+		$('#alert-ui').hide();
+		$('#pair-device').attr('value', true);
+		$('#pair-device').attr('checked', 'checked');
+		$('#pair-device ~ span').addClass('checked');
+		$('#alert-device').removeAttr('checked');
+		$('#alert-device').attr('value', 'false');
+		$('#alert-device ~ span').removeClass('checked');
+		$("label[for='privateResponse']").hide();
+	} else {
+		$('#pair-ui').hide();
+		$('#alert-ui').show();
+		$('#alert-device').attr('value', true);
+		$('#alert-device').attr('checked', 'checked');
+		$('#alert-device ~ span').addClass('checked');
+		$('#pair-device').removeAttr('checked');
+		$('#pair-device').attr('value', 'false');
+		$('#pair-device ~ span').removeClass('checked');
+		$("label[for='privateResponse']").show();
+	}
+	$('#description').val("");
+	$('#device').removeAttr('selected').find('option:first').attr('selected', 'selected');
+	$("div.custom.dropdown ul li[class='selected']").removeAttr('class');
+	$("div.custom.dropdown ul li:first").addClass('selected');
+	$("div.custom.dropdown a[class='current']").text('Select a device');
+	$(".device-control-wrapper").hide();
+	$("#email").val('false');
+	$("#email ~ span").removeClass('checked');
+	$("#sms").val('false');
+	$("#sms ~ span").removeClass('checked');
+	$('#submit').attr('disabled', 'disabled');
+}
+
+function showDeviceControl(unitDeviceId) {
+    $(".device-control-wrapper").hide();
+	$("#device-"+unitDeviceId).parent().show();
+	$("label.for-switch").removeClass('hide');
+	$("span.custom.checkbox.disabled").hide();
+	if($('#description').val() && isDeviceStateSelected()) {
+		enableSubmitButton();
+	}
+};
+
+function descriptionChanged(value) {
+	var deviceState = isDeviceStateSelected();
+	if(value && $('#device').val() != 'null' && deviceState) {
+		enableSubmitButton();
+	} else if(value && isSingleAlertTypeEnabled() && deviceState ) {
+		enableSubmitButton();
+	}
+};
+
+function isSingleAlertTypeEnabled() {
+	return $('#sms ~ span').hasClass('checked') || $('#email ~ span').hasClass('checked')
+}
+
+function enableSubmitForAlert() {
+	if(isSingleAlertTypeEnabled() && $('#description').val() && isDeviceStateSelected()) {
+		enableSubmitButton();
+	}
+};
+
+function addNewEvent() {
+	$('#pair-device ~ span').click(function(event) {
+		$('#alert-ui').hide();
+		$('#pair-ui').show();
+		$('#alert-device ~ span').removeClass('checked');
+		$('#pair-device ~ span').addClass('checked');
+        $('#alert-device').attr('value', false);
+        $('#alert-device').removeAttr('checked');
+        $('#pair-device').attr('checked', 'checked');
+    	$('#pair-device').attr('value', true);
+    	if(!$('form').find("input#pair").length) {
+			var $hiddenInput = $('<input/>',{type:'hidden',id:'pair', name:'pair', value:'true'});
+	    	$hiddenInput.appendTo('form');
+		}
+		$('input#alert').remove();
+		$("label[for='privateResponse']").hide();
+		resetPairDeviceEventSelect();
+	});
+
+	$('#alert-device ~ span').click(function(event) {
+	 	$('#pair-ui').hide();
+	 	$('#alert-ui').show();
+		$('#pair-device ~ span').removeClass('checked');
+		$('#alert-device ~ span').addClass('checked');
+	 	$('#pair-device').removeAttr('checked');
+	 	$('#pair-device').attr('value', false);
+	 	$('#alert-device').attr('checked', 'checked');
+	 	$('#alert-device').attr('value', true);
+		if(!$('form').find("input#alert").length) {
+			var $hiddenInput = $('<input/>',{type:'hidden',id:'alert', name:'alert', value:'true'});
+	    	$hiddenInput.appendTo('form');
+		}
+		$('input#pair').remove();
+		$("label[for='privateResponse']").show();
+		resetPairDeviceEventSelect();
+		resetPairDeviceEventSelect();
+	});
+
+  	$("label[for='email'] span").change(function() {
+    	enableSubmitForAlert();
+  	});
+	
+	$("label[for='sms'] span").change(function() {
+	    enableSubmitForAlert();
+	});
+}
+
+function resetPairDeviceEventSelect() {
+	$("div.eight > div > ul > li.selected").removeClass('selected');
+	$("div.eight > div > ul > li:first").addClass('selected');
+	$("div.eight > div > a.current").html('Select Device State');
+};
+
+function isDeviceStateSelected() {
+	return $("div.eight > div > a.current").html() != 'Select Device State';
+};
+
+function deviceStateChange() {
+	if($('#description').val() && ($('#device').val() != 'null' || $('#sms ~ span').hasClass('checked') || $('#email ~ span').hasClass('checked'))) {
+		enableSubmitButton();
+	}
+};
+
+function handleSaveEvent(data) {
+	if(data.isEventValid) {
+		$("#edit-event").trigger('reveal:close');
+		window.location.href = "/rb4/homeautomation/index/" + data.unitDeviceId;
+	} else {
+		$('.alert-box').show();
+		$('.error').show();
+		$('ul#event-switch > li:last > span').addClass('checked');
+	}
+}
+
+function enableSubmitButton() {
+	if($("a#submit").attr('disabled')) {
+		$("a#submit").removeAttr('disabled');
+		$("a#submit").click(function() {
+			self = this; 
+			App.submitForm(this, null, 'null' ,{success : function (data) {handleSaveEvent(data)}});
+		});
+	}
+}
+</script>
+			</div>
+		</div>
+	</li>
+	<!-- <li id="routineTab">
+                    <h3>Routines</h3>
+                  </li> -->
+	<li id="messagesTab" class="" style="display: none;">
+		<h3>Device Messages</h3>
+	</li>
+</ul>
+
+<script type="text/javascript">
+$(document).ready(function() {
+	$("li[id^='door-lock-'] #edit-state").hide();
+	$("li[id^='outlet-'] #edit-state").hide();
+	$("li[id^='moisture-'] #edit-state").hide();
+	$("li[id^='motion-'] #edit-state").hide();
+	// default slider function
+	$('#slider-button').click(function() {
+		event.preventDefault();
+		if ($(this).css("left") == "255px") {
+			$('#room-list-sm').animate({"left": '-=280'}, 'fast');
+			$('#slider-button').animate({"left": '-=255'}, 'fast'); 
+			$('#device-list').animate({"left": '-=380'}, 'fast');
+		} else {
+			$('#room-list-sm').animate({"left": '+=280'}, 'fast');
+			$('#slider-button').animate({"left": '+=255'}, 'fast');
+			$('#device-list').animate({"left": '+=380'}, 'fast');
+		}
+	});
+	// all devices slider
+	$('.all-devices-link').click(function() { 
+		event.preventDefault();
+		if ($('#slider-button').css("left") === "255px") {
+			$('#room-list-sm').animate({"left": '-=280'}, 'fast');
+			$('#slider-button').animate({"left": '-=255'}, 'fast'); 
+			$('#device-list').animate({"left": '-=380'}, 'fast');
+			$('h6.device-list-title').text('All Devices');
+		}
+	});
+	
+	// room slider
+	 $('.room1').click(function() { 
+		event.preventDefault();
+		if ($('#slider-button').css("left") === "255px") {
+			$('#room-list-sm').animate({"left": '-=280'}, 'fast');
+			$('#slider-button').animate({"left": '-=255'}, 'fast'); 
+			$('#device-list').animate({"left": '-=380'}, 'fast');
+			$('h6.device-list-title').text('Room 1');
+		}
+	}); 
+
+	$("li[id^='door-lock-']").find('img.device-edit').click(function() {
+		var lockId = $(this).closest('li').attr('id').replace('door-lock-','');
+		$('#door-lock-' + lockId + ' > #edit-state').find('#name').val($('#door-lock-'+lockId).find('span#rname').text());
+		$('#door-lock-' + lockId + ' > .default-state').toggle('fast');
+		$('#door-lock-' + lockId + ' > #edit-state').toggle('fast').delay(500);
+		$('#door-lock-' + lockId + ' > #edit-state').find('#name').focus();
+	});
+
+	$("li[id^='door-lock-']").find('input.edit-done ').click(function() {
+		var lockId = $(this).closest('li').attr('id').replace('door-lock-','');
+		$('#door-lock-' + lockId + ' > #edit-state').toggle('fast');
+		$('#door-lock-' + lockId + ' > .default-state').toggle('fast').delay(500);
+	});
+	//outlet
+	$("li[id^='outlet-']").find('img.device-edit').click(function() {
+		var outletId = $(this).closest('li').attr('id').replace('outlet-','');
+		$('#outlet-' + outletId + ' > #edit-state').find('#name').val($('#outlet-'+outletId).find('span#rname').text());
+		$('#outlet-' + outletId + ' > .default-state').toggle('fast');
+		$('#outlet-' + outletId + ' > #edit-state').toggle('fast').delay(500);
+		$('#outlet-' + outletId + ' > #edit-state').find('#name').focus();
+	});
+	
+	$("li[id^='outlet-']").find('input.edit-done ').click(function() {
+		var outletId = $(this).closest('li').attr('id').replace('outlet-','');
+		$('#outlet-' + outletId + ' > #edit-state').toggle('fast');
+		$('#outlet-' + outletId + ' > .default-state').toggle('fast').delay(500);
+	});
+	//moisture
+	$("li[id^='moisture-']").find('img.device-edit').click(function() {
+		var moistureId = $(this).closest('li').attr('id').replace('moisture-','');
+		$('#moisture-' + moistureId + ' > #edit-state').find('#name').val($('#moisture-'+moistureId).find('span#rname').text());
+		$('#moisture-' + moistureId + ' > .default-state').toggle('fast');
+		$('#moisture-' + moistureId + ' > #edit-state').toggle('fast').delay(500);
+		$('#moisture-' + moistureId + ' > #edit-state').find('#name').focus();
+	});
+	
+	$("li[id^='moisture-']").find('input.edit-done ').click(function() {
+		var moistureId = $(this).closest('li').attr('id').replace('moisture-','');
+		$('#moisture-' + moistureId + ' > #edit-state').toggle('fast');
+		$('#moisture-' + moistureId + ' > .default-state').toggle('fast').delay(500);
+	});
+	//motion
+	$("li[id^='motion-']").find('img.device-edit').click(function() {
+		var motionId = $(this).closest('li').attr('id').replace('motion-','');
+		$('#motion-' + motionId + ' > #edit-state').find('#name').val($('#motion-'+motionId).find('span#rname').text());
+		$('#motion-' + motionId + ' > .default-state').toggle('fast');
+		$('#motion-' + motionId + ' > #edit-state').toggle('fast').delay(500);
+		$('#motion-' + motionId + ' > #edit-state').find('#name').focus();
+	});
+	
+	$("li[id^='motion-']").find('input.edit-done ').click(function() {
+		var motionId = $(this).closest('li').attr('id').replace('motion-','');
+		$('#motion-' + motionId + ' > #edit-state').toggle('fast');
+		$('#motion-' + motionId + ' > .default-state').toggle('fast').delay(500);
+	});
+	//multi
+	$("li[id^='multi-']").find('img.device-edit').click(function() {
+		var motionId = $(this).closest('li').attr('id').replace('multi-','');
+		$('#multi-' + motionId + ' > #edit-state').find('#name').val($('#multi-'+motionId).find('span#rname').text());
+		$('#multi-' + motionId + ' > .default-state').toggle('fast');
+		$('#multi-' + motionId + ' > #edit-state').toggle('fast').delay(500);
+		$('#multi-' + motionId + ' > #edit-state').find('#name').focus();
+	});
+	
+	$("li[id^='multi-']").find('input.edit-done ').click(function() {
+		var motionId = $(this).closest('li').attr('id').replace('multi-','');
+		$('#multi-' + motionId + ' > #edit-state').toggle('fast');
+		$('#multi-' + motionId + ' > .default-state').toggle('fast').delay(500);
+	});
+	//fob
+	$("li[id^='fob-']").find('img.device-edit').click(function() {
+		var motionId = $(this).closest('li').attr('id').replace('fob-','');
+		$('#fob-' + motionId + ' > #edit-state').find('#name').val($('#fob-'+motionId).find('span#rname').text());
+		$('#fob-' + motionId + ' > .default-state').toggle('fast');
+		$('#fob-' + motionId + ' > #edit-state').toggle('fast').delay(500);
+		$('#fob-' + motionId + ' > #edit-state').find('#name').focus();
+	});
+	
+	$("li[id^='fob-']").find('input.edit-done ').click(function() {
+		var motionId = $(this).closest('li').attr('id').replace('fob-','');
+		$('#fob-' + motionId + ' > #edit-state').toggle('fast');
+		$('#fob-' + motionId + ' > .default-state').toggle('fast').delay(500);
+	});
+	
+});
+</script>
+
+	              </div>
+	            </div>
+	          </div>
+	        </div>
+	      </div> 
+	    </div>
+	
+		</div>
+	</div>
+
+	
+
+
+<div id="contact-form" class="reveal-modal">
+	<a class="close-reveal-modal">&#215;</a>
+   	<div id="contact-form-content">
+	<h3 class="orange">Contact Us</h3>
+	<form action="/rb4/contact/submitContactForm" method="post" name="form-contact" class="custom" id="form-contact" > 
+	    <div class='' id='' >
+
+	    	<label>Your Full Name</label>
+	    	<input type="text" name="name" value="" id="name" />
+	    <small></small></div>
+
+	    <div class='' id='' >
+
+	    	<label>Email Address</label>
+	    	<input type="text" name="email" value="" id="email" />
+	    <small></small></div>
+
+	    <div class='' id='' >
+
+	    	<select name="topic" id="topic" >
+<option value="">Choose a Topic</option>
+<option value="Technical Support" >Technical Support</option>
+<option value="Sales Inquiry" >Sales Inquiry</option>
+<option value="Feature Request" >Feature Request</option>
+<option value="Contact my community" >Contact my community</option>
+<option value="Other" >Other</option>
+</select>
+	    <small></small></div>
+
+	    <div class='' id='' >
+
+	    	<label>Your Message</label>
+	    	<textarea name="message" id="message" ></textarea>
+	    <small></small></div>
+ 
+	    <div class="form-sumbit-ui">	    	
+	        <a href="javascript:void(0);" class="button primary radius small right" onclick="self = this; App.submitForm(this, null, '#contact-form-content' ,{success : function (data) {return submitContactFormSuccess(data)}});" >Send</a>
+	        <input class="button secondary radius small right" value="Cancel" onclick="$('#contact-form').trigger('reveal:close');"/>
+	    </div>
+	</form>
+<script>
+
+$(document).ready(function() {
+	$("#contact-form").bind('reveal:open', function() {
+		$("#form-contact").find("div").each(function() {
+			if($(this).hasClass('error')) {
+				$(this).attr('class', '');
+				$(this).children('small').text('');
+			}			
+			$(this).children("input[type='text']").val('');
+			$(this).children("textarea").val('');			
+		});		
+		$("#topic ~ div a[class='current']").text('Choose a Topic');		
+		$("#topic ~ div ul li[class='selected']").removeAttr('class');
+		$("#topic ~ div ul li:first").attr('class', 'selected');
+		$('#topic option:selected').removeAttr('selected');		
+		$("#topic option:first").attr('selected', 'selected');		
+	});	
+});
+
+function submitContactFormSuccess(data) {	
+	if ($(data).find("#form-contact div[class='error ']").length == 0) {				
+		$('#thank-you').reveal();
+		return false;
+	}	
+}
+</script>
+</div>
+</div>
+<div id="thank-you" class="reveal-modal">
+	<h3>Thank you</h3>
+	<div class="alert-box success">
+		<p>Your Message has been sent.</p>
+	</div>
+	<div class="form-sumbit-ui">
+		<input class="button secondary radius small right" value="Close" onclick="$('#thank-you').trigger('reveal:close');" />
+	</div>
+	<a class="close-reveal-modal">&#215;</a>
+</div>
+
+
+<div id="privacy-policy" class="reveal-modal large">
+	<a class="close-reveal-modal">&#215;</a>
+   	<div id="rb4.sys.privacy" data-version="9">
+
+<h3>RESIDENT BUDDY PRIVACY POLICY</h3>
+
+<h5>1. Introduction</h5>
+
+<p>Thank you for visiting Resident Buddy. This Privacy Policy, like our Terms of Service, is an integral part of using our service, and you must completely agree to it in order to use our website and service. If you have not already read and agreed to our Terms of Service, please do so now before continuing.</p>
+
+<h5>2. Definitions</h5>
+
+<p>Throughout this document, we may use certain words or phrases, and it is important that you understand the meaning of them. The following is a non-exhaustive list of definitions of words and phrases found in this document:</p>
+
+<p>"Privacy Policy" means this Privacy Policy;</p>
+
+<p>"Resident Buddy" refers to our company, known as "rentbits.com, Inc.," our Site (ResidentBuddy.com), or our Service (the resident portal offered at ResidentBuddy.com), or a combination of two or all of the preceding definitions, depending on the context;</p>
+
+<p>"Service" refers to the services that we provide through our Site, including our resident portal services;</p>
+
+<p>"Site" refers to our website, www.ResidentBuddy.com;</p>
+
+<p>"User" refers to anyone who accesses, purchases, or uses our Service, regardless of whether they are a rental property manager or resident, and including anyone who is a general visitor to our Site;</p>
+
+<p>"You" refers to you, the person who is reading this Privacy Policy provided by rentbits.com, Inc, which governs the use of Resident Buddy.</p>
+
+<h5>3. Information Collected</h5>
+<br>
+<h6 class="orange">Identifying Information</h6>
+
+<p>We collect certain personal information from you when you sign up to our Service that can be used to identify you, such as your name, e-mail address, mailing address, date of birth, telephone number, gender, general interests, and lifestyle information. The information we collect from you, to the extent that it is private, is disclosed only in accordance with our Terms of Service and/or this Privacy Policy.</p>
+
+<h6 class="orange">Non-Identifying Information</h6>
+
+<p>Whenever you visit our Site, we may collect non-identifying information from you, such as your IP address, referring URL, browser, operating system, cookie information, and Internet Service Provider. Without a subpoena, voluntary compliance on the part of your Internet Service Provider, or additional records from a third party, this information alone cannot usually be used to identify you.</p>
+
+<h5>4. Use of Your Information</h5>
+
+<p>We may use your information to:</p>
+
+    <ul>
+        <li>Enhance or improve User experience, our Site, or our Service.</li>
+        <li>Process transactions between you and other Users (including passing your information to PayLease).</li>
+        <li>Send e-mails about our Site or respond to inquiries.</li>
+        <li>Resolve disputes between you and other Users.</li>
+        <li>Send e-mails and updates about Resident Buddy, including newsletters.</li>
+        <li>Send third party offers, from which you may opt out.</li>
+        <li>Perform any other function that we believe in good faith is necessary to protect the security or proper functioning of our Site or Service.</li>
+    </ul>
+
+<h5>5. Accessing, Editing, and Removing Your Information</h5>
+
+<p>Users may in some cases be able to review and edit the personal information they have provided to us by logging into your account on the Site and editing their account. Although most changes may occur immediately, information may still be stored in a web browser’s cache. We take no responsibility for stored information in your cache, or in other devices that may store information, and disclaim all liability of such. In addition, we may, from time to time, retain residual information about you in our backup and/or database.</p>
+
+<h5>6. Cookies</h5>
+
+<p>We use cookies to remember your preferences. For this reason, it is necessary that you enable cookies in your browser, and you hereby acknowledge that we have informed you of our use of cookies and that you consent to our use of cookies in relation to your computer system.</p>
+
+<h5>7. Third Party Websites</h5>
+
+<p>Resident Buddy or its Users may post links to third party websites on its Site. These third party websites are not screened for privacy or security issues by Resident Buddy, and you release us from any liability for the conduct of these third party websites.</p>
+
+<p>Please be aware that this Privacy Policy, and any other policies in place, in addition to any amendments, does not create rights enforceable by third parties or require disclosure of any personal information relating to members of the Service or Site. Resident Buddy bears no responsibility for the information collected or used by any advertiser or third party website. Please review the privacy policy and terms of service for each site you visit through third party links.</p>
+
+<h5>8. Third Party Access to Your Information</h5>
+
+<p>Although you are entering into an Agreement with Resident Buddy to disclose your information to us, we do use third party individuals and organizations to assist us, including contractors, web hosts, and others.
+Throughout the course of our provision of our Service to you, we may delegate our authority to collect, access, use, and disseminate your information. For example, our web host stores the information that you provide us, and we may hire outside contractors to perform maintenance or assist us in securing our website.</p>
+
+<p>It is therefore necessary that you grant the third parties we may use in the course of our business the same rights that you afford us under this Privacy Policy. For this reason, you hereby agree that for every authorization which you grant to us in this Privacy Policy, you also grant to any third party that we may hire, contract, or otherwise retain the services of for the purpose of operating, maintaining, repairing, or otherwise improving or preserving our website or its underlying files or systems. You agree not to hold us liable for the actions of any of these third parties, even if we would normally be held vicariously liable for their actions, and that you must take legal action against them directly should they commit any tort or other actionable wrong against you.</p>
+
+<p>Without limiting the generality of the foregoing, you authorize us to use PayLease for the purpose of processing rental payment transactions between Users.</p>
+
+<h5>9. Release of Your Information for Legal Purposes</h5>
+
+<p>At times it may become necessary, for tax, anti-money laundering, or other purposes, to release your information in response to a request from a government agency or a private litigant. You agree that we may disclose your information to a third party where we believe, in good faith, that it is desirable to do so for the purposes of a civil action, criminal investigation, or other legal matter. In the event that we receive a subpoena affecting your privacy, we may elect to notify you to give you an opportunity to file a motion to quash the subpoena, or we may attempt to quash it ourselves, but we are not obligated to do either. We may also proactively report you, and release your information to, third parties where we believe that it is prudent to do so for legal reasons, such as our belief that you have engaged in fraudulent activities. You release us from any damages that may arise from or relate to the release of your information to a request from law enforcement agencies or private litigants.</p>
+
+<h5>10. Commercial and Non-Commercial Communications</h5>
+
+<p>By providing information to the Site that forms the basis of communication with you, such as contact information, you waive all rights to file complaints concerning unsolicited email from Resident Buddy since, by providing such information, you agree to receive communication from us other anyone else covered under this Privacy Policy. However, you may unsubscribe from certain communications by notifying Resident Buddy that you no longer wish to receive solicitations or information and we will endeavor to remove you from the database.</p>
+
+<h5>11. Security Measures</h5>
+
+<p>We take certain measures to enhance the security of our Site and Service, including the use of SSL certificates.  However, we make no representations as to the security or privacy of your information. It is in our interest to keep our website secure, but we recommend that you use anti-virus software, firewalls, and other precautions to protect yourself from security threats.</p>
+
+<h5>12. California Online Privacy Protection Act</h5>
+
+<p>Resident Buddy permits residents of California to use its services. Therefore, it is the intent of rentbits.com, Inc. to comply with the California Business and Professions Code §§ 22575-22579. If you are a California resident you may request certain information regarding our disclosure of personal information to any third parties for their direct marketing purposes. Various provisions throughout this Privacy Policy address requirements of the Californian privacy statutes. In summary, you must presume that we collect electronic information from all visitors. You may contact us at <a href="mailto:support@rentbits.com">support@rentbits.com</a> with any questions.</p>
+
+<h5>13. Minors</h5>
+
+<p>Individuals under 18 years of age are not allowed to use our Service. If you become aware of a User who is under the required age to use all or any portion of our Service, please notify us immediately at support@rentbits.com and provide us with full details as to why you believe they are below that age and we will address the issue. If you are a User who is reported in this manner, we may require you to provide suitable proof of age, such as a copy of government identification, in order to continue using our Site and/or Service.</p>
+
+<h5>14. International Transfer</h5>
+
+<p>Your information may be transferred to - and maintained on - computers located outside of your state, province, country or other governmental jurisdiction where the privacy laws may not be as protective as those in your jurisdiction. If you are located outside the United States and choose to provide information to us, rentbits.com, Inc. transfers Personal Information to the United States and processes it there. Your consent to this Privacy Policy followed by your submission of such information represents your agreement to that transfer.</p>
+
+<h5>16. Amendments</h5>
+
+<p>Like our Terms of Service, we may amend this Privacy Policy from time to time. When we amend this Agreement, we will place a note on our Site as to when this Privacy Policy was last modified, and we will also require your agreement to the amendments as a condition of your continued use of our Service. You must read this page each time you visit our Site and agree to it. If you do not agree to the amendments, you must contact us immediately at <a href="mailto:support@rentbits.com">support@rentbits.com</a> with information sufficient to identify your account.</p>
+
+<P>
+    <small>Last Modified:  December 26, 2012</small>
+</P>
+</div>
+
+</div>
+
+<div id="tos" class="reveal-modal large">
+	<a class="close-reveal-modal">&#215;</a>
+   	<div id="tos" data-version="11">
+
+<h3>RESIDENT BUDDY TERMS OF SERVICE</h3>
+<h5>1. Introduction</h5>
+
+<p>Thank you for visiting Resident Buddy, a resident portal for members of participating rental apartment communities. Please read these Terms of Service carefully, as they are a legally-binding contract and your use of our Site and Service is contingent upon your agreement to them as well as our Privacy Policy.</p>
+
+<h5>2. Corporate Information</h5>
+
+<p>Resident Buddy is owned and operated by rentbits.com, Inc., a corporation lawfully-formed and doing business in the State of Colorado. Our corporation is registered with the Secretary of State for the State of Colorado with the Identification Number 20051263958. Unless otherwise permitted or required by these Terms of Service, our Privacy Policy, or any provision of law, any legal documents to be served or general queries should be addressed to our registered agent as listed with the Secretary of State. For more information, please visit www.sos.state.co.us.</p>
+
+<h5>3. Definitions</h5>
+
+<p>Throughout this Agreement, we may use certain words or phrases, and it is important that you understand the meaning of them. The list is not all-encompassing and no definition should be considered binding to the point that it renders this Agreement nonsensical:</p>
+
+<p>"Agreement" means these Terms of Service;</p>
+
+<p>"Resident Buddy" refers to our company, known as "rentbits.com, Inc.," our Site (ResidentBuddy.com), or our Service (the resident portal offered at ResidentBuddy.com), or a combination of two or all of the preceding definitions, depending on the context;</p>
+
+<p>"Service" refers to the services that we provide through our Site, including our resident portal services;</p>
+
+<p>"Site" refers to our website, www.ResidentBuddy.com;</p>
+
+<p>"User" refers to anyone who accesses, purchases, or uses our Service, regardless of whether they are a rental property manager or resident, and including anyone who is a general visitor to our Site;</p>
+
+<p>"You" refers to you, the person who is entering into this Agreement with rentbits.com, Inc.</p>
+
+<h5>4. What does Resident Buddy do?</h5>
+
+<p>We provide a resident portal for members of participating rental apartment communities. We enable residents and community managers to communicate issues, events, policy changes, maintenance information, and community/local information, package delivery information, and book amenities. Residents and community managers can create event reminders on a calendar. Community managers can send out notifications relevant to the residents living in their community. We may, but are not obligated to, provide a document management portal where residents can access things such as policies, lease forms, and other relevant documents.</p>
+
+<p>We also provide a platform for members of the community to exchange goods and services such as car pools, pet care, babysitting—similar to a classifieds page.</p>
+
+<p>For the benefit of your privacy, each community is isolated, and only members of that community and the community management can interact with each other. No outside members can access another community’s information from their accounts.</p>
+
+<h5>5. Eligibility</h5>
+
+<p>In order to use our Service, you must meet a number of conditions, including but not limited to:</p>
+
+    <ul>
+        <li>You must not be in violation of any embargoes, export controls, or other laws of the United States or other countries having jurisdiction over this Agreement, rentbits.com, Inc., and yourself. For example, if the Office of Foreign Assets Control prohibits conducting financial transactions with nationals, residents, or banks of your country, you must not use our Service.</li>
+        <li>You must not have previously created any other profile with Resident Buddy, unless you receive prior permission from us to create an additional account.</li>
+        <li>You must be the minimum age required to enter into a contract in the area in which you reside, and, in any event, must not be less than the age of contractual capacity in the State of Colorado, which is 18 years age.</li>
+        <li>You must, if signing up on behalf of an organization (such as if you are a community manager signing up on behalf of a community), be authorized by that organization to create the account.</li>
+        <li>You must provide us with personal information, payment information, and other information that we deem necessary to include you in our marketplace and provide you with our Service.</li>
+        <li>If you are the recipient of funds through our Service (such as rental payments), you must properly report all income as required to the Internal Revenue Service and any other governmental entity that may require it. You acknowledge that Resident Buddy is not required to conduct your recordkeeping for you or to report any income information to the tax authorities.</li>
+    </ul>
+
+<h5>6. Nature of Service</h5>
+
+<p>All Users use Resident Buddy solely as a method of communicating with each other. Resident Buddy makes no warranties as to the honesty or reliability of any other User. Resident Buddy is in no way a party to any contract between Users, including rental contracts, and you hereby agree that you will not name Resident Buddy as a defendant in any dispute between yourself and another User.</p>
+
+<h5>7. The Community</h5>
+
+<p>Once you have signed up to Resident Buddy, you may use our Service to communicate with the rest of your community through a unique resident portal assigned for your community. The following rules apply to anyone who uses our Service. You must not:</p>
+
+    <ul>
+        <li>Violate the laws of the United States, its states, or any foreign political entity having jurisdiction over this Agreement, whether or not the foreign political entity is a country or a subdivision (such as a state or province) or municipality (such as a city, town, county, or region) of a foreign country.</li>
+        <li>If selling goods, sell anything which would be unlawful for the recipient to possess, even if you may lawfully transfer it. For example, you must not sell anything which requires a license to possess unless the recipient is licensed to possess that item.</li>
+        <li>Sell any regulated goods for which you have not complied with the governing regulations. For example, you may not be permitted to sell food without complying with certain regulations set by the Food and Drug Administration and various state licensing laws.</li>
+        <li>Send anything through post or courier that you are not entitled by those services to send.</li>
+        <li>Sell anything, whether lawfully or not, that Resident Buddy or your community manager at their sole discretion determines is dangerous (such as certain or all types of weapons).</li>
+        <li>Post or send anything violent, threatening, pornographic, racist, hateful, or otherwise objectionable according to the opinion of Resident Buddy, your community manager, or their delegates.</li>
+        <li>Post requests for goods or services which you have no intention of actually purchasing.</li>
+        <li>Make fraudulent or negligent representations.</li>
+        <li>Infringe on anyone’s intellectual property rights, defame anyone, impersonate anyone, or otherwise violate the rights of a third party.</li>
+        <li>Hack, crack, phish, SQL inject, or otherwise compromise the security or integrity of the Resident Buddy Site, Service, or its Users’ computers.</li>
+        <li>Do anything else which a reasonable person would believe does or could bring Resident Buddy into disrepute.</li>
+    </ul>
+
+<h5>8. Housing Protection Laws</h5>
+
+<p>You have certain rights in relation to your status as a resident or potential resident of a property. For example, you are protected against certain kinds of discrimination—the protections may vary based on state. Federally, the United States Department of Housing and Urban Development (<a href="www.hud.gov">www.hud.gov</a>) is responsible for receiving complaints regarding housing discrimination.</p>
+
+<p>Enforcement at the state level may vary. For example, the State of Colorado has established the Division of Regulatory Agencies – Civil Rights Division to protect tenants (<a href="http://www.colorado.gov/cs/Satellite?c=Page&childpagename=DORA-DCR%2FDORALayout&cid=1251629365757&pagename=CBONWrapper">http://www.colorado.gov/cs/Satellite?c=Page&childpagename=DORA-DCR%2FDORALayout&cid=1251629365757&pagename=CBONWrapper</a>).</p>
+
+<p>For more information about your legal rights as a resident, please consult an attorney who is admitted to practice in the same state as the property which you occupy or intend to occupy is located.</p>
+
+<h5>9. Payment</h5>
+
+<p>All payments for rent are processed using the third party service, PayLease (www.paylease.com). Resident Buddy accepts ACH and credit card payments. We collect the relevant information and pass it to PayLease; we do not store the payment information in our servers. PayLease gives us a token which we use to access payment histories if needed, but at no point can we recover the actual account information.</p>
+
+<p>All parties agree that any payments made are done so between residents and community managers, and rentbits.com, Inc. is not privy to any contract.</p>
+
+<h5>10. Chargebacks</h5>
+
+<p>Users must not conduct any chargebacks or other disputes which result in a loss for rentbits.com, Inc. Chargebacks which would not result in any loss for rentbits.com, Inc., may be done, but only where such actions are not unlawful (unsubstantiated chargebacks, for example, would be fraudulent and constitute a crime in most if not all jurisdictions).</p>
+
+<p>Any payments for other services which are made directly to Resident Buddy or through a third party for the benefit of Resident Buddy, from which a dispute arises, shall be resolved solely according to our "Forum of Dispute" provisions and no others.</p>
+
+<h5>11. Our Copyright</h5>
+
+<p>You agree not to copy, distribute, display, disseminate, or otherwise reproduce any of the information on the Site, including community descriptions, User-submitted content, and other content submitted by third parties to Resident Buddy, without receiving our prior written permission, regardless of whether you would otherwise have a fair use defense or other defense (such as permission of the author) for the use of that content, as copying it from our Site still harms our network capacity. If you are otherwise permitted by law to copy such content, and you acquire it from a source other than Resident Buddy, you may of course use it without receiving our prior written permission.</p>
+
+<h5>12. Your Copyright</h5>
+
+<p>Resident Buddy must be assured that it has the right to use the content that is posted to its Site by its Users. Such content may include, but is not limited to, photographs, videos, text, audio, and other materials. Whenever submitting content to our website, you agree that you are granting us a non-exclusive, universal, perpetual, irrevocable, sublicensable, commercial and non-commercial right to use, distribute, sell, publish, and otherwise make use of the content that you submit to us. You warrant to us that you have the right to grant us this right over the content, and that you will indemnify us for any loss resulting from a breach of this warranty and defend us against claims regarding the same.</p>
+
+<h5>13. Trademarks</h5>
+
+<p>"Resident Buddy" and "Rentbits" are trademarks used by us, rentbits.com, Inc., to uniquely identify our Site, Service, and business. You agree not to use this phrase anywhere without our prior written consent. Additionally, you agree not to use our trade dress, or copy the look and feel of our website or its design, without our prior written consent. You agree that this paragraph goes beyond the governing law on intellectual property law, and includes prohibitions on any competition that violates the provisions of this paragraph, including starting your own resident portal or other real estate-related website.</p>
+
+<h5>14. Revocation of Consent</h5>
+
+<p>We may revoke our consent for your use of our intellectual property, or any other permission granted to you under this Agreement, at any time. You agree that if we so request, you must take immediate action to remove any usage of our intellectual property that you may have engaged in, even if it would cause a loss to you.</p>
+
+<h5>15. Copyright & Trademark Infringement</h5>
+
+<p>Users must not post any Contracts, User profiles, or other information that infringes on anyone’s copyright, but it may happen. We take copyright infringement very seriously, and we have registered a Copyright Agent with the United States Copyright Office, which limits our liability under the Digital Millennium Copyright Act. If you believe that your copyright has been infringed, please send us a message which contains:</p>
+
+    <ul>
+        <li>Your name.</li>
+        <li>The name of the party whose copyright has been infringed, if different from your name.</li>
+        <li>The name and description of the work that is being infringed.</li>
+        <li>The location on our website of the infringing copy.</li>
+        <li>A statement that you have a good faith belief that use of the copyrighted work described above is not authorized by the copyright owner (or by a third party who is legally entitled to do so on behalf of the copyright owner) and is not otherwise permitted by law.</li>
+        <li>A statement that you swear, under penalty of perjury, that the information contained in this notification is accurate and that you are the copyright owner or have an exclusive right in law to bring infringement proceedings with respect to its use.</li>
+    </ul>
+
+<P>You must sign this notification and send it to our Copyright Agent at:</P>
+
+<p>
+    Attn: Resident Buddy Copyright Agent<br>
+    1062 Delaware Street<br>
+    #5<br>
+    Denver, Colorado 80204<br>
+    United States<br>
+</p>
+
+<p>
+    <a href="mailto:support@rentbits.com">support@rentbits.com</a>
+</p>
+
+<p>If sending the notification by e-mail, an electronic signature is acceptable.</p>
+<p>Although U.S. law does not provide for a similar procedure for trademark infringement, we recommend that you send us similar information to that above in regards to any allegation of trademark infringement, and we will address it as soon as practicable.</p>
+
+<h5>16. Communications Decency Act</h5>
+
+<p>Similar to the DMCA provisions above, United States law—specifically Section 230 of the Communications Decency Act—creates a defense for us for the actions of third parties in regards to any defamatory content posted on our website. Although we are not liable for defamatory words posted on our website by our Users even if given notice, we do prohibit defamation under this Agreement and we may, if we believe the situation warrants it, take action against the offending User. Please notify us at <a href="support@rentbits.com">support@rentbits.com</a> if any of our Users have posted anything that you believe is defamatory.</p>
+
+<h5>17. Representations & Warranties</h5>
+
+<p>WE MAKE NO REPRESENTATIONS OR WARRANTIES AS TO THE MERCHANTABILITY OF OUR SERVICE OR FITNESS FOR ANY PARTICULAR PURPOSE. YOU AGREE THAT YOU ARE RELEASING US FROM ANY LIABILITY THAT WE MAY OTHERWISE HAVE TO YOU IN RELATION TO OR ARISING FROM THIS AGREEMENT OR OUR SERVICES, FOR REASONS INCLUDING, BUT NOT LIMITED TO, FAILURE OF OUR SERVICE, NEGLIGENCE, OR ANY OTHER TORT. TO THE EXTENT THAT APPLICABLE LAW RESTRICTS THIS RELEASE OF LIABILITY, YOU AGREE THAT WE ARE ONLY LIABLE TO YOU FOR THE MINIMUM AMOUNT OF DAMAGES THAT THE LAW RESTRICTS OUR LIABILITY TO, IF SUCH A MINIMUM EXISTS.</p>
+
+<p>YOU AGREE THAT WE ARE NOT RESPONSIBLE IN ANY WAY FOR DAMAGES CAUSED BY THIRD PARTIES WHO MAY USE OUR SERVICES, INCLUDING BUT NOT LIMITED TO PEOPLE WHO COMMIT INTELLECTUAL PROPERTY INFRINGEMENT, DEFAMATION, TORTIOUS INTERFERENCE WITH ECONOMIC RELATIONS, OR ANY OTHER ACTIONABLE CONDUCT TOWARDS YOU.</p>
+
+<p>WE ARE NOT RESPONSIBLE FOR ANY FAILURE OF A BUYER OF GOODS OR SERVICES TO MAKE THE APPROPRIATE PAYMENT TO YOU IF YOU ARE A SELLER OF THOSE GOODS OR SERVICES, OR OF A SELLER TO RENDER THE REQUIRED GOODS OR SERVICES TO YOU IF YOU ARE A BUYER. THIS INCLUDES BOTH RENTAL PAYMENTS, AS WELL AS GENERAL GOODS OR SERVICES WHICH MAY BE SOLD FROM ONE USER TO ANOTHER THROUGH A COMMUNITY PORTAL ADVERTISING SECTION.</p>
+
+<p>WE ARE NOT RESPONSIBLE FOR ANY FAILURE ON THE PART OF A PAYMENT PROCESSOR, INCLUDING PAYPAL OR THE CREDIT CARD COMPANY OR BANK THAT YOU USE TO FUND PAYPAL, TO DIRECT PAYMENTS TO THE CORRECT DESTINATION, OR ANY ACTIONS ON THEIR PART IN PLACING A HOLD ON YOUR FUNDS.</p>
+
+<p>WE ARE NOT LIABLE FOR ANY FAILURE OF THE GOODS OR SERVICES OF OUR COMPANY OR A THIRD PARTY, INCLUDING ANY FAILURES OR DISRUPTIONS, UNTIMELY DELIVERY, SCHEDULED OR UNSCHEDULED, INTENTIONAL OR UNINTENTIONAL, ON OUR WEBSITE WHICH PREVENT ACCESS TO OUR WEBSITE TEMPORARILY OR PERMANENTLY.</p>
+
+<p>THE PROVISION OF OUR SERVICE TO YOU IS CONTINGENT ON YOUR AGREEMENT WITH THIS AND ALL OTHER SECTIONS OF THIS AGREEMENT. NOTHING IN THE PROVISIONS OF THIS "REPRESENTATIONS & WARRANTIES" SECTION SHALL BE CONSTRUED TO LIMIT THE GENERALITY OF THE FIRST PARAGRAPH OF THIS SECTION.</p>
+
+<p>For Jurisdictions that do not allow us to limit our liability: Notwithstanding any provision of these Terms, if your jurisdiction has provisions specific to waiver or liability that conflict with the above then our liability is limited to the smallest extent possible by law. Specifically, in those jurisdictions not allowed, we do not disclaim liability for: (a) death or personal injury caused by its negligence or that of any of its officers, employees or agents; or (b) fraudulent misrepresentation; or (c) any liability which it is not lawful to exclude either now or in the future.</p>
+
+<p>IF YOU ARE A RESIDENT OF A JURISDICTION THAT REQUIRES A SPECIFIC STATEMENT REGARDING RELEASE THEN THE FOLLOWING APPLIES. FOR EXAMPLE, CALIFORNIA RESIDENTS MUST, AS A CONDITION OF THIS AGREEMENT, WAIVE THE APPLICABILITY OF CALIFORNIA CIVIL CODE SECTION 1542, WHICH STATES, "A GENERAL RELEASE DOES NOT EXTEND TO CLAIMS WHICH THE CREDITOR DOES NOT KNOW OR SUSPECT TO EXIST IN HIS OR HER FAVOR AT THE TIME OF EXECUTING THE RELEASE, WHICH IF KNOWN BY HIM OR HER MUST HAVE MATERIALLY AFFECTED HIS OR HER SETTLEMENT WITH THE DEBTOR."  YOU HEREBY WAIVE THIS SECTION OF THE CALIFORNIA CIVIL CODE. YOU HEREBY WAIVE ANY SIMILAR PROVISION IN LAW, REGULATION, OR CODE THAT HAS THE SAME INTENT OR EFFECT AS THE AFOREMENTIONED RELEASE.</p>
+
+<h5>18. Indemnity</h5>
+
+<p>You agree to indemnify and hold us harmless for any claims by you or any third party which may arise from or relate to this Agreement or the provision of our service to you, including any damages caused by your use of our website or acceptance of the offers contained on it. You also agree that you have a duty to defend us against such claims and we may require you to pay for an attorney(s) of our choice in such cases. You agree that this indemnity extends to requiring you to pay for our reasonable attorneys’ fees, court costs, and disbursements. In the event of a claim such as one described in this paragraph, we may elect to settle with the party/parties making the claim, and you shall be liable for the damages as though we had proceeded with a trial.</p>
+
+<h5>19. Choice of Law</h5>
+
+<p>This Agreement shall be governed by the laws in force in the State of Colorado. The offer and acceptance of this contract are deemed to have occurred in the State of Colorado.</p>
+
+<h5>20. Forum of Dispute</h5>
+
+<p>You agree that any dispute arising from or relating to this Agreement will be heard solely by a court of competent jurisdiction in the State of Colorado. Specifically, where the subject matter of a dispute is eligible for it, you agree that any disputes shall be head solely within the lowest court of original jurisdiction responsible for hearing civil matters ("Small Claims Court").</p>
+<p>If a dispute claims multiple claims and one or more of those claims would be eligible to be heard by the Small Claims Court, you agree not to bring the other claims against us and to instead proceed within the Small Claims Court.</p>
+<p>If you would be entitled in a dispute to an amount exceeding the monetary jurisdiction of the Small Claims Court, you agree to waive your right to collect any damages in excess of the monetary jurisdiction and instead still bring your claim within the Small Claims Court.</p>
+<p>You agree that if a dispute is eligible to be heard in Small Claims Court but you would be entitled to an additional or alternative remedy in a higher court, such as injunctive relief, you will waive your right to that remedy and still bring the dispute within the Small Claims Court.</p>
+<p>If you bring a dispute in a manner other than in accordance with this section, you agree that we may move to have it dismissed, and that you will be responsible for our reasonable attorneys’ fees, court costs, and disbursements in doing so.</p>
+<p>You agree that the unsuccessful party in any dispute arising from or relating to this Agreement will be responsible for the reimbursement of the successful party’s reasonable attorneys’ fees, court costs, and disbursements.</p>
+
+<h5>21. Force Majeure</h5>
+
+<p>You agree that we are not responsible to you for anything that we may otherwise be responsible for, if it is the result of events beyond our control, including, but not limited to, acts of God, war, insurrection, riots, terrorism, crime, labor shortages (including lawful and unlawful strikes), embargoes, postal disruption, communication disruption, unavailability of payment processors, failure or shortage of infrastructure, shortage of materials, or any other event beyond our control.</p>
+
+<h5>22. Severability</h5>
+
+<p>In the event that a provision of this Agreement is found to be unlawful, conflicting with another provision of the Agreement, or otherwise unenforceable, the Agreement will remain in force as though it had been entered into without that unenforceable provision being included in it.</p>
+<p>If two or more provisions of this Agreement are deemed to conflict with each other’s operation, rentbits.com, Inc. shall have the sole right to elect which provision remains in force.</p>
+<p>Disputes amongst Users where rentbits.com, Inc. is not a party shall have any inconsistent provisions resolved according to their mutual agreement or, in a case where they cannot agree, by a court of competent jurisdiction in accordance with this Agreement’s dispute provis</p>ions.
+
+<h5>23. Non-Waiver</h5>
+
+<p>Rentbits.com, Inc. reserves all rights afforded to us under this Agreement as well as under the provisions of any applicable law. Our non-enforcement of any particular provision or provisions of this Agreement or the any applicable law should not be construed as our waiver of the right to enforce that same provision under the same or different circumstances at any time in the future.</p>
+
+<h5>24. Termination & Cancellation</h5>
+
+<p>We may terminate your account or access as well as access to our Site and Service to you at our discretion without explanation, though we will strive to provide a timely explanation in most cases. Our liability for refunding you, if you have paid anything to us, will be limited to the amount you paid for goods or services which have not yet been and will not be delivered, except in cases where the termination or cancellation was due to your breach of this Agreement, in which case you agree that we are not required to provide any refund or other compensation whatsoever.</p>
+
+<p>Under no circumstances, including termination or cancellation of our Service to you, will we be liable for any losses related to actions of other Users.</p>
+
+<h5>25. Assignment of Rights</h5>
+<p>You may not assign your rights and/or obligations under this Agreement to any other party without our prior written consent. We may assign our rights and/or obligations under this Agreement to any other party at our discretion.</p>
+
+<h5>26. Amendments</h5>
+
+<p>We may amend this Agreement from time to time. When we amend this Agreement, we will update the date on this page to indicate that there has been a change. You must visit this page each time you access our Site. If you do not agree to the changes, you must cease using our Site and Service immediately and inform us of your non-agreement with information sufficient to identify your account at <a href="support@rentbits.com">support@rentbits.com</a> so that we may disable your account.</p>
+
+<h5>27. California Users and Residents</h5>
+
+<p>Pursuant to California Civil Code Section 1789.3, any questions about pricing, complaints, or inquiries about Resident Buddy must be addressed to our agent for notice and sent via certified mail to:  rentbits.com, Inc. 1062 Delaware St., #5, Denver, Colorado, 80204, United States.</p>
+
+<p>Lastly, California users are also entitled to the following specific consumer rights notice: The Complaint Assistance Unit of the Division of Consumer Services of the California Department of Consumer Affairs may be contacted in writing at 1625 North Market Blvd., Sacramento, CA 95834, or by telephone at (916) 445-1254 or (800) 952-5210.</p>
+
+<p>
+    <small>Last Modified:  December 26, 2012</small>
+</p>
+</div>
+
+</div>
+
+
+
+<footer>
+	
+	<div class="row">
+		<div class="twelve columns copyright signin">
+			<ul>
+				<li>&copy; 2014 <a href="http://rentbits.com" target="_blank">rentbits.com</a> </li>
+				<li><span>|</span></li>
+				<li><a href="#" data-reveal-id="contact-form">Contact Us</a></li>
+				<li><span>|</span></li>
+				<li><a href="#" data-reveal-id="privacy-policy">Privacy policy</a></li>
+				<li><span>|</span></li>
+				<li><a href="#" data-reveal-id="tos">Terms & Conditions</a></li>
+			</ul>
+			<ul class="version">
+				<li> Version: 1.0</li>
+				<li><span>|</span> </li>
+				<li>Build: b_140221_53_0</li>
+				
+			</ul>
+		</div>	
+	</div>
+</footer>
+
+	
+	<div class="slide-out-div hide-for-small">
+	<a class="handle">Content</a>	
+	<form action="/rb4/homeautomation/index" method="post" name="feedbackForm" id="feedbackForm" >
+		<h3>Resident Buddy Feedback</h3>
+		<input type="hidden" name="to" value="support@rentbits.com" id="to" />
+		<div>
+			<input type="text" name="from" placeholder="your email address" id="from" value="" />
+		</div>
+		<textarea id="content" name="content" rows="5" placeholder="Let us know what you think." ></textarea>
+		<div class="form-sumbit-ui">
+			<a href="javascript:void(0);" onclick="sendFeedback();" class="button medium radius primary right remote">Send</a>
+			<a href="javascript:void(0);" onclick="closeFeedback();" class="button medium radius secondary right">Close</a>				
+		</div>		
+	</form>	
+</div>
+
+<script type="text/javascript">
+	function sendFeedback() {
+		var email = $("#from").val();
+		if(App.isEmail(email)) {
+			var params = $("#feedbackForm").serialize();
+			$.post('/rb4/feedback/sendFeedback?' + params, function(data) {
+				if(!data) {
+					closeFeedback();
+				}
+			});
+		} else {
+			if(!$("#from").parent().hasClass('error')) {
+				App.showError($("#from").parent(), "Email is not valid");
+			}
+		}
+	}
+
+	function closeFeedback() {
+		$('.slide-out-div').animate({right: '-' + 380}, 300).removeClass('open');
+		$("#from").val('');
+		$("form > textArea").val('');
+		App.removeErrors($("#feedbackForm"));
+	}
+</script>
+
+</body>
+
+</html>
