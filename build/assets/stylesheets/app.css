@@ -4130,4 +4130,5 @@ ul.inline-list-edit li:last-child {
   .homepage.automation .tabs-content {
     height: 660px !important; } }
 .web-menu.nav-bar {
-  background: red; }
+  background: red;
+  background: blue; }
