@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+
+  <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width" />
+
+  <title>Welcome to Foundation</title>
+  
+  <!-- Included CSS Files (compressed) -->
+  <!--
+  <link rel="stylesheet" href="foundation/stylesheets/foundation.min.css">
+  -->
+  
+  <!-- Included CSS Files (Uncompressed) -->
+  <link rel="stylesheet" href="foundation/stylesheets/foundation.css">
+  <link rel="stylesheet" href="assets/stylesheets/app.css">
+
+  <script src="foundation/javascripts/modernizr.foundation.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+
+  <!-- IE Fix for HTML5 Tags -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+ <!-- script for the sliding mobile menu -->  
+  <script type="text/javascript">
+	 $(document).ready(function(){
+			$(".error").hide();
+		 });
+  </script>
+  
+  <script type="text/javascript">
+ 
+	$(document).ready(function(){
+	 
+			$(".mobile-menu").hide();
+			$(".show_hide").show();
+	 
+		$('.show_hide').click(function( event ){
+			event.preventDefault();
+		$('.mobile-menu').slideToggle();
+		
+		//toggle the button label
+		$(this).toggleClass("hide-button");
+		});
+	 
+	});
+ 
+</script>
+
+</head>
+<body>
+<!-- community hat -->
+    <div id="community-hat">
+        <div class="row">
+            <div class="twelve columns">
+            	<center>
+                	<p class="text-center">Community Hat</p>
+            	</center>
+            </div>   
+        </div>
+    </div>
+    <!-- end comuunity hat -->
+    
+    <!--mobile menu -->
+    <div class="row">
+        <div class="twelve columns mobile-menu">
+            <ul class="nav-bar show-for-small">
+                <li><a href="#">For Sale</a></li>
+                <li><a href="#">Ride Share</a></li>
+                <li><a href="#">Child Care</a></li>
+                <li><a href="#">Pet Care</a></li>
+                <li><a href="#">Calendar</a></li>
+            </ul>
+        <!--<a href="#" class="show_hide">close</a>-->
+        </div>
+    </div>
+    <div id="page-header">
+		<div class="row">
+			<div class="twelve columns">
+            	<div class="right tertiary-nav hide-for-small">
+                    <div href="#" id="user-dd" class="small button split dropdown">
+                        <a href="http://google.com">username</a>
+                        <span></span>
+                        <ul>
+                            <li><a href="#">Settings</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Sign Out</a></li>
+                        </ul>
+                    </div>
+                    <!--<a href="#" class="announcments">announcments</a>-->
+                </div>
+ 				<div class="hide-for-small">	
+                	<img src="assets/img/logo-web.png" />
+                </div>    
+                <div class="show-for-small" style="background-color: #67a2de; height:73px;">
+                    <!-- mini menu -->
+                    <div id="mobile-menu" class="right">
+                        <ul id="menu-mini" class="button-group three-up">
+                            <li><a href="#" class="button small special-button">Pay Rent</a></li>
+                            <li><a href="#" class="button small">Maitenance</a></li>
+                            <li><a href="#" class="button small show_hide">Menu</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="show-for-small" style="clear:both;">
+                	<img src="assets/img/logo-mobile.png" style="margin-top: -73px; margin-left: 6px;" />
+                </div>
+                <div class="show-for-small right" style="clear:both;">
+                	<a href="#">Sign Out</a>
+                </div>
+                <ul class="nav-bar hide-for-small">
+                	<li><a href="#" class="special-button">Pay Rent</a></li>
+                    <li><a href="#">Maintenance Request</a></li>
+                    <li class="has-flyout">
+                        <a href="three-col-template.html">Market Place</a>
+                        <a href="#" class="flyout-toggle"><span> </span></a>
+                        <ul class="flyout">
+                          <li><a href="#">For Sale</a></li>
+                          <li><a href="#">Ride Share</a></li>
+                          <li><a href="#">Child Care</a></li>
+                          <li><a href="#">Pet care</a></li>
+                    	</ul>
+                  	</li>
+                  	<li><a href="#">Calendar</a></li>
+                </ul>
+    		</div>
+        </div>
+    </div>
+    
+    <!--  bread crumbs  -->
+	<div class="row">
+		<div class="twelve columns">
+			<ul class="breadcrumbs">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Pay Rent</a></li>
+   		  <!--  <li class="unavailable"><a href="#">Gene Splicing</a></li>  -->
+            	<li class="current"><a href="#">Bank Payment</a></li>
+        	</ul>
+		</div>
+	</div>
+    
+    
+	<!-- page content -->
+    <div id="page-wrapper" class="payrent"> 
+		<div class="row">
+            <div class="twelve columns">
+            	<h1>Pay Rent <span class="subheader"><a href="#" data-reveal-id="history" >Payment History</a></span></h1>
+                <br>
+                <h4>Header Test <a href="#" class="button small primary radius">Create Note</a></h4>
+            </div>
+        </div>
+        <div class="row">
+        	<div class="twelve columns">
+                <div class="alert-box secondary">
+                	<h3>Hello Sue Willson <span class="subheader">in #426</span></h3>
+                    <p>Your rent is due in 2 days. User the form below to pay your rent online.</p>
+                    <a href="" class="close">&times;</a>
+                </div>
+				
+                <div class="row">
+                	<div class="twelve columns">
+                        <div class="panel radius" id="content">   
+                            <h4 class="credit">Your Credit Card Payment</h4>
+                            <form action="/rb4/payrent/ccconfirm" method="post" class="custom" >
+                              <input type="hidden" name="dateDue" value="09/05/2013" id="dateDue" />
+                              <input type="hidden" name="dateDueTime" value="17:59" id="dateDueTime" />
+                              <input type="hidden" name="dateApplied" value="09/15/2013" id="dateApplied" />
+                              <input type="hidden" name="ccType" value="Visa" id="ccType" />
+                              <input type="hidden" name="validTypes" value="15" id="validTypes" />
+                              <div class="row">
+                                  <div class="six columns">
+                                 	<div class='' id='' >
+                                          <label>First Name</label>
+                                          <input type="text" name="billingFirstName" value="Kelly 001" id="billingFirstName" />
+                                      	<small></small></div>
+                             		</div>
+                                  <div class="six columns">
+                                      <div class='' id='' >
+                          
+                                          <label>Last Name</label>
+                                          <input type="text" name="billingLastName" value="Sandoval" id="billingLastName" />
+                                      <small></small></div>
+                          
+                                  </div>
+                              </div>
+                              
+                              <div class="row">
+                                  <div class="twelve columns">
+                                      <div class='' id='' >
+                          
+                                          <label>Street Address</label>
+                                          <input type="text" name="billingStreetAddress" value="6560 Greenwood Plaza Blvd Unit #1" id="billingStreetAddress" />
+                                      <small></small></div>
+                          
+                                  </div>
+                                  <div class="six columns">
+                                      <div class='' id='' >
+                          
+                                          <label>City</label>
+                                          <input type="text" name="billingCity" value="Englewood" id="billingCity" />
+                                      <small></small></div>
+                          
+                                  </div>
+                                  <div class="three columns">
+                                      <div class='' id='' >
+                          
+                                          <label>State</label>
+                                          <select name="billingState" id="billingState" >
+                          
+                          <option value="null">Select a State</option>
+                          
+                          <option value="AL" >Alabama</option>
+                          
+                          <option value="AK" >Alaska</option>
+                          
+                          <option value="AZ" >Arizona</option>
+                          
+                          <option value="AR" >Arkansas</option>
+                          
+                          <option value="CA" >California</option>
+                          
+                          <option value="CO" selected="selected" >Colorado</option>
+                          
+                          <option value="CT" >Connecticut</option>
+                          
+                          <option value="DE" >Delaware</option>
+                          
+                          <option value="DC" >District of Columbia</option>
+                          
+                          <option value="FL" >Florida</option>
+                          
+                          <option value="GA" >Georgia</option>
+                          
+                          <option value="HI" >Hawaii</option>
+                          
+                          <option value="ID" >Idaho</option>
+                          
+                          <option value="IL" >Illinois</option>
+                          
+                          <option value="IN" >Indiana</option>
+                          
+                          <option value="IA" >Iowa</option>
+                          
+                          <option value="KS" >Kansas</option>
+                          
+                          <option value="KY" >Kentucky</option>
+                          
+                          <option value="LA" >Louisiana</option>
+                          
+                          <option value="ME" >Maine</option>
+                          
+                          <option value="MD" >Maryland</option>
+                          
+                          <option value="MA" >Massachusetts</option>
+                          
+                          <option value="MI" >Michigan</option>
+                          
+                          <option value="MN" >Minnesota</option>
+                          
+                          <option value="MS" >Mississippi</option>
+                          
+                          <option value="MO" >Missouri</option>
+                          
+                          <option value="MT" >Montana</option>
+                          
+                          <option value="NE" >Nebraska</option>
+                          
+                          <option value="NV" >Nevada</option>
+                          
+                          <option value="NH" >New Hampshire</option>
+                          
+                          <option value="NJ" >New Jersey</option>
+                          
+                          <option value="NM" >New Mexico</option>
+                          
+                          <option value="NY" >New York</option>
+                          
+                          <option value="NC" >North Carolina</option>
+                          
+                          <option value="ND" >North Dakota</option>
+                          
+                          <option value="OH" >Ohio</option>
+                          
+                          <option value="OK" >Oklahoma</option>
+                          
+                          <option value="OR" >Oregon</option>
+                          
+                          <option value="PA" >Pennsylvania</option>
+                          
+                          <option value="RI" >Rhode Island</option>
+                          
+                          <option value="SC" >South Carolina</option>
+                          
+                          <option value="SD" >South Dakota</option>
+                          
+                          <option value="TN" >Tennessee</option>
+                          
+                          <option value="TX" >Texas</option>
+                          
+                          <option value="UT" >Utah</option>
+                          
+                          <option value="VT" >Vermont</option>
+                          
+                          <option value="VA" >Virginia</option>
+                          
+                          <option value="WA" >Washington</option>
+                          
+                          <option value="WV" >West Virginia</option>
+                          
+                          <option value="WI" >Wisconsin</option>
+                          
+                          <option value="WY" >Wyoming</option>
+                          
+                          </select>
+                                      <small></small></div>
+                          
+                                  </div>
+                                  <div class="three columns">
+                                      <div class='' id='' >
+                          
+                                          <label>ZipCode</label>
+                                          <input type="text" name="billingZip" value="80111" id="billingZip" />
+                                      <small></small></div>
+                          
+                                  </div>
+                              </div>
+                              
+                              <div class="row">
+                                  <div class="six columns">
+                                      <div class='' id='' >
+                          
+                                          <label>Credit Card Number</label>
+                                          <input type="text" name="ccNumber" value="" placeholder="enter credit card number" id="ccNumber" />
+                                      <small></small></div>
+                          
+                                  </div>
+                                  <div class="two columns mobile-two">
+                                      <div class='' id='' >
+                          
+                                          <label>Exp Month</label>
+                                          <select name="ccExpMonth" id="ccExpMonth" >
+                          
+                          <option value="01" >01</option>
+                          
+                          <option value="02" >02</option>
+                          
+                          <option value="03" >03</option>
+                          
+                          <option value="04" >04</option>
+                          
+                          <option value="05" >05</option>
+                          
+                          <option value="06" >06</option>
+                          
+                          <option value="07" >07</option>
+                          
+                          <option value="08" >08</option>
+                          
+                          <option value="09" >09</option>
+                          
+                          <option value="10" >10</option>
+                          
+                          <option value="11" >11</option>
+                          
+                          <option value="12" >12</option>
+                          
+                          </select>
+                                      <small></small></div>
+                          
+                                  </div>
+                                  <div class="two columns mobile-two">
+                                      <div class='special' id='' >
+                          
+                                          <label>Exp Year </label>
+                                          <select name="ccExpYear" id="ccExpYear" >
+                          
+                          <option value="2013" >2013</option>
+                          
+                          <option value="2014" >2014</option>
+                          
+                          <option value="2015" >2015</option>
+                          
+                          <option value="2016" >2016</option>
+                          
+                          <option value="2017" >2017</option>
+                          
+                          <option value="2018" >2018</option>
+                          
+                          <option value="2019" >2019</option>
+                          
+                          <option value="2020" >2020</option>
+                          
+                          <option value="2021" >2021</option>
+                          
+                          <option value="2022" >2022</option>
+                          
+                          </select>
+                                      <small></small></div>
+                          
+                                  </div>
+                                  <div class="two columns">
+                                      <div class='' id='' >
+                          
+                                          <label class="has-info">
+                                              Security Code  
+                                              
+                                                  
+                                                  
+                                                      <a href="#" data-reveal-id="visa-master-cvc"><img src="/rb4/assets/img/empty-image.png" class="info-blue"></a>
+                                                  
+                                              
+                                          </label>
+                                          <input type="text" name="ccCvv2" value="" placeholder="enter security code" id="ccCvv2" />
+                                      <small></small></div>
+                          
+                                  </div>
+                              </div>
+                              
+                          
+                              <div class='' id='' >
+                          
+                                  <label>Rent Due</label>
+                                  <input type="text" name="rentAmount" value="1.00" id="rentAmount" />
+                              <small></small></div>
+                          
+                              
+                              <div class='' id='' >
+                          
+                                  <label>Utilities & Fees</label>
+                                  <input type="text" name="feeAmount" value="" placeholder="enter amount of utilities and fees" id="feeAmount" />
+                              <small></small></div>
+                              
+                          
+                              <div class="radio-buttons-container">
+                              <div class='' id='' >
+                          
+                                  <label for="saveAccount" class="has-info">
+                                      <input type="hidden" name="_saveAccount" /><input type="checkbox" name="saveAccount" id="saveAccount"  />
+                                      Save This Card
+                                      <a href="javascript:void(0);" class="rm-button" onclick="self = this; App.loadRemote('/rb4/page/render?cmsCode=rb4.sys.tooltips&code=payrent.account.save', null,{load : function () {Application.prototype.showSpinner = function(target) {};},success : function (data) {App.messageBox(data);},loaded : function (data) {Application.prototype.showSpinner = function(target) { this.$spinner.show(); }}})" >
+                                          <img src="/rb4/assets/img/empty-image.png" class="info-blue">
+                                      </a>
+                                  </label>
+                              <small></small></div>
+                          
+                              
+                              <div class='special' id='' >
+                          
+                                  <label>
+                                      <input type="hidden" name="_acceptTerms" /><input type="checkbox" name="acceptTerms" id="acceptTerms"  />
+                                      Accept <a href="#" data-reveal-id="tos">Terms Of Service</a>
+                                  </label>
+                              <small></small></div>
+                          
+                              </div>
+                          
+                          </form>
+  </div>
+	
+
+</div>
+                    
+                </div>
+                
+                
+                </form>
+			</div>
+		</div> 
+	</div>
+    
+    <!-- footer -->
+    <footer>
+        <div class="row">
+        	<div class="four columns">
+           		<p>section 1</p>
+            </div> 
+            <div class="four columns">
+           		<p>section 2</p>
+            </div>
+            <div class="four columns">
+           		<p>section 3</p>
+            </div>
+        </div>
+	</footer> 
+    
+    <!-- modals -->
+     <div id="history" class="reveal-modal">
+  		<h2>Payment History</h2>
+  		<a class="close-reveal-modal">&#215;</a>
+	</div>
+     <style>
+	 .example-check { background: url(assets/images/check-example.png) 0 0 no-repeat; width:302px; height: 158px; }
+	 
+	 </style>
+    <div id="examples" class="reveal-modal">
+  		<h2>Example</h2>
+  		<img src="assets/img/empty-image.png" class="example-check">
+  		<a class="close-reveal-modal">&#215;</a>
+	</div>
+    
+    <div id="terms" class="reveal-modal">
+  		<h2>Terms</h2>
+  		<p>Im a terms.</p>
+  		<a class="close-reveal-modal">&#215;</a>
+	</div>
+    
+  <!-- start scripts -->
+  
+  <!-- Included JS Files (Uncompressed) -->
+  <!--
+  
+  <script src="foundation/javascripts/modernizr.foundation.js"></script>
+  
+  <script src="foundation/javascripts/jquery.js"></script>
+  
+  <script src="foundation/javascripts/jquery.foundation.reveal.js"></script>
+  
+  <script src="foundation/javascripts/jquery.foundation.orbit.js"></script>
+  
+  <script src="foundation/javascripts/jquery.foundation.navigation.js"></script>
+  
+  <script src="foundation/javascripts/jquery.foundation.buttons.js"></script>
+  
+  <script src="foundation/javascripts/jquery.foundation.tabs.js"></script>
+  
+  <script src="foundation/javascripts/jquery.foundation.forms.js"></script>
+  
+  <script src="foundation/javascripts/jquery.foundation.tooltips.js"></script>
+  
+  <script src="foundation/javascripts/jquery.foundation.accordion.js"></script>
+  
+  <script src="foundation/javascripts/jquery.placeholder.js"></script>
+  
+  <script src="foundation/javascripts/jquery.foundation.alerts.js"></script>
+  
+  -->
+  
+  <!-- Included JS Files (Compressed) -->
+  <script src="foundation/javascripts/foundation.min.js"></script>
+  
+  <!-- Initialize JS Plugins -->
+  <script src="foundation/javascripts/app.js"></script>
+  <script src="foundation/javascripts/foundation.js"></script>
+
+  <script type="text/javascript">
+		$('#featured').orbit({
+		 animation: 'fade',                  // fade, horizontal-slide, vertical-slide, horizontal-push
+		 animationSpeed: 800,                // how fast animtions are
+		 timer: true,            // true or false to have the timer
+		 advanceSpeed: 5000,         // if timer is enabled, time between transitions 
+		 pauseOnHover: true,        // if you hover pauses the slider
+		 startClockOnMouseOut: true,    // if clock should start on MouseOut
+		 startClockOnMouseOutAfter: 300,    // how long after MouseOut should the timer start again
+		 directionalNav: true,       // manual advancing directional navs
+		 captions: true,             // do you want captions?
+		 captionAnimation: 'fade',       // fade, slideOpen, none
+		 captionAnimationSpeed: 800,     // if so how quickly should they animate in
+		 bullets: false,             // true or false to activate the bullet navigation
+		 bulletThumbs: false,        // thumbnails for the bullets
+		 bulletThumbLocation: '',        // location from this file where thumbs will be
+		 afterSlideChange: function(){},     // empty function 
+		 fluid: true                         // or set a aspect ratio for content slides (ex: '4x3') 
+		});
+  </script>
+    
+    <script type="text/javascript">
+	  $(document).ready(function() {
+		$('#buttonForModal').click(function() {
+		  $('#myModal').reveal();
+		});
+	  });
+	</script>
+      
+</body>
+</html>

@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+
+  <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width" />
+
+  <title>Welcome to Foundation</title>
+  
+  <!-- Included CSS Files (compressed) -->
+  <!--
+  <link rel="stylesheet" href="foundation/stylesheets/foundation.min.css">
+  -->
+  
+  <!-- Included CSS Files (Uncompressed) -->
+  <link rel="stylesheet" href="foundation/stylesheets/foundation.css">
+  <link rel="stylesheet" href="assets/stylesheets/app.css">
+
+  <script src="foundation/javascripts/modernizr.foundation.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+
+  <!-- IE Fix for HTML5 Tags -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <!-- script for the error messaging --> 
+  <script type="text/javascript">
+	 $(document).ready(function(){
+			$(".error").hide();
+		 });
+  </script>
+  
+  
+  <!-- script for the sliding mobile menu --> 
+  <script type="text/javascript">
+ 
+	$(document).ready(function(){
+	 
+			$(".mobile-menu").hide();
+			$(".show_hide").show();
+	 
+		$('.show_hide').click(function( event ){
+			event.preventDefault();
+		$('.mobile-menu').slideToggle();
+		
+		//toggle the button label
+		$(this).toggleClass("hide-button");
+		});
+	 
+	});
+ 
+</script>
+
+ <!-- script for the sliding contact menu --> 
+  <script type="text/javascript">
+ 
+	$(document).ready(function(){
+	 
+			$(".posted-contact-info").hide();
+			$(".contact-show-hide").show();
+	 
+		$('.contact-show-hide').click(function( event ){
+			event.preventDefault();
+		$('.posted-contact-info').slideToggle();
+		
+		//toggle the button label
+		$(this).toggleClass("");
+		});
+	 
+	});
+ 
+</script>
+
+</head>
+<body>
+<!-- community hat -->
+    <div id="community-hat">
+        <div class="row">
+            <div class="twelve columns">
+            	<center>
+                	<img src="images/community-logo.png" alt="Community Name">
+            	</center>
+            </div>   
+        </div>
+    </div>
+    <!-- end comuunity hat -->
+    
+    <!--mobile menu -->
+    <div class="row">
+        <div class="twelve columns mobile-menu">
+            <ul class="nav-bar show-for-small">
+            	<li><a href="#" class="maintenance-m">Maintenance Request</a></li>
+                <li><a href="#" class="settings-m">Settings</a></li>
+                <li><a href="#" class="notifications-m">Message Inbox</a></li>
+            </ul>
+        <!--<a href="#" class="show_hide">close</a>-->
+        </div>
+    </div>
+
+        <div id="page-header">
+                <div class="page-border">&nbsp;</div>
+                <div class="row">
+                    <div class="twelve columns">
+                        <div class="right tertiary-nav hide-for-small">
+                            <div href="#" id="user-dd" class="small button dropdown radius">
+                                fistlast
+                                <ul>
+                                    <li><a href="#">Settings</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#" class="orange">Sign Out</a></li>
+                                </ul>
+                            </div>
+                        	<a href="#" class="notifications">Notifications</a>
+                    	</div>
+                        <div class="hide-for-small left logo-web-container">	
+                            <a href="homepage-v2.html"><img src="assets/img/empty-image.png" class="left logo-image"></a>
+                            <ul class="phone-menu left">
+                                <li><h2>Voice</h2></li>
+                                <li><p class="orange">303-640-3160</p></li>
+                            </ul>
+                        </div>    
+                 		<div class="show-for-small mobile-menu-container">
+                        <!-- mini menu -->
+                            <div id="mobile-menu" class="right">
+                                <ul id="menu-mini" class="button-group three-up">
+                                    <!--<li><a href="#" class="button small special-m">Pay Rent</a></li>-->
+                                    <li><a href="#" class="button small show_hide"><img src="assets/img/empty-image.png" class="m-menu-toggle"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="show-for-small logo-m-container">
+                            <img src="assets/img/empty-image.png" class="logo-m" />
+                        </div>
+                        <div class="show-for-small right sign-out-m">
+                            <a href="#">Sign Out</a>
+                        </div>
+                        <ul class="nav-bar web-menu hide-for-small">
+                            <li class="special-button"><a href="#" >Pay Rent</a></li>
+                            <li><a href="#">Maintenance Request</a></li>
+                            <li class="has-flyou">
+                                <a href="three-col-template.html">The Exchange</a>
+                                <a href="#" class="flyout-toggle"><span></span></a>
+                                <ul class="flyout">
+                                  <li><a href="#" class="forSale">For Sale</a></li>
+                                  <li><a href="#" class="rideShare">Ride Share</a></li>
+                                  <li><a href="#" class="childCare">Child Care</a></li>
+                                  <li><a href="#" class="petCare">Pet care</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Calendar</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+	<div id="page-wrapper"> 
+     
+    	<!--  bread crumbs  -->
+        <div class="row">
+            <div class="twelve columns">
+                <ul class="breadcrumbs">
+                    <li><a href="#">Notifications</a></li>
+                    <li class="current"><a href="#">Announcements</a></li>
+                </ul>
+            </div>
+        </div>
+		<!-- page content -->
+        <div class="notifications"> 
+            <div class="row">
+                <div class="twelve columns">
+                    <h1>Announcements</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="nine columns">
+                    <div class="panel radius">
+                        <div class="row"> 
+                            <div class="twelve columns">
+                                <div class="image-wrapper">
+                                	<img src="images/road-litespeed.jpg">
+                                </div>
+                                <h4>Title of Announcment goes here</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id ornare risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nunc cursus, lectus id hendrerit condimentum, erat est lacinia lorem, sed egestas nibh nulla quis lorem. Cras rutrum aliquam auctor. Praesent quam erat, gravida a tincidunt eget, mollis in est. Vestibulum porta volutpat condimentum. Sed vehicula, diam adipiscing auctor fringilla, orci odio dictum augue, in dignissim dolor quam eget.</p>
+                            </div>
+                        </div>
+                    </div>    
+                </div> 
+                <div class="three columns right-col">
+                    <div class="panel radius">
+                    	<h4>Need to talk?</h4>
+                    	<p>Create a note for your community or property manager</p>
+                    	<a hidden="#" data-reveal-id="note-community" class="button primary small radius">Create Note</a>
+                	</div>
+                </div>
+        	</div>
+    	</div>
+    </div>
+    <!-- footer -->
+    <footer>
+        <div class="row">
+        	<div class="four columns">
+             	<h4 class="text-center">Community Resources</h4>
+            	<ul>
+                	<li class="text-center">Office: 303-640-3160</li>
+                 	<li class="text-center"><a href="#">Community Map</a></li>
+                	<li class="text-center"><a href="#">Community Website</a></li> 
+               	</ul>
+            </div> 
+            <div class="four columns">
+            	<h4 class="text-center">Helpful Numbers</h4>
+                <ul>
+                	<li class="text-center">Posion Control: 303-666-8008</li> 
+                 	<li class="text-center">Animal Control: 303-666-8008</li>
+               		<li class="text-center">Emergency Weather: 303-666-8008</li>
+             	</ul>
+            </div> 
+            <div class="four columns">
+            	<h4 class="text-center">Helpful Numbers</h4>
+                <ul>
+                	<li class="text-center">Posion Control: 303-666-8008</li> 
+                 	<li class="text-center">Animal Control: 303-666-8008</li>
+               		<li class="text-center">Emergency Weather: 303-666-8008</li>
+             	</ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="twelve columns copyright signin">
+                <ul>
+                    <li>&copy; 2012 <a href="#">rentbits.com</a></li>
+                    <li><span>|</span></li>
+                    <li><a href="#" data-reveal-id="contact-form">Contact Us</a></li>
+                    <li><span>|</span></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><span>|</span></li>
+                    <li><a href="#">Terms &amp; Conditions</a></li>
+                </ul>
+                <ul class="version">
+                    <li>Version: 1.0</li>
+                    <li><span>|</span></li>
+                    <li>Build: HEAD</li>
+                </ul>
+            </div>
+        </div>
+        
+	</footer> 
+    
+    <!-- modals -->
+      
+  <!-- Included JS Files (Compressed) -->
+  <script src="foundation/javascripts/foundation.min.js"></script>
+  
+  <!-- Initialize JS Plugins -->
+  <script src="foundation/javascripts/app.js"></script>
+  <script src="foundation/javascripts/foundation.js"></script>
+  
+  <!--<script src="foundation/javascripts/jquery.foundation.orbit.js"></script>-->
+
+  <script type="text/javascript">
+		$('#gallery').orbit({
+		 timer: false,            // true or false to have the timer
+		 directionalNav: true,       // manual advancing directional navs
+		 captions: false,             // do you want captions?
+		 bullets: true,             // true or false to activate the bullet navigation
+		 //bulletThumbs: true,        // thumbnails for the bullets
+		// bulletThumbLocation: 'images/thumbs/',        // location from this file where thumbs will be
+		 afterSlideChange: function(){},     // empty function 
+		 fluid: true                        // or set a aspect ratio for content slides (ex: '4x3') 
+		});
+  </script>
+    
+  <script type="text/javascript">
+	  $(document).ready(function() {
+		$('#buttonForModal').click(function() {
+		  $('#myModal').reveal();
+		});
+	  });
+  </script>
+      
+</body>
+</html>

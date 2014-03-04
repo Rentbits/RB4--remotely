@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+
+  <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width" />
+
+  <title>Welcome to Foundation</title>
+  
+  <!-- Included CSS Files (compressed) -->
+  <!--
+  <link rel="stylesheet" href="foundation/stylesheets/foundation.min.css">
+  -->
+  
+  <!-- Included CSS Files (Uncompressed) -->
+  <link rel="stylesheet" href="foundation/stylesheets/foundation.css">
+  <link rel="stylesheet" href="assets/stylesheets/app.css">
+
+  <script src="foundation/javascripts/modernizr.foundation.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+
+  <!-- IE Fix for HTML5 Tags -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+ <!-- script for the sliding mobile menu -->  
+  <script type="text/javascript">
+	 $(document).ready(function(){
+			$(".error").hide();
+		 });
+  </script>
+  
+  <script type="text/javascript">
+ 
+	$(document).ready(function(){
+	 
+			$(".mobile-menu").hide();
+			$(".show_hide").show();
+	 
+		$('.show_hide').click(function( event ){
+			event.preventDefault();
+		$('.mobile-menu').slideToggle();
+		
+		//toggle the button label
+		$(this).toggleClass("hide-button");
+		});
+	 
+	});
+ 
+</script>
+
+</head>
+<body>
+<!-- community hat -->
+    <div id="community-hat">
+        <div class="row">
+            <div class="twelve columns">
+            	<center>
+                	<img src="images/community-logo.png" alt="Community Name" />
+            	</center>
+            </div>   
+        </div>
+    </div>
+    <!-- end comuunity hat -->
+    
+    <!--mobile menu -->
+    <div class="row">
+        <div class="twelve columns mobile-menu">
+            <ul class="nav-bar show-for-small">
+                <li><a href="#" class="forSale-m">For Sale</a></li>
+                <li><a href="#" class="rideShare-m">Ride Share</a></li>
+                <li><a href="#" class="childCare-m">Child Care</a></li>
+                <li><a href="#" class="petCare-m">Pet Care</a></li>
+                <li><a href="#" class="calendar-m">Events</a></li>
+            </ul>
+        <!--<a href="#" class="show_hide">close</a>-->
+        </div>
+    </div>
+
+        <div id="page-header">
+           	<div class="page-border">&nbsp;</div>
+           	<div class="row">
+             	<div class="twelve columns">
+                 	<div class="right tertiary-nav hide-for-small">
+                        	<div href="#" id="user-dd" class="small button dropdown radius">
+                            fistlast
+                            	<ul>
+                                	<li><a href="#">Settings</a></li>
+                                	<li class="divider"></li>
+                                	<li><a href="#" class="orange">Sign Out</a></li>
+                            	</ul>
+                        	</div>
+                        	<a href="#" class="notifications">Notifications</a>
+                   	 	</div>
+                 	<div class="hide-for-small left logo-web-container">	
+                    	<a href="homepage-v2.html"><img src="assets/img/empty-image.png" class="left logo-image" /></a>
+                       	<ul class="phone-menu left">
+                        	<li><h2>Call Menu</h2></li>
+                        	<li><p class="orange">303-640-3160</p></li>
+                     	</ul>
+                 	</div>    
+                 	<div class="show-for-small mobile-menu-container">
+                   	<!-- mini menu -->
+                   	<div id="mobile-menu" class="right">
+                     	<ul id="menu-mini" class="button-group three-up">
+                         	<li><a href="payment-landing-v2.html" class="button small special-m">Pay Rent</a></li>
+                          	<li><a href="maintenance-form-v2.html" class="button small">Maitenance</a></li>
+                           	<li><a href="#" class="button small show_hide">Menu</a></li>
+                      	</ul>
+                 	</div>
+               	</div>
+               	<div class="show-for-small logo-m-container">
+           			<img src="assets/img/empty-image.png" class="logo-m" />
+             	</div>
+            	<div class="show-for-small right sign-out-m">
+                	<a href="#">Sign Out</a>
+             	</div>
+               	<ul class="nav-bar web-menu hide-for-small">
+                	<li class="special-button"><a href="payment-landing-v2.html" >Pay Rent</a></li>
+              		<li><a href="maintenance-form-v2.html">Maintenance Request</a></li>
+           			<li class="has-flyout">
+                     	<a href="three-col-template.html">Market Place</a>
+                    	<a href="#" class="flyout-toggle"><span></span></a>
+                     	<ul class="flyout">
+                         	<li><a href="marketplace-landing-v2.html" class="forSale">For Sale</a></li>
+                           	<li><a href="marketplace-forsale-landing-v2.html" class="rideShare">Ride Share</a></li>
+                        	<li><a href="#" class="childCare">Child Care</a></li>
+                       		<li><a href="#" class="petCare">Pet care</a></li>
+                  		 </ul>
+                		</li>
+                    	<li><a href="calendar-landing-v2.html">Events</a></li>
+                	</ul>
+            	</div>
+          	</div>
+      	</div>
+	    <div id="page-wrapper">
+		      <!-- page content -->
+          <div class="settings"> 
+        	  <div class="row">
+            	<div class="twelve columns">
+        			<h1>Settings</h1>
+            	</div>
+            </div>
+            <div class="row">
+              <div class="nine columns"> 
+                <form class="custom">
+                  <div class="panel radius">
+                    <dl class="tabs">
+                      <dd class="active"><a href="#personal">Personal</a></dd>
+                      <dd><a href="#account">Account</a></dd>
+                      <dd><a href="#app-connections">App Connections</a></dd>
+                      <dd><a href="#auto-pay">Auto Pay</a></dd>
+                    </dl>
+                        	<ul class="tabs-content">
+                            <li class="active" id="personalTab">
+                              <!--<h4>Personal</h4>-->
+                              <div class="row">
+                                <!--<div class="two columns">
+                                	<img src="profile/lrg.jpg" class="profile-large" />
+                               		<p><a href="#">change photo</a></p>
+                                </div>-->
+                                <div class="twelve columns">
+                                  <div class="row">
+                                    <div class="six columns">
+                                      <label>First Name</label>
+                                      <input type="text" value="Joe">
+                                    </div>
+                                    <div class="six columns">
+                                      <label>Last Name</label>
+                                      <input type="text" value="Smith">
+                                    </div>
+                                  </div>
+                                  <label>Birth Day</label>
+                                  <div class="row">
+                                    <div class="twelve columns">
+                                      <div class="row collapse">
+                                        <div class="one mobile-one columns">
+                                          <span class="prefix"><img src="assets/img/empty-image.png" class="icon-calendar" /></span>
+                                        </div>
+                                        <div class="eleven mobile-three columns">
+                                          <input type="text"  />
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="radio-buttons-container">
+                                    <label>Gender</label>
+                                    <label for="radio1" class="radio-button-container">
+                                      <input name="radio1" type="radio" id="radio1" style="display:none;">
+                                      <span class="custom radio"></span> Male
+                                    </label>
+                                    <label for="radio2" class="radio-button-container">
+                                      <input name="radio1" type="radio" id="radio2" style="display:none;">
+                                      <span class="custom radio checked"></span> Female
+                                    </label>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                            <li id="accountTab">
+                              <!--<h4>Contact</h4>-->
+                              <div class="row">
+                                <div class="twelve columns">
+                                  <label>coffee</label>
+                                  <input type="text" placeholder="" value="720-999222">
+                                  <label>Phone 2</label>
+                                  <input type="text" placeholder="add telephone number">
+                                  <label>Phone 2</label>
+                                  <input type="text" placeholder="add telephone number">
+                                  <div class="row">
+                                    <div class="six columns">
+                                      <label>Email</label>
+                                      <input type="text" placeholder="jdoe@website.com" disabled >
+                                    </div>
+                                    <label class="hide-for-small">&nbsp;</label>
+                                    <a href="#" data-reveal-id="change-email" class="button round secondary small">Change Email</a>
+                                  </div>
+                                  <div>
+                                    <label>Notification Prefferences</label>
+                                    <label for="checkbox1" class="radio-buttons-container">
+                                      <input type="checkbox" id="checkbox1" style="display: none;"><span class="custom checkbox"></span> Voice
+                                    </label>
+                                    <label for="checkbox1" class="radio-buttons-container">
+                                      <input type="checkbox" id="checkbox1" style="display: none;"><span class="custom checkbox"></span> SMS
+                                    </label>
+                                    <label for="checkbox1" class="radio-buttons-container">
+                                      <input type="checkbox" id="checkbox1" style="display: none;"><span class="custom checkbox"></span> Email older
+                                    </label>
+                                  </div>
+                                  <!-- accont info -->
+                                  <div class="row">
+                                    <div class="six columns button-container">
+                                      <a href="#" data-reveal-id="change-pin" class="button round primary small">Change Pin</a>		
+                                    </div>
+                                    <div class="six columns button-container">
+                                      <a href="#" data-reveal-id="change-passord" class="button round primary small">Change Password</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                          </li>
+
+                          <li id="auto-payTab">
+                            <!--<h4>Contact</h4>-->
+                            <div class="row">
+                              <div class="twelve columns">
+                                <div class="panel auto-pay">
+                                  <p>Auto-pay will automatically withdraw onces a month from your account in the amont of <b>$1,200.00</b></p> 
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <!-- <form class="customs"> -->
+                                <div class="six columns">
+                                  <div class="row">
+                                    <div class="nine columns"> 
+                                      <label>Account</label>
+                                      <input disabled type="text" placeholder="" value="********1234">
+                                    </div>
+                                    <div class="three columns">
+                                      <label>&nbsp;</label>
+                                      <a href="#" data-reveal-id="delete-confirmation" class="button radius medium secondary delete">Delete</a>
+                                    </div> 
+                                  </div>
+                                  <!-- <small class="button-text">Click to remove saved account information. </small> -->
+                                </div>
+                                <div class="six columns">
+                                  <label>Day of withdraw</label>
+                                  <select class="medium">
+                                    <option>1st of the month</option>
+                                    <option>2nd of the month</option>
+                                    <option>3rdof the month</option>
+                                    <option>4th of the month</option>
+                                    <option>5th of the month</option>
+                                  </select>  
+                                </div>
+                              <!-- </form> -->
+                            </div>
+                            <div class="row">
+                              <div class="twelve columns on_off">
+                                <label>Status</label>
+                                <input type="checkbox" checked="checked" id="on_off_on">
+                              </div>  
+                            </div>  
+                          </li>
+                          <li id="app-connectionsTab">
+                              <!--<h4>Contact</h4>-->
+                              
+                          </li>
+
+                        </ul>
+                    	</div> 
+                    	<input value="SAVE CHANGES" type="button" class="button medium radius primary right">   
+                 	</form>    
+             	</div> 
+              <div class="three columns">
+                <div class="panel radius">
+                  <h6 class="orange">Community</h6>
+                  <ul class="no-bullet">
+                    <li>Princess Gardens</li>
+                    <li>1062 Deleware St.</li>
+                    <li>Denver, CO 80204</li>
+                  </ul>
+                  <h6 class="orange">Resident</h6>
+                  <ul class="no-bullet">
+                    <li>Joe Smith</li>
+                    <li>Building: #5</li>
+                    <li>Unit: #111</li>
+                  </ul>
+                </div>        
+              </div>         
+        	</div>
+   		</div> 
+	</div>
+    <!-- footer -->
+    <footer>
+        <div class="row">
+        	<div class="four columns">
+            	<center>
+                	<h4>Community Resources</h4>
+                    <ul>
+                    	<li>Office: 303-640-3160</li>
+                        <li><a href="#">Community Map</a></li>
+                        <li><a href="#">Community Website</a></li> 
+                    </ul>
+           		</center>
+            </div> 
+            <div class="four columns">
+            	<center>
+                	<h4>Helpful Numbers</h4>
+                    <ul>
+                        <li>Posion Control: 303-666-8008</li> 
+                        <li>Animal Control: 303-666-8008</li>
+                        <li>Emergency Weather: 303-666-8008</li>
+                    </ul>
+           		</center>
+            </div> 
+            <div class="four columns">
+           		<center><img src="assets/img/empty-image.png" class="rentbits-logo" /></center>
+            </div>
+        </div>
+	</footer> 
+
+    <!-- modals -->
+    <div id="delete-confirmation" class="reveal-modal">
+      <h3>Remove Account Information</h3>
+        <p><img src="assets/img/empty-image.png" class="icon-trash"> Are you sure you want to remove this account information?<br><small>This will disable Auto-pay until you save a new account or card.</small></p>
+        <div class="button-container">
+          <input type="submit" class="button small radius primary right" value="Remove" />
+          <input type="submit" class="button small radius secondary right" value="Cancel" />
+        </div>
+      <a class="close-reveal-modal">&#215;</a>
+    </div>
+
+    <div id="change-email" class="reveal-modal">
+  		<h3 class="orange">Change Email</h3>
+        <!--<div class="row">
+         
+            <div class="row collapse" style="margin-bottom: 15px;">
+              <div class="two mobile-one columns">
+                <span class="prefix">Old</span>
+              </div>
+              <div class="ten mobile-three columns">
+                <input type="text" value="jdoe@website.com" disabled />
+              </div>
+            </div>
+          </div>-->
+  		<input type="text" value="jsmith@website.com" disabled />
+        <input type="text" placeholder="new email">
+        <input type="text" placeholder="re-enter new email">
+        <hr>
+        <input type="button" value="Change" class="button primary radius small right">
+  		<a class="close-reveal-modal">&#215;</a>
+	</div>
+    
+     <div id="change-pin" class="reveal-modal">
+  		<h3 class="orange">Change Pin</h3>
+        <input type="text" placeholder="" value="jsmith" disabled >
+        <input type="text" placeholder="new pin">
+        <input type="text" placeholder="re-enter new pin">
+        <hr>
+        <input type="button" value="Change" class="button primary radius small right">
+  		<a class="close-reveal-modal">&#215;</a>
+	</div>
+    
+     <div id="change-passord" class="reveal-modal">
+  		<h3 class="orange">Change Password</h3>
+        <input value="mypassword" disabled type="password">
+        <input type="text" placeholder="new password">
+        <input type="text" placeholder="re-enter new password">
+        <hr>
+        <input type="button" value="Change" class="button primary radius small right">
+  		<a class="close-reveal-modal">&#215;</a>
+	</div>
+    
+  <!-- start scripts -->
+  
+  <!-- Included JS Files (Uncompressed) -->
+  <!--
+  
+  <script src="foundation/javascripts/modernizr.foundation.js"></script>
+  
+  <script src="foundation/javascripts/jquery.js"></script>
+  
+  <script src="foundation/javascripts/jquery.foundation.reveal.js"></script>
+  
+  <script src="foundation/javascripts/jquery.foundation.orbit.js"></script>
+  
+  <script src="foundation/javascripts/jquery.foundation.navigation.js"></script>
+  
+  <script src="foundation/javascripts/jquery.foundation.buttons.js"></script>
+  
+  
+  <script src="foundation/javascripts/jquery.foundation.forms.js"></script>
+  
+  <script src="foundation/javascripts/jquery.foundation.tooltips.js"></script>
+  
+  <script src="foundation/javascripts/jquery.foundation.accordion.js"></script>
+  
+  <script src="foundation/javascripts/jquery.placeholder.js"></script>
+  
+  <script src="foundation/javascripts/jquery.foundation.alerts.js"></script>
+  
+  -->
+  
+<!--  <script src="foundation/javascripts/jquery.foundation.tabs.js"></script>-->
+  
+  <!-- Included JS Files (Compressed) -->
+  <script src="foundation/javascripts/foundation.min.js"></script>
+  
+  <!-- Initialize JS Plugins -->
+  <script src="foundation/javascripts/app.js"></script>
+    
+    <script type="text/javascript">
+	  $(document).ready(function() {
+      
+		  $('#buttonForModal').click(function() {
+		    $('#myModal').reveal();
+		  });
+	 </script>
+
+   <script>
+
+
+   </script>
+
+  <!-- check boxes -->
+  <script src="assets/js/iphone-style-checkboxes.js" type="text/javascript"></script>
+  
+   <!-- check boxes -->
+  <script>
+    $(window).load(function() {
+      $('span.custom.checkbox.checked').hide();
+      $('.on_off :checkbox').iphoneStyle();
+      $('.disabled :checkbox').iphoneStyle();
+      $('.css_sized_container :checkbox').iphoneStyle({ resizeContainer: false, resizeHandle: false });
+      $('.long_tiny :checkbox').iphoneStyle({ checkedLabel: 'Very Long Text', uncheckedLabel: 'Tiny' });
+      $('.iPhoneCheckContainer').width('91px');
+      var onchange_checkbox = ($('.onchange :checkbox')).iphoneStyle({
+        onChange: function(elem, value) { 
+          $('span#status').html(value.toString());
+        }
+      });
+      
+      setInterval(function() {
+        onchange_checkbox.prop('checked', !onchange_checkbox.is(':checked')).iphoneStyle("refresh");
+        return
+      }, 2500);
+    });
+  </script>
+      
+</body>
+</html>

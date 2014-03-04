@@ -4130,4 +4130,41 @@ ul.inline-list-edit li:last-child {
   .homepage.automation .tabs-content {
     height: 660px !important; } }
 .web-menu.nav-bar {
-  background: red; }
+  background: #e4534c;
+  border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 3px; }
+
+#community-hat {
+  display: none; }
+
+#page-wrapper,
+#page-header {
+  background: none; }
+
+.page-border {
+  display: none; }
+
+.phone-menu {
+  display: none; }
+
+.nav-bar {
+  list-style-type: none; }
+
+.nav-bar > li {
+  margin: 0;
+  padding: 0;
+  border: none;
+  height: 100%; }
+  .nav-bar > li:last-child {
+    margin: 0;
+    padding: 0; }
+  .nav-bar > li a {
+    text-shadow: none; }
+
+.nav-bar > li:hover,
+.nav-bar > li.active,
+.nav-bar > li.active:hover {
+  background: #eb7e78;
+  border-radius: 0; }

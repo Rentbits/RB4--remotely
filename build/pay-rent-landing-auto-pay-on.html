@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+
+  <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width" />
+
+  <title>Welcome to Foundation</title>
+  
+  <!-- Included CSS Files (compressed) -->
+  <!--
+  <link rel="stylesheet" href="foundation/stylesheets/foundation.min.css">
+  -->
+  
+  <!-- Included CSS Files (Uncompressed) -->
+  <link rel="stylesheet" href="assets/stylesheets/web-fonts.css">
+  <link rel="stylesheet" href="foundation/stylesheets/foundation.css">
+  <link rel="stylesheet" href="assets/stylesheets/app.css">
+
+  <script src="foundation/javascripts/modernizr.foundation.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+
+  <!-- IE Fix for HTML5 Tags -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+ <!-- script for the sliding mobile menu -->  
+  <script type="text/javascript">
+	 $(document).ready(function(){
+			$(".error").hide();
+		 });
+  </script>
+  
+  <script type="text/javascript">
+ 
+	$(document).ready(function(){
+	 
+			$(".mobile-menu").hide();
+			$(".show_hide").show();
+	 
+		$('.show_hide').click(function( event ){
+			event.preventDefault();
+		$('.mobile-menu').slideToggle();
+		
+		//toggle the button label
+		$(this).toggleClass("hide-button");
+		});
+	 
+	});
+  </script>
+  <!-- limit character count on event titles -->
+  <script type="text/javascript">
+	$(function() {
+		$('ul.calendar-mini-list li a').each(function() {
+			var $this = $(this);
+			$this.text( $this.text().slice(0,17) + "..." );        
+		});
+	});
+  </script>
+
+</head>
+<body>
+<!-- community hat -->
+    <div id="community-hat">
+        <div class="row">
+            <div class="twelve columns">
+            	<center>
+                	<img src="images/community-logo.png" alt="Community Name" />
+            	</center>
+            </div>   
+        </div>
+    </div>
+    <!-- end comuunity hat -->
+    
+    <!--mobile menu -->
+    <div class="row">
+        <div class="twelve columns mobile-menu">
+            <ul class="nav-bar show-for-small">
+                <li><a href="#">For Sale</a></li>
+                <li><a href="#">Ride Share</a></li>
+                <li><a href="#">Child Care</a></li>
+                <li><a href="#">Pet Care</a></li>
+                <li><a href="#">Calendar</a></li>
+            </ul>
+        <!--<a href="#" class="show_hide">close</a>-->
+        </div>
+    </div>
+    <div id="page-wrapper">
+        <div id="page-header">
+            <div class="page-border">&nbsp;</div>
+            <div class="row">
+                <div class="twelve columns">
+                    <div class="right tertiary-nav hide-for-small">
+                        <div href="#" id="user-dd" class="small button dropdown radius">
+                            fistlast
+                            <ul>
+                                <li><a href="#">Settings</a></li>
+                                <li class="divider"></li>
+                                <li><a href="#" class="orange">Sign Out</a></li>
+                            </ul>
+                        </div>
+                        <a href="#" class="notifications">Notifications</a>
+                    </div>
+                    <div class="hide-for-small left logo-web-container">	
+                        <a href="homepage-v2.html"><img src="assets/img/empty-image.png" class="left logo-image" /></a>
+                        <ul class="phone-menu left">
+                            <li><h2>Call Menu</h2></li>
+                            <li><p class="orange">303-640-3160</p></li>
+                        </ul>
+                    </div>    
+                    <div class="show-for-small mobile-menu-container">
+                        <!-- mini menu -->
+                        <div id="mobile-menu" class="right">
+                            <ul id="menu-mini" class="button-group three-up">
+                                <li><a href="#" class="button small special-m">Pay Rent</a></li>
+                                <li><a href="#" class="button small show_hide">Menu</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="show-for-small logo-m-container">
+                        <img src="assets/img/empty-image.png" class="logo-m" />
+                    </div>
+                    <div class="show-for-small right sign-out-m">
+                        <a href="#">Sign Out</a>
+                    </div>
+                    <ul class="nav-bar web-menu hide-for-small">
+                        <li class="special-button"><a href="#" >Pay Rent</a></li>
+                        <li><a href="#">Maintenance Request</a></li>
+                        <li class="has-flyout">
+                            <a href="three-col-template.html">Market Place</a>
+                            <a href="#" class="flyout-toggle"><span></span></a>
+                            <ul class="flyout">
+                              <li><a href="#" class="forSale">For Sale</a></li>
+                              <li class="rideShare"><a href="#" class="rideShare">Ride Share</a></li>
+                              <li class="childCare"><a href="#" class="childCare">Child Care</a></li>
+                              <li class="petCare"><a href="#" class="petCare">Pet care</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Events</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    
+    <!--  notifications  -->
+    	<div class="row">
+        	<div class="twelve columns">
+            	<h1>Pay Rent</h1>
+            	<!-- <div class="alert-box">
+      				<p class="center-align">Auto-Pay is on. You can not make a payment manually with Auto-Pay on. Check your settings, if you would like to make a change.</p>
+      				<a href="" class="close">&times;</a>
+    			</div> -->
+            </div>
+        </div>
+
+
+	<!-- page content -->
+        <div class="homepage payrent"> 
+            <div class="row">
+                <!-- left column -->
+                <div class="nine columns left-col">
+                    <div class="panel radius" >
+                        <div class="row">
+                            <div class="three columns tab-vert-col">
+                                <dl class="tabs vertical hide-for-small">
+                                    <dd><a href="#bank" class="bankTabs-vert">Bank Account</a></dd>
+                                    <dd><a href="#credit" class="creditTabs-vert">Credit Card</a></dd>
+                                </dl>
+                                <dl class="tabs show-for-small">
+                                    <dd class="active"><a href="#quick" class="quickTab-hor">Qiuck Pay</a></dd>
+                                    <dd><a href="#bank" class="bankTabs-hor">Bank Account</a></dd>
+                                    <dd><a href="#credit" class="creditTabs-hor">Credit Card</a></dd>
+                                </dl>
+                            </div>
+                            <div class="nine columns tab-vert-content-col">
+                                <ul class="tabs-content">
+                                    <li id="bankTab">
+                                     	<div class="row">
+                                        	<div class="twelve columns">
+                                    			<h4>Bank Account</h4>
+                                    		</div>
+                                        </div>
+                                        <div class="row">
+                                        	<div class="eight columns">
+                                          		<p>Use the Back Account Payment form to pay your rent with any bank account. This form allows you to select from savings or checking accounts.</p>
+                                           	</div>
+                                         	<div class="four columns">
+                                                <!-- udpated code snippet for auto-pay -->
+                                            	<a href="#" class="button medium radius secondary pay-auto-on" data-reveal-id="auto-pay-on-message">Pay November</a>
+                                                <!-- end udpated code snippet for auto-pay --> 
+                                      		</div>
+                                		</div>
+                                        <!-- new code snippet for auto-pay -->   
+                                        <div class="panel radius">
+                                            <h6><small class="gray">Saved checking account ending with: &#8230;<span class="black">1234</span></small></h6>
+                                        </div>
+                                        <h6><a href="#" class="has-tip tip-top" title="Auto-pay automatially withdraws from your account"><img src="assets/img/empty-image.png" class="info-green"></a> 
+                                        <span class="button-text">Auto-Pay is On</span></h6>
+                                        <p><small>To turn Auto-Pay off go to your <a href="http://kelly.test.rentbits.com/Sites/resident-buddy-f3/settings-auto-pay-manage.html#auto-pay" class="lt-gray">settings page</a></small></p>
+                                        <!-- end code snippet for auto-pay -->
+                                    </li>
+                                    <li id="creditTab">
+                                        <div class="row">
+                                        	<div class="twelve columns">
+                                    			<h4>Credit Card</h4>
+                                    		</div>
+                                        </div>
+                                        <div class="row">
+                                        	<div class="eight columns">
+                                          		<p>Use the Credit Card Payment form to pay your Visa, Mastercard or American Express card. </p>
+                                           	</div>
+                                         	<div class="four columns">
+                                                <!-- udpated code snippet for auto-pay --> 
+                                            	<a href="#" class="button medium radius secondary pay-auto-on" data-reveal-id="auto-pay-on-message">Pay November</a>
+                                                <!-- end udpated code snippet for auto-pay --> 
+                                      		</div>
+                                		</div>
+                                        
+                                        <!-- new code snippet for auto-pay -->    
+                                        <div class="panel radius">
+                                            <h6><small class="gray">Saved checking account ending with: &#8230;<span class="black">1234</span></small></h6>
+                                        </div>
+                                        <h6><a href="#" class="has-tip tip-top" title="Auto-pay automatially withdraws from your account"><img src="assets/img/empty-image.png" class="info-green"></a> 
+                                        <span class="button-text">Auto-Pay is On</span></h6>
+                                        <p><small>To turn Auto-Pay off go to your <a href="http://kelly.test.rentbits.com/Sites/resident-buddy-f3/settings-auto-pay-manage.html#auto-pay" class="lt-gray">settings page</a></small></p>
+                                        <!-- end code snippet for auto-pay -->   
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- right column-->
+                <div class="three columns right-col">
+                    	<div class="panel radius">
+                        	<h4>Payment History</h4>
+                            <dl>
+                            	<dt><a href="#">October 1012</a></dt>
+                                <dd>Paid: 10/01/2012</dd>
+                                <dd>Transaction ID: 13</dd>
+                                <dd>Rent Paid: $1,20000 </dd>
+                                <dd>Utilities &amp; Fees Paid: $200.00 </dd>
+                            </dl>
+                            <ul class="mini-list">
+                            	<li><a href="#">September 2012</a></li>
+                                <li><a href="#">August 2012</a></li>
+                                <li><a href="#">July 2012</a></li>
+                                <li><a href="#">June 2012</a></li>
+                                <li><a href="#">May 2012</a></li>
+                            </ul>
+                            <a href="#" class="button small round secondary">View All</a>
+                        </div>   
+                	</div>  
+            </div> 
+        </div>
+    </div>
+    <!-- footer -->
+    <footer>
+        <div class="row">
+        	<div class="four columns">
+            	<center>
+                	<h4>Community Resources</h4>
+                    <ul>
+                    	<li>Office: 303-640-3160</li>
+                        <li><a href="#">Community Map</a></li>
+                        <li><a href="#">Community Website</a></li> 
+                    </ul>
+           		</center>
+            </div> 
+            <div class="four columns">
+            	<center>
+                	<h4>Helpful Numbers</h4>
+                    <ul>
+                        <li>Posion Control: 303-666-8008</li> 
+                        <li>Animal Control: 303-666-8008</li>
+                        <li>Emergency Weather: 303-666-8008</li>
+                    </ul>
+           		</center>
+            </div> 
+            <div class="four columns">
+           		<center><img src="assets/img/empty-image.png" class="rentbits-logo" /></center>
+            </div>
+        </div>
+	</footer> 
+    
+    <!-- modals -->
+    <div id="delete-confirmation" class="reveal-modal">
+  		<h3>Remove Account Information</h3>
+        <p><img src="assets/img/empty-image.png" class="icon-trash"> Are you sure you want to remove this account information?<br><small>This will disable Quick Pay until you save a new account or card.</small></p>
+        <div class="button-container">
+       		<input type="submit" class="button small radius primary right" value="Remove" />
+      		<input type="submit" class="button small radius secondary right" value="Cancel" />
+      	</div>
+        
+  		<a class="close-reveal-modal">&#215;</a>
+	</div>
+    
+    <!-- new code snippet for auto-pay -->
+    <div id="auto-pay-on-message" class="reveal-modal">
+        <h3><img src="assets/img/empty-image.png" class="icon-auto-pay">Auto-Pay Is On</h3>
+        <p>You have Auto-Pay turned on. Your next payment will be automatically withdrawn from account ending with ...<b>1234</b> on the {day} of {month}.</p>
+        <p><small>To pay on line manually you must first turn Auto-Pay off.</small></p>
+        <div class="button-container">
+            <input type="submit" class="button small radius primary right" value="Go To Settings" />
+            <input type="submit" class="button small radius secondary right" value="Close" />
+        </div>
+        
+        <a class="close-reveal-modal">&#215;</a>
+    </div>
+    <!-- end code snippet for auto-pay -->
+   
+    
+  <!-- start scripts -->
+  
+  <!-- Included JS Files (Uncompressed) -->
+  <!--
+  
+  <script src="foundation/javascripts/modernizr.foundation.js"></script>
+  
+  <script src="foundation/javascripts/jquery.js"></script>
+  
+  <script src="foundation/javascripts/jquery.foundation.reveal.js"></script>
+  
+  <script src="foundation/javascripts/jquery.foundation.orbit.js"></script>
+  
+  <script src="foundation/javascripts/jquery.foundation.navigation.js"></script>
+  
+  <script src="foundation/javascripts/jquery.foundation.buttons.js"></script>
+  
+  <script src="foundation/javascripts/jquery.foundation.tabs.js"></script>
+  
+  <script src="foundation/javascripts/jquery.foundation.forms.js"></script>
+  
+  <script src="foundation/javascripts/jquery.foundation.tooltips.js"></script>
+  
+  <script src="foundation/javascripts/jquery.foundation.accordion.js"></script>
+  
+  <script src="foundation/javascripts/jquery.placeholder.js"></script>
+  
+  <script src="foundation/javascripts/jquery.foundation.alerts.js"></script>
+  
+  -->
+
+  
+  <!-- Included JS Files (Compressed) -->
+  <script src="foundation/javascripts/foundation.min.js"></script>
+  
+  <!-- Initialize JS Plugins -->
+  <script src="foundation/javascripts/app.js"></script>
+  
+  <script src="foundation/javascripts/jquery.foundation.tabs.js"></script>
+  
+  <!-- Initialize Modal -->
+    <script type="text/javascript">
+	  $(document).ready(function() {
+		$('#buttonForModal').click(function() {
+		  $('#myModal').reveal();
+		});
+		
+		$(document).foundationTabs();
+		
+	  });
+	</script>
+  
+  <script src="foundation/javascripts/jquery.foundation.orbit.js"></script>
+  
+
+ 
+</body>
+</html>

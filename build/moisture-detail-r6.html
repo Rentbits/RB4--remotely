@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+
+  <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width" />
+
+  <title>Motion Detail</title>
+
+  <!-- Included CSS Files (Uncompressed) -->
+  <link rel="stylesheet" href="assets/stylesheets/web-fonts.css">
+  <link rel="stylesheet" href="foundation/stylesheets/foundation.css">
+  <link rel="stylesheet" href="assets/stylesheets/app.css">
+  <link rel="stylesheet" href="assets/stylesheets/foundation-4-switch.css">
+  <script src="foundation/javascripts/jquery.js"></script>
+  <script src="foundation/javascripts/modernizr.foundation.js"></script>
+
+
+  <!-- IE Fix for HTML5 Tags -->
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+
+</head>
+<body class="">
+  <!-- community hat -->
+  <div id="community-hat">
+    <div class="row">
+      <div class="twelve columns">
+        <center>
+          <img src="images/community-logo.png" alt="Community Name">
+        </center>
+      </div>
+    </div>
+  </div>
+  <!-- end comuunity hat -->
+
+  <!--mobile menu -->
+  <div class="row">
+    <div class="twelve columns mobile-menu hide">
+      <ul class="nav-bar show-for-small">
+        <li class="active"><a href="#" class="automation">Home Automation</a></li>
+        <li><a href="#" class="maintenance-m">Maintenance Request</a></li>
+        <li><a href="#" class="market-place-m">The Exchange</a></li>
+        <li><a href="#" class="events-m">Events</a></li>
+        <li><a href="#" class="settings-m">Settings</a></li>
+        <li><a href="#" class="notifications-m">Notifications</a></li>
+      </ul>
+    </div>
+  </div>
+  <div id="page-wrapper">
+    <div id="page-header">
+      <div class="page-border">&nbsp;</div>
+        <div class="row">
+          <div class="twelve columns">
+            <div class="right tertiary-nav hide-for-small">
+              <div href="#" id="user-dd" class="small button dropdown radius">
+                fistlast
+                <ul>
+                  <li><a href="#">Settings</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#" class="orange">Sign Out</a></li>
+                </ul>
+              </div>
+              <a href="#" class="notifications">Notifications</a>
+            </div>
+            <div class="hide-for-small left logo-web-container">
+              <a href="homepage-v2.html"><img src="assets/img/empty-image.png" class="left logo-image"></a>
+              <ul class="phone-menu left">
+                <li><h2>Call Menu</h2></li>
+                <li><p class="orange">303-640-3160</p></li>
+              </ul>
+            </div>
+            <!-- mini menu -->
+            <div class="show-for-small mobile-menu-container">
+              <div id="mobile-menu" class="right">
+                <ul id="menu-mini" class="button-group three-up">
+                  <li><a href="#" class="button small special-m">Pay Rent</a></li>
+                  <li><a href="#" class="button small show_hide"><img src="assets/img/empty-image.png" class="m-menu-toggle"></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="show-for-small logo-m-container">
+              <img src="assets/img/empty-image.png" class="logo-m" />
+            </div>
+            <div class="show-for-small right sign-out-m">
+              <a href="#">Sign Out</a>
+            </div>
+            <ul class="nav-bar web-menu hide-for-small">
+              <li class="special-button"><a href="#" >Pay Rent</a></li>
+              <li class="active">
+                <a href="#">Home Automation</a>
+              </li>
+              <li><a href="#">Maintenance Request</a></li>
+              <li class="has-flyout">
+                <a href="three-col-template.html">The Exchange</a>
+                <a href="#" class="flyout-toggle"><span></span></a>
+                <ul class="flyout">
+                  <li><a href="#" class="forSale">For Sale</a></li>
+                  <li class="rideShare"><a href="#" class="rideShare">Ride Share</a></li>
+                  <li class="childCare"><a href="#" class="childCare">Child Care</a></li>
+                  <li class="petCare"><a href="#" class="petCare">Pet care</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Events</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!--  bread crumbs  -->
+      <div class="row hide-for-small">
+        <div class="twelve columns">
+          <ul class="breadcrumbs">
+            <li ><a href="http://rb4.test.rentbits.com/rb4/">Home</a></li>
+            <li ><a href="home-automation-landing-r1.html">Home Automation</a></li>
+            <li class="current"><a href="#">Detail</a></li>
+          </ul>
+        </div>
+      </div>
+	   <!-- page content -->
+      <div class="automation detail">
+        <div class="row">
+          <div class="twelve columns">
+            <div class="panel radius">
+              <div class="row">
+                <div class="nine columns">
+                  <div class="panel radius white-box">
+                    <div id="device">
+                      <div class="row">
+                        <div id="door-lock-1" class="twelve columns">
+                          <div class="default-state">
+                            <h4 class="motion edit"><span></span>Moisture Sensor</h4>
+                          </div>
+                          <div id="edit-state" class="row">
+                            <div class="twelve columns clear-fix">
+                              <input type="text" class="left" id="door-lock-1-name">
+                              <input type="button" value="Done" class="edit-done right">
+                            </div>
+                          </div>
+                          <div class="sensor-status">
+                            <h6>Dry</h6>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="device-events">
+                      <h6>Device Events</h6>
+                      <div id="device-event-empty-state" class="row">
+                        <div class="four centered columns">
+                          <h4 class="device-event text-center"><span></span>No Events Set</h4>
+                          <p class="text-center"><a href="#" data-reveal-id="create-device-event" class="button round secondary small">Add Event</a></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="three columns">
+                  <h6 class="messages">Messages</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <style>
+.faq { color: #999; padding-top: 10px; padding-left: 10px; }
+  </style>
+
+  <!-- modals -->
+  <div id="create-device-event" class="reveal-modal large">
+
+    <form class="custom">
+      <h4 class="device-event"><span></span>Create An Event</h4>
+      <p class="sans lt-gray">Events are actions that change the setting of paired devices or send alerts when a sensor is triggered. The motion sesor is triggered by motion. Set up custom events for this device.</p>
+      <div class="radio-button-wrapper">
+        <ul id="event-switch">
+          <li>
+            <label for="radio1" class="" id="pair">
+              <input name="radio1" type="radio" id="radio1" checked style="display:none;"><span class="custom radio checked"></span> Pair a Device
+            </label>
+          </li>
+          <li>
+            <label for="radio2" class="" id="alert">
+              <input name="radio2" type="radio" id="radio2" style="display:none;"><span class="custom radio"></span> Add an Alert
+            </label>
+          </li>
+        </ul>
+      </div>
+      <!-- add alert here -->
+      <!-- <div class="alert-box alert">
+        Oops something has gone wrong. Please fix and click Save again.
+        <a href="" class="close">&times;</a>
+      </div> -->
+
+      <div class="row" style="padding-bottom:20px;">
+        <div class="eight columns">
+          <label>Trigger Pairing When Device Is</label>
+          <div class="custom dropdown">
+            <a href="#" class="current">
+              Select Device State
+            </a>
+            <a href="#" class="selector"></a>
+            <ul>
+              <li>Wet</li>
+              <li>Dry</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div id="pair-ui" class="row">
+        <div class="eight columns">
+          <label>Pair With</label>
+          <div class="custom dropdown">
+            <a href="#" class="current">
+              Select a Device
+            </a>
+            <a href="#" class="selector"></a>
+            <ul>
+              <li data-device='thermostat'>Thermostat</li>
+              <li data-device='lock'>Door Lock</li>
+              <li data-device='outlet'>Outlet 1</li>
+              <li data-device='outlet'>Outlet 2</li>
+              <li data-device='outlet'>Outlet 3</li>
+            </ul>
+          </div>
+        </div>
+        <div class="four columns">
+          <label class="for-switch">Chnage Setting To</label>
+          <!--  -->
+          <div id="device-controls">
+            <div class="device-control-wrapper">
+              <div data-device='outlet' class="switch small round">
+                <input id="outlet" name="switch-outlet" type="radio">
+                <label for="outlet" onclick="">Off</label>
+                <input id="outlet1" name="switch-outlet" type="radio" checked="">
+                <label for="outlet1" onclick="">On</label>
+                <span></span>
+              </div>
+            </div>
+            <div class="device-control-wrapper">
+              <div data-device='lock' class="switch small round">
+                <input id="lock" name="switch-lock" type="radio">
+                <label for="lock" onclick="">Locked</label>
+                <input id="lock1" name="switch-lock" type="radio" checked="">
+                <label for="lock1" onclick="">Unlocked</label>
+                <span></span>
+              </div>
+            </div>
+            <div class="device-control-wrapper">
+              <div data-device='thermostat' class="switch small round">
+                <p>it's hot!</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div id="alert-ui" class="row hide" ><!-- style="margin-bottom: 40px;" -->
+        <div class="twelve columns radio-buttons-container">
+          <label>Notification Preferences</label>
+          <label for="checkbox1">
+            <input type="checkbox" id="checkbox1" style="display: none;"><span class="custom checkbox"></span> Voice
+          </label>
+          <label for="checkbox2">
+            <input type="checkbox" id="checkbox2" style="display: none;"><span class="custom checkbox"></span> Email
+          </label>
+          <label for="checkbox3">
+            <input type="checkbox" id="checkbox3" checked style="display: none;"><span class="custom checkbox"></span> SMS
+          </label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="twelve columns">
+          <label><span class="has-tip" title="By default Events are shared with your entire household.">Name Your Event</span></label>
+          <input type="text" placeholder="e.g. Auto Living Room Lamp" class="error" />
+          <!-- <small class="error">This name is in use.</small> -->
+          <div class="button-container">
+            <label for="checkbox4" class="left"><input type="checkbox" checked id="checkbox4" style="display: none;"><span class="custom checkbox"></span><span class="has-tip tip-top" data-width="210" title="By default Events are shared with your entire household."> Make Event Private</span></label>
+            <input id="" class="button small radius primary right" value="Saves">
+            <input id="" class="button small radius secondary right" value="Cancel">
+          </div>
+        </div>
+      </div>
+    </form>
+    <a class="close-reveal-modal">&#215;</a>
+  </div>
+
+  <!-- Included JS Files (Compressed) -->
+  <script src="foundation/javascripts/foundation.min.js"></script>
+  <script src="foundation/javascripts/jquery.foundation.tooltips.js"></script>
+  <script>
+    //mobile menu
+    $(".mobile-menu").hide();
+    $(".show_hide").show();
+  </script>
+
+  <script>
+    $(function() {
+      //mobile menu function
+      $('.show_hide').click(function( event ){
+        event.preventDefault();
+        $('.mobile-menu').slideToggle();
+        //toggle the button label
+        $(this).toggleClass("hide-button");
+      });
+      //edit device name function
+      $('.default-state').click(function (event) {
+        $(this).toggle('fast');
+        $(this).parents('.default-state').siblings('#edit-state').toggle('fast').delay(500);
+        $(this).parents('.default-state').siblings('#edit-state').find('input.name').focus();
+      });
+      $('input.edit-done').click(function () {
+        $(this).parents('#edit-state').siblings('.default-state').toggle('fast');
+        $(this).parents('#edit-state').toggle('fast').delay(500);
+      });
+
+      // toggle form elements
+      $('#pair').click(function(event) {
+        // jQuery.fx.off = true;
+        /* Act on the event */
+        $('#alert-ui').hide();
+        $('#pair-ui').show();
+
+      });
+      $('#alert').click(function(event) {
+        /* Act on the event */
+        $('#pair-ui').hide();
+        $('#alert-ui').show();
+      });
+      // toggle flipswitch
+      // $('.dropdown').find('li').click(function (event) {
+      //   $('#switch-wrapper').show();
+      // });
+
+      // begin g code
+      var deviceControl = function (argument) {
+        // body...
+        var
+          $pairUi         = $('#pair-ui'),
+          deviceControls  = $pairUi.find('.device-control-wrapper').children(), 
+          deviceSelectors = $pairUi.find('.dropdown ul');
+
+        deviceControls.hide();
+
+        deviceSelectors.on('click', 'li', function(event) {
+          event.preventDefault();
+          /* Act on the event */
+          var
+            $this      = $(this),
+            deviceType = $this.data('device');
+
+          if ( deviceType ) {
+            deviceControls.hide();
+
+            console.log(deviceType);
+            deviceControls.each(function(index, el) {
+              var $this = $(this);
+              if ( $this.data('device') === deviceType ) { $this.show(); };
+            });
+
+          };
+
+        });
+      };
+      deviceControl();
+
+      // end g code
+
+    });
+  </script>
+
+</body>
+</html>

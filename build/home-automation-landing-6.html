@@ -143,37 +143,9 @@
                   <li class="active" id="devicesTab" >
                     <div class="row slider-wrapper" >
                       <!-- large view only -->
-                      <div class="three columns hide-for-small rooms-list-lg">
-                        <h6>Rooms</h6>
-                        <ul class="side-nav">
-                          <li class="active"><a href="#">All Devices</a></li>
-                          <li class="divider"></li>
-                          <li><a href="#">Living Room</a></li>
-                          <li class="divider"></li>
-                          <li><a href="#">Kitchen</a></li>
-                          <li class="divider"></li>
-                        </ul>
-                      </div>
-                      <div class="nine columns device-list-wrapper">
-                        <!-- button to show sm view -->
-                        <a href="#" id="slider-button" class="show-for-small">slide</a>
-                        <!-- small vie only -->
-                        <div id="room-list-sm" class="show-for-small">
-                          <ul class="edit-menu">
-                            <li><a href="#" class="add-sm-list"></a></li>
-                            <li><a href="#" class="edit-sm-list"></a></li>
-                          </ul>
-                          <h6>Rooms</h6>
-                          <ul class="side-nav" style="clear: both;">
-                            <li class="divider"></li>
-                            <li class="active"><a href="#">All Devices</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#">Kitchen</a></li>
-                            <li class="divider"></li>
-                            <li><a href="#" class="room1">Living Room</a></li>
-                            <li class="divider"></li>
-                          </ul>
-                        </div>
+
+                      <div class="twelve columns device-list-wrapper">
+
                         <div id="device-list">
                           <h6 class="device-list-title">All Devices</h6>
                           <ul class="device-list-main">
@@ -253,6 +225,29 @@
                                 </div>
                               </div> 
                             </li>
+                            
+                            <li id="fob-1">
+                              <div class="row default-state">
+                                <div class="five mobile-two columns">
+                                  <h4 class="fob"><a href="fob-detail-r1.html">Proximity Sensor</a></h4>
+                                </div>
+                                <div class="three mobile-two columns">
+                                  <p>Out of Range</p>
+                                </div>
+                                <div class="three columns hide-for-small">
+                                  <a href="fob-detail-r1.html" class="button round small secondary right">Details</a>
+                                </div>
+                                <div class="one columns hide-for-small">
+                                  <img scr="assets/img/empty-image.png" class="device-edit">
+                                </div>
+                              </div>
+                              <div id="edit-state" class="row">
+                                <div class="twelve columns clear-fix">
+                                  <input type="text" class="left" id="moisture-1-name">
+                                  <input type="button" value="Done" class="edit-done right">
+                                </div>
+                              </div> 
+                            </li>
                             <li id="moisture-1">
                               <div class="row default-state">
                                 <div class="five mobile-two columns">
@@ -280,10 +275,10 @@
                                 <div class="five mobile-two columns">
                                   <h4 class="motion">Motion Sensor</h4>
                                 </div>
-                                <div class="three columns hide-for-small">
-        
-                                </div>
                                 <div class="three mobile-two columns">
+                                  <p>Inactive</p>
+                                </div>
+                                <div class="three columns hide-for-small">
                                   <a href="motion-detail-r1.html" class="button round small primary right">Setup</a>
                                 </div>
                                 <div class="one columns hide-for-small">
@@ -293,6 +288,28 @@
                               <div id="edit-state" class="row">
                                 <div class="twelve columns clear-fix">
                                   <input type="text" class="left" id="motion-1-name">
+                                  <input type="button" value="Done" class="edit-done right">
+                                </div>
+                              </div> 
+                            </li>
+                            <li id="multi-1">
+                              <div class="row default-state">
+                                <div class="five mobile-two columns">
+                                  <h4 class="multi">Multi Sensor</h4>
+                                </div>
+                                <div class="three mobile-two columns">
+                                  <p>Closed</p>
+                                </div>
+                                <div class="three columns  hide-for-small">
+                                  <a href="motion-detail-r1.html" class="button round small secondary right">Detials</a>
+                                </div>
+                                <div class="one columns hide-for-small">
+                                  <img scr="assets/img/empty-image.png" class="device-edit">
+                                </div>
+                              </div>
+                              <div id="edit-state" class="row">
+                                <div class="twelve columns clear-fix">
+                                  <input type="text" class="left" id="multi-1-name">
                                   <input type="button" value="Done" class="edit-done right">
                                 </div>
                               </div> 
@@ -386,45 +403,7 @@
         $(this).toggleClass("hide-button");
         });
     });
-    // default slider function
-    $('#slider-button').click(function() { 
-      event.preventDefault();
-      if($(this).css("left") == "255px")
-        {
-          $('#room-list-sm').animate({"left": '-=280'}, 'fast');
-          $('#slider-button').animate({"left": '-=255'}, 'fast'); 
-          $('#device-list').animate({"left": '-=380'}, 'fast');
-        }
-      else
-        {
-          $('#room-list-sm').animate({"left": '+=280'}, 'fast');
-          $('#slider-button').animate({"left": '+=255'}, 'fast');
-          $('#device-list').animate({"left": '+=380'}, 'fast');
-          
-        }
-    }); 
-    // all devices slider
-    $('.all-devices-link').click(function() { 
-      event.preventDefault();
-      if($('#slider-button').css("left") === "255px")
-        {
-          $('#room-list-sm').animate({"left": '-=280'}, 'fast');
-          $('#slider-button').animate({"left": '-=255'}, 'fast'); 
-          $('#device-list').animate({"left": '-=380'}, 'fast');
-          $('h6.device-list-title').text('All Devices');
-        }
-    });
-    // room slider
-    $('.room1').click(function() { 
-      event.preventDefault();
-      if($('#slider-button').css("left") === "255px")
-        {
-          $('#room-list-sm').animate({"left": '-=280'}, 'fast');
-          $('#slider-button').animate({"left": '-=255'}, 'fast'); 
-          $('#device-list').animate({"left": '-=380'}, 'fast');
-          $('h6.device-list-title').text('Room 1');
-        }
-    }); 
+
 
     //edit device name function
     $('img.device-edit').click(function () {
