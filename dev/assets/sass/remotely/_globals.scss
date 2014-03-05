@@ -1,1 +1,25 @@
-$color-remotely-primary: #e4534c;
+$color-remotely-primary  : #e4534c;
+$color-remotely-accent   : #56C8E1;
+$color-remotely-success  : #8FCA6E;
+
+
+// typography
+
+h1, %h1 {
+  font-family: $helvetica;
+}
+h2, %h2 {
+  font-family: $helvetica;
+}
+h3, %h3 {
+  font-family: $helvetica;
+}
+h4, %h4 {
+  font-family: $helvetica;
+}
+h5, %h5 {
+  font-family: $helvetica;
+}
+h6, %h6 {
+  font-family: $helvetica;
+}
