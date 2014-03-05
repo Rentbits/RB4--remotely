@@ -4144,93 +4144,56 @@ h5 {
 h6 {
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif; }
 
+a {
+  color: #e6645d; }
+  a:hover {
+    color: #e9756f; }
+
+.radius {
+  border-radius: 3px; }
+
+.button {
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+.button.primary {
+  background: #56c8e1;
+  border-color: #4db4ca; }
+  .button.primary:hover {
+    background: #51bed5; }
+
+.button.secondary {
+  background: whitesmoke; }
+
+#page-header {
+  background: none; }
+
+#page-wrapper {
+  background: none;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+#community-hat {
+  display: none; }
+
 .web-menu.nav-bar {
+  list-style-type: none;
   background: #e4534c;
   border: none;
   -webkit-box-shadow: none;
   box-shadow: none;
   border-radius: 3px; }
 
-.nav-bar > li.special-button a, a.special-button, input.special-button[type="button"], input.special-button[type="submit"] {
+.nav-bar > li.special-button a,
+a.special-button,
+input.special-button[type="button"],
+input.special-button[type="submit"] {
   background: #56c8e1;
   -webkit-box-shadow: none;
   box-shadow: none;
   border: 0;
   display: block;
   margin: 11% 12px auto 15px; }
-
-#community-hat {
-  display: none; }
-
-#page-wrapper,
-#page-header {
-  background: none; }
-
-.radius {
-  border-radius: 3px; }
-
-.tabs-content {
-  min-height: 400px;
-  height: auto; }
-
-.automation dl.tabs dd.active {
-  background: none;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  border: none;
-  padding: 0;
-  margin: 0;
-  border-radius: 0; }
-
-dl.tabs.vertical dd.active a {
-  border-radius: 0; }
-
-.automation dl.tabs.vertical dd.active a.devicesTab-vert,
-.automation dl.tabs.vertical dd.active a.messagesTabs-vert {
-  background: HSLA(202, 14%, 85%, 1); }
-
-.automation .panel {
-  background: none;
-  border: 1px solid HSLA(202, 14%, 85%, 1);
-  padding-bottom: 0; }
-
-.automation .tabs-content {
-  padding: 0;
-  -webkit-box-shadow: none;
-  box-shadow: none; }
-
-.automation .device-list-wrapper {
-  padding: 0; }
-.automation .device-list-main {
-  margin: 0;
-  border-left: 1px solid HSLA(202, 14%, 85%, 1); }
-  .automation .device-list-main li:last-of-type {
-    border-bottom: 0; }
-
-#device-list ul.device-list-main {
-  margin: 0;
-  border-left: 1px solid HSLA(202, 14%, 85%, 1); }
-  #device-list ul.device-list-main li {
-    padding-left: 20px; }
-  #device-list ul.device-list-main li:last-of-type {
-    border-bottom: 0; }
-
-#device-list ul.temp-control li.temp-up:before {
-  margin-left: -60px; }
-
-.device-list-title {
-  margin: 0;
-  border-radius: 0;
-  background: HSLA(198, 13%, 85%, 1); }
-
-.page-border {
-  display: none; }
-
-.phone-menu {
-  display: none; }
-
-.nav-bar {
-  list-style-type: none; }
 
 .nav-bar > li {
   margin: 0;
@@ -4264,3 +4227,69 @@ ul.flyout li a,
   ul.flyout li a:hover,
   .nav-bar li ul li a:hover {
     background: #e4534c; }
+
+.tabs-content {
+  min-height: 400px;
+  height: auto; }
+
+.automation dl.tabs dd.active {
+  background: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  border-radius: 0; }
+
+dl.tabs.vertical dd.active a {
+  border-radius: 0; }
+
+.automation dl.tabs.vertical dd.active a.devicesTab-vert,
+.automation dl.tabs.vertical dd.active a.messagesTabs-vert {
+  background: HSLA(202, 14%, 85%, 1); }
+
+.automation .panel {
+  background: none;
+  border: 1px solid HSLA(202, 14%, 85%, 1);
+  padding-bottom: 0; }
+
+.panel {
+  background: #f4f6f6; }
+
+.automation .tabs-content {
+  padding: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+.automation .device-list-wrapper {
+  padding: 0; }
+.automation .device-list-main {
+  margin: 0;
+  border-left: 1px solid HSLA(202, 14%, 85%, 1); }
+  .automation .device-list-main li:last-of-type {
+    border-bottom: 0; }
+
+#device-list ul.device-list-main {
+  margin: 0;
+  border-left: 1px solid HSLA(202, 14%, 85%, 1); }
+  #device-list ul.device-list-main li {
+    padding-left: 20px; }
+  #device-list ul.device-list-main li:last-of-type {
+    border-bottom: 0; }
+
+#device-list ul.temp-control li.temp-up:before {
+  margin-left: -60px; }
+
+#device-list h4 {
+  padding-left: 44px; }
+
+.device-list-title {
+  margin: 0;
+  border-radius: 0;
+  background: HSLA(198, 13%, 85%, 1); }
+
+.page-border {
+  display: none; }
+
+.phone-menu {
+  display: none; }

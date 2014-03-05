@@ -23,3 +23,12 @@ h5, %h5 {
 h6, %h6 {
   font-family: $helvetica;
 }
+
+a {
+  color: tint($color-remotely-primary, 10%);
+
+  &:hover {
+    color: tint($color-remotely-primary, 20%);
+
+  }
+}
