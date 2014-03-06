@@ -2358,643 +2358,6 @@ img.thumb {
 /* -----------------------------------------
    Market Place
 ----------------------------------------- */
-.market-place h1 span.subheader {
-  margin-left: -15px; }
-
-a.button.contact-show-hide {
-  margin-bottom: 0; }
-
-.posted-contact-info {
-  padding: 10px;
-  margin-top: 0;
-  background-color: #d8d7d6;
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px; }
-
-.posted-contact-info p {
-  margin: 0;
-  padding: 0; }
-
-.posted-contact-info p.tele {
-  padding: 4px 0 4px 35px;
-  background: transparent url(../img/icon-sprite-menus.png) no-repeat 0 -849px;
-  color: #595959; }
-
-.posted-contact-info p a.email {
-  padding: 4px 0 4px 35px;
-  background: transparent url(../img/icon-sprite-menus.png) no-repeat 0 -812px;
-  color: #595959;
-  text-decoration: underline; }
-
-/* typography over-rides */
-.market-place h5 {
-  margin-top: 0; }
-
-.market-place .box a {
-  font-weight: normal; }
-
-.sort {
-  margin-top: 27px; }
-
-.contact-info {
-  color: #898989; }
-
-.check-style, .radio-style {
-  margin-top: 0;
-  margin-bottom: 6px;
-  padding-top: 0; }
-
-/* orbit overrides */
-.market-place .orbit {
-  margin-bottom: 0; }
-
-.market-place .orbit-wrapper #forSaleCarousel {
-  height: 270px !important; }
-
-.market-place .orbit-wrapper #rideShareCarousel {
-  height: 270px !important; }
-
-.market-place .orbit-wrapper #childCareCarousel {
-  height: 270px !important; }
-
-.market-place .orbit-wrapper #petCareCarousel {
-  height: 270px !important; }
-
-.market-place .orbit-wrapper .orbit .orbit-slide {
-  background-color: #f3f3f0; }
-
-.market-place .orbit-wrapper #forSaleCarousel.orbit .first-box,
-.market-place .orbit-wrapper #rideShareCarousel.orbit .first-box,
-.market-place .orbit-wrapper #childCareCarousel.orbit .first-box,
-.market-place .orbit-wrapper #petCareCarousel.orbit .first-box {
-  margin-left: 0; }
-
-.market-place .orbit-wrapper #forSaleCarousel .box,
-.market-place .orbit-wrapper #rideShareCarousel .box,
-.market-place .orbit-wrapper #childCareCarousel .box,
-.market-place .orbit-wrapper #petCareCarousel .box {
-  margin: 0 0 0 1.85%;
-  width: 32.0%; }
-
-.market-place .orbit-wrapper #rideShareCarousel .map,
-.market-place .orbit-wrapper #rideShareCarousel .ride {
-  height: 260px;
-  background-color: #ffffff; }
-
-.market-place .orbit-wrapper #forSaleCarousel .photo,
-.market-place .orbit-wrapper #childCareCarousel .photo,
-.market-place .orbit-wrapper #petCareCarousel .photo {
-  height: 260px; }
-
-.market-place .orbit-wrapper #forSaleCarousel .photo img,
-.market-place .orbit-wrapper #rideShareCarousel .map img,
-.market-place .orbit-wrapper #rideShareCarousel .ride img,
-.market-place .orbit-wrapper #childCareCarousel .photo img,
-.market-place .orbit-wrapper #petCareCarousel .photo img {
-  margin-left: auto;
-  margin-right: auto;
-  max-height: 199px;
-  overflow: hidden; }
-
-.market-place .orbit-wrapper #rideShareCarousel .box.map .box-bottom,
-.market-place .orbit-wrapper #rideShareCarousel .box.ride .box-bottom,
-.market-place .orbit-wrapper #forSaleCarousel .box.photo .box-bottom,
-.market-place .orbit-wrapper #childCareCarousel .box.photo .box-bottom,
-.market-place .orbit-wrapper #petCareCarousel .box.photo .box-bottom {
-  position: absolute;
-  bottom: 10px;
-  width: inherit; }
-
-.market-place .orbit-wrapper #forSaleCarousel .box.photo .box-bottom div,
-.market-place .orbit-wrapper #childCareCarousel .box.photo .box-bottom div,
-.market-place .orbit-wrapper #petCareCarousel .box.photo .box-bottom div .market-place .orbit-wrapper #forSaleCarousel .box.photo .box-bottom div {
-  padding-top: 0; }
-
-.market-place .box-bottom {
-  width: 100%;
-  height: auto;
-  background-color: #ffffff;
-  border-bottom-left-radius: 4px;
-  border-bottom-right-radius: 4px;
-  margin: 0;
-  padding: 0; }
-
-.market-place .box-bottom div {
-  margin: 0;
-  padding: 5; }
-
-.empty-container {
-  margin-top: 10%;
-  padding-bottom: 15px; }
-
-.empty-container h5,
-.empty-container p,
-.market-place .empty-carousel h5,
-.market-place .empty-carousel p {
-  text-align: center; }
-
-.market-place .empty-carousel p a.button,
-.market-place .empty-container p a.button {
-  margin-top: 15px; }
-
-.market-place .view-all img, .market-place .empty-carousel img, .empty-container img, .homepage .view-all img {
-  background-image: url(../img/icon-sprite-menus.png);
-  background-repeat: no-repeat;
-  opacity: .4;
-  padding: 20px;
-  width: 100%;
-  max-height: 33px; }
-
-div.view-all {
-  padding: 8.6% 0;
-  -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-  opacity: .9;
-  background-color: #fff;
-  height: 260px; }
-
-.view-all h5, .view-all p {
-  max-width: 100%;
-  text-align: center; }
-
-.icon-for-sale {
-  background-position: center -337px; }
-
-.icon-ride-share {
-  background-position: center -75px; }
-
-.icon-child-care {
-  background-position: center -154px;
-  padding: 20px; }
-
-.icon-pet-care {
-  background-position: center -247px; }
-
-.icon-notes {
-  background-image: url(../img/icon-sprite-menus.png);
-  background-position: center -539px;
-  background-repeat: no-repeat;
-  padding: 20px;
-  width: 100%;
-  height: 33px; }
-
-.homepage .empty-carousel {
-  text-align: center;
-  padding-bottom: 15px; }
-
-.homepage .empty-carousel h5,
-.homepage .empty-carousel p {
-  color: #898989; }
-
-.homepage .orbit-wrapper #calendarCarousel .box.view-all,
-.homepage .orbit-wrapper #forSaleCarousel .box.view-all {
-  background-color: #fafafa; }
-
-.homepage .icon-for-sale {
-  background-position: center -337px; }
-
-.homepage .icon-events {
-  background-position: center -415px; }
-
-.empty-container img.icon-events {
-  background-position: center -415px; }
-
-.market-place .empty-carousel img.icon-for-sale, .empty-container img.icon-for-sale {
-  background-position: center -337px; }
-
-.market-place .empty-carousel img.icon-ride-share, .empty-container img.icon-ride-share {
-  background-position: center -75px; }
-
-.market-place .empty-carousel img.icon-child-care, .empty-container img.icon-child-care {
-  background-position: center -154px; }
-
-.market-place .empty-carousel img.icon-pet-care, .empty-container img.icon-pet-care {
-  background-position: center -247px; }
-
-.market-place .empty-carousel h5, .empty-container h5, .market-place .empty-carousel p, .empty-container p {
-  color: #898989; }
-
-/* photo gallery on add details screen */
-.market-place #gallery.orbit .orbit-slide {
-  /*max-height: 360px;*/
-  height: auto;
-  background-image: url(../img/bckgnd-gallery.jpg);
-  background-repeat: repeat; }
-
-.market-place #gallery.orbit .orbit-slide img {
-  max-width: 480px; }
-
-#gallery img {
-  /*max-width: 480px; width:100%;*/
-  border-radius: 4px; }
-
-.add-price {
-  background: #db7b27 url(../img/bckgnd-add-price.png) left center no-repeat;
-  padding: 8px 10px 8px 30px;
-  color: #fff;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px; }
-
-div.review {
-  background-color: #ffffdd;
-  border-radius: 4px;
-  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-  padding-top: 10px; }
-
-div.review img.arrow-left-panel {
-  position: absolute;
-  top: 150px;
-  left: 0;
-  background: transparent url(../img/left-arrow-review-panel.png) 0 0 no-repeat;
-  padding: 20px; }
-
-.review h4 {
-  font-family: 'BebasRegular', Helvetica, aria, sans;
-  margin-bottom: 15px;
-  word-spacing: .2em; }
-
-li.list-check {
-  background: transparent url(../img/icon-sprite-market-place.png) 0 -119px no-repeat;
-  padding-left: 30px; }
-
-li.availability-days {
-  display: inline;
-  background: transparent url(../img/icon-sprite-market-place.png) 0 8px no-repeat;
-  padding: 15px 0 15px 30px; }
-
-li.availability-time {
-  display: inline;
-  background: transparent url(../img/icon-sprite-market-place.png) 0 -36px no-repeat;
-  padding: 15px 0 15px 30px; }
-
-ul.ride-share li.availability-days,
-ul.ride-share li.availability-time {
-  display: block; }
-
-ul.ride-share li.availability-time {
-  margin-top: -20px; }
-
-/* button over-rides */
-.reveal-modal .columns, .reveal-modal .column {
-  padding: 0; }
-
-.reveal-modal .button.small.primary {
-  font-size: 12px; }
-
-.reveal-modal .custom.dropdown.small {
-  margin-top: 20px; }
-
-.reveal-modal .button-container {
-  margin-top: 30px;
-  padding-top: 20px;
-  border-width: 1px 0 0 0; }
-
-.reveal-modal .button-container input, .reveal-modal .button-container a.button {
-  margin: 0 0 0 15px; }
-
-/*border: 1px solid #ccc;*/
-.button-container {
-  margin: 0 0 15px 0;
-  padding: 0; }
-
-.button.dropdown.secondary.manage {
-  background-image: url(../img/icon-sprite-menus.png);
-  background-repeat: no-repeat;
-  background-position: 2px -725px;
-  padding: 13px 32px 12px 12px; }
-
-a.manage, a.manage:hover {
-  background-image: url(../img/icon-sprite-menus.png);
-  background-repeat: no-repeat;
-  background-position: 5px -726px;
-  padding: 9px 20px 11px 20px;
-  text-indent: -9999px; }
-
-.form-sumbit-ui {
-  margin-bottom: 30px; }
-
-.form-sumbit-ui .button.right {
-  float: right;
-  margin-left: 10px; }
-
-.settings .button-container {
-  margin: 15px 0 0 0;
-  padding: 0; }
-
-/* ui for post filter */
-ul#filter {
-  border-radius: 4px;
-  border: 1px solid #e0e0e0;
-  background-color: #f5f5f5;
-  width: 100%;
-  padding: 0;
-  margin: 0 0 10px 0; }
-
-ul#filter li {
-  display: inline-block;
-  list-style: none;
-  padding: 7px;
-  margin: 0; }
-
-ul#filter li:first-child {
-  font-size: 12px;
-  background: #629fdd url(../img/bck-gnd-filter2.png) no-repeat 74px center;
-  color: #ffffff;
-  text-transform: uppercase;
-  padding: 14px 20px 9px 9px;
-  margin: 2px;
-  border-bottom-left-radius: 2px;
-  border-top-left-radius: 2px; }
-
-ul#filter li.current a {
-  color: #000000; }
-
-/* filter styles */
-.none {
-  display: none; }
-
-/* form styles */
-#dropZone {
-  border: 2px dashed #aaaaaa;
-  margin: 0;
-  padding: 15px 10px; }
-
-#dropZone #emptystate h6, #dropZone #emptystate h5 {
-  font-family: 'TisaWebPro', gergia, serif;
-  font-size: 24px;
-  color: #999999;
-  text-align: center;
-  text-transform: none; }
-
-#dropZone #emptystate h6 span, #dropZone #emptystate h5 span {
-  font-size: 14px;
-  font-weight: normal; }
-
-#dropZone #emptystate a.radius {
-  border-radius: 99px; }
-
-.reveal-modal #dropZone {
-  margin-bottom: 15px; }
-
-li.availability-days {
-  padding-right: 20px; }
-
-li.list-check {
-  list-style: none; }
-
-.ride-map {
-  overflow: hidden; }
-
-.added-tags {
-  padding-bottom: 10px;
-  /*display: none; */ }
-
-.added-tags a, a.tags {
-  background: #ece7e7 url(../img/delete-tag.png) no-repeat 7px center;
-  padding: 4px 7px 4px 19px;
-  color: #666;
-  font-size: 12px;
-  font-family: 'MuseoSans-500', "Helvetica", Helvetica, Arial, sans-serif;
-  border-radius: 99px;
-  margin-bottom: 10px;
-  display: inline-block; }
-
-a.tags {
-  background-image: none;
-  padding: 4px 8px; }
-
-.sug-tag {
-  font-size: 13px;
-  color: #666; }
-
-.sug-tag a {
-  margin-right: 4px;
-  border: none;
-  border-style: none;
-  border-width: 0;
-  background: #dedede url(../img/bckgnd-bu-tag.png) repeat-x 0 0;
-  padding: 4px 7px;
-  color: #666;
-  border-radius: 100px;
-  -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-  font-size: 12px;
-  font-family: 'MuseoSans-500', "Helvetica", Helvetica, Arial, sans-serif; }
-
-.market-place .nine.columns .one.columns.hide-for-small img {
-  border-radius: 4px; }
-
-.market-place .nine.columns .panel p {
-  word-wrap: break-word; }
-
-/* --- shared small screens --- */
-@media only screen and (max-width: 767px) {
-  div.review input.button {
-    margin-bottom: 10px; }
-
-  /* orbit mobile overide */
-  .market-place .orbit {
-    margin-bottom: 10px;
-    margin-left: 4%; }
-
-  .market-place .orbit-wrapper #forSaleCarousel {
-    height: 284px !important; }
-
-  .market-place .orbit-wrapper #rideShareCarousel {
-    height: 284px !important; }
-
-  .market-place .orbit-wrapper #childCareCarousel {
-    height: 284px !important; }
-
-  .market-place .orbit-wrapper #petCareCarousel {
-    height: 284px !important; }
-
-  .market-place .orbit-wrapper #forSaleCarousel.orbit .box,
-  .market-place .orbit-wrapper #rideShareCarousel.orbit .box,
-  .market-place .orbit-wrapper #childCareCarousel.orbit .box,
-  .market-place .orbit-wrapper #petCareCarousel.orbit .box {
-    width: 80%;
-    margin-bottom: 50px;
-    margin-left: auto;
-    margin-right: auto;
-    height: 280px; }
-
-  .market-place .orbit-wrapper #forSaleCarousel .box.photo .box-bottom {
-    position: relative;
-    bottom: 0;
-    border-bottom-left-radius: 4px; }
-
-  .market-place .orbit-wrapper #forSaleCarousel .box.photo .box-bottom div {
-    padding-top: 7px;
-    border-bottom-left-radius: 4px; }
-
-  .market-place .orbit-wrapper #forSaleCarousel.orbit .photo img,
-  .market-place .orbit-wrapper #rideShareCarousel.orbit .map img,
-  .market-place .orbit-wrapper #rideShareCarousel.orbit .ride img,
-  .market-place .orbit-wrapper #childCareCarousel.orbit .photo img,
-  .market-place .orbit-wrapper #petCareCarousel.orbit .photo img {
-    max-height: 200px; }
-
-  #days.reveal-modal {
-    width: 80%; }
-
-  .reveal-modal .button-container {
-    margin: 0; }
-
-  .reveal-modal .button-container input, .reveal-modal .button-container a.button {
-    margin: 10px 0 0 0;
-    width: 100%; }
-
-  #time-selector.reveal-modal {
-    overflow: visible !important;
-    background-color: #eeeeee; }
-
-  /* filters */
-  .filter-container-m {
-    margin: 10px 0; }
-
-  .filter-container-m .small.button.dropdown.radius.secondary {
-    width: 100%; }
-
-  .sort {
-    float: none;
-    width: 100%; } }
-@media only screen and (max-width: 400px) {
-  .market-place #container .box {
-    clear: both; }
-
-  .market-place #container .col2 {
-    width: 100%; } }
-/* -----------------------------------------
-   Calendar
------------------------------------------ */
-/* General */
-ul.calendar-mini-list {
-  display: block;
-  list-style: none;
-  height: 180px;
-  overflow: auto;
-  width: auto;
-  border-bottom: 1px solid #cccccc;
-  margin: 4px 4px 0 0;
-  padding: 0 10px; }
-
-ul.calendar-mini-list li {
-  list-style: none;
-  border-bottom: 1px solid #cccccc;
-  line-height: 3em;
-  font-wieght: normal;
-  padding: 10px 0; }
-
-ul.calendar-mini-list li:last-child {
-  border-bottom: none; }
-
-ul.calendar-mini-list li a {
-  font-weight: normal; }
-
-.box-bottom h5 {
-  color: #db7b27; }
-
-.event-calendar ul.calendar-mini-list {
-  margin: 0; }
-
-.event-calendar {
-  margin: 0;
-  padding: 0; }
-
-.month-container {
-  margin-top: 20px; }
-
-.event-calendar .col2 {
-  width: 31%; }
-
-.event-calendar .box {
-  /*background-color:#f5f3f1;*/
-  background-color: #f3f3ee; }
-
-.event-calendar .box ul.calendar-mini-list {
-  width: 100%;
-  margin: 4px 4px 0 0;
-  padding: 0 10px; }
-
-.month-nav {
-  height: 49px;
-  width: 100%;
-  border-radius: 4px;
-  -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
-  background: transparent url(../img/bckgnd-month-nav.png) repeat-x 0 0;
-  margin: 0;
-  padding: 21px 0; }
-
-.month-nav div a.left-nav {
-  width: 45px;
-  height: 49px;
-  background: transparent url(../img/left-arrow-month.png) no-repeat 0 0;
-  padding: 21px; }
-
-.month-nav a.right-nav {
-  width: 45px;
-  height: 49px;
-  background: transparent url(../img/right-arrow-month.png) no-repeat 0 0;
-  float: right;
-  margin-top: -21px; }
-
-.month-nav h3 {
-  color: #db7b27;
-  text-align: center;
-  margin-top: -10px; }
-
-/* Event tags */
-.day-list, .month-list, .list {
-  background: transparent url(../img/bckgnd-bottom-border.png) repeat-x 0 bottom;
-  padding-top: 10px; }
-
-.day-list:first-child {
-  border-top: 1px #cccccc solid; }
-
-.day-list:last-child {
-  border-top: none;
-  background-image: none; }
-
-.day-list img, .calendar-mini-list a {
-  background-image: url(../img/icon-sprite-events.png);
-  background-repeat: no-repeat;
-  max-width: 54px; }
-
-.community-maintenance {
-  background-position: 0 0;
-  padding: 20px; }
-
-a.party, a.book-club, a.wine-tasting, a.community-mainenance, a.community-default, a.resident-default {
-  padding-left: 50px;
-  padding-top: 10px; }
-
-.community-default {
-  background-position: 0 -293px;
-  padding: 20px 28px; }
-
-.resident-default {
-  background-position: 0 -247px;
-  padding: 20px; }
-
-.party {
-  background-position: 0 -61px;
-  padding: 20px; }
-
-.book-club {
-  background-position: 4px -122px;
-  padding: 20px; }
-
-.wine-tasting {
-  background-position: 8px -184px;
-  padding: 20px; }
-
-/* --- shared small screens --- */
-@media only screen and (max-width: 767px) {
-  .event-calendar .col2 {
-    width: 100%; } }
 /* -----------------------------------------
    Forms
 ----------------------------------------- */
@@ -4142,7 +3505,8 @@ h5 {
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif; }
 
 h6 {
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif; }
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  color: #7f7f7f; }
 
 a {
   color: #e6645d; }
@@ -4156,7 +3520,27 @@ a {
   -webkit-box-shadow: none;
   box-shadow: none; }
 
+.orange {
+  color: #E89452; }
+
+.blue {
+  color: #4db4ca; }
+
+.red {
+  color: #d51a21;
+  font-weight: bold; }
+
+ul.breadcrumbs {
+  padding-left: 3px; }
+
+form.custom span.custom.radio.checked:before {
+  background: #4db4ca;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
 .button.primary {
+  font-weight: normal;
+  text-shadow: none;
   background: #56c8e1;
   border-color: #4db4ca; }
   .button.primary:hover {
@@ -4175,6 +3559,11 @@ a {
 
 #community-hat {
   display: none; }
+
+img.logo-image {
+  background: url("../img/svg/remotely-logo.svg") center no-repeat;
+  -webkit-background-size: contain;
+  background-size: contain; }
 
 .web-menu.nav-bar {
   list-style-type: none;
@@ -4254,7 +3643,7 @@ dl.tabs.vertical dd.active a {
   padding-bottom: 0; }
 
 .panel {
-  background: #f4f6f6; }
+  background: #f2f4f5; }
 
 .automation .tabs-content {
   padding: 0;
@@ -4293,3 +3682,14 @@ dl.tabs.vertical dd.active a {
 
 .phone-menu {
   display: none; }
+
+.automation.detail .panel .panel.white-box {
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+.detail #timers h6, .detail #device-events h6 {
+  background: #f2f4f5; }
+
+div.review {
+  -webkit-box-shadow: none;
+  box-shadow: none; }

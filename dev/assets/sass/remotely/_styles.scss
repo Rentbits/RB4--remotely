@@ -9,7 +9,31 @@
   box-shadow: none;
 }
 
+.orange {
+  color: #E89452;
+}
+
+.blue {
+  color: shade($color-remotely-accent, 10%);
+}
+
+.red {
+  color: #d51a21;
+  font-weight: bold;
+}
+
+ul.breadcrumbs {
+  padding-left: 3px;
+}
+
+form.custom span.custom.radio.checked:before {
+  background: shade($color-remotely-accent, 10%);
+  box-shadow: none;
+}
+
 .button.primary {
+  font-weight: normal;
+  text-shadow: none;
   background: $color-remotely-accent;
   border-color: shade($color-remotely-accent, 10%);
 
@@ -44,6 +68,14 @@ body {
 
 #community-hat {
   display: none;
+}
+
+// header styles
+// ====
+
+img.logo-image {
+  background: url('../img/svg/remotely-logo.svg') center no-repeat;
+  background-size: contain;
 }
 
 // nav styles
@@ -159,7 +191,7 @@ dl.tabs.vertical dd.active a {
   // border: none;
 }
 .panel {
-  background: tint(#D4DBDE, 75%);
+  background: tint(#D4DBDE, 70%);
 }
 
 .automation .tabs-content {
@@ -217,4 +249,18 @@ dl.tabs.vertical dd.active a {
 
 .phone-menu {
   display: none;
+}
+
+
+.automation.detail .panel .panel.white-box {
+  box-shadow:none;
+  // background: tint(#D4DBDE, 70%);
+}
+
+.detail #timers h6, .detail #device-events h6 {
+  background: tint(#D4DBDE, 70%);
+}
+
+div.review {
+  box-shadow: none;
 }
