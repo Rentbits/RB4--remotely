@@ -3815,11 +3815,11 @@ div.alert-box.secondary {
   border-width: 0;
   background: #def1f6; }
 
-#sign-in .mast-head {
-  background: #e5544c;
-  border-radius: 3px 3px 0 0; }
-
-#sign-in.contact-form-step-1 .mast-head {
+#sign-in .mast-head,
+#sign-in .mast-head-reset,
+#sign-in.contact-form-step-1 .mast-head,
+#sign-in.contact-form-step-2 .mast-head,
+#sign-in.contact-form-step-3 .mast-head {
   background: #e5544c;
   border-radius: 3px 3px 0 0; }
 

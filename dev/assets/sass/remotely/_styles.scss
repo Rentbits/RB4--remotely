@@ -383,15 +383,25 @@ div.alert-box.secondary {
 
 // sign in page
 
-#sign-in .mast-head {
+// #sign-in .mast-head {
+//   background: $color-remotely-primary;
+//   border-radius: 3px 3px 0 0;
+// }
+
+#sign-in .mast-head,
+#sign-in .mast-head-reset,
+#sign-in.contact-form-step-1 .mast-head,
+#sign-in.contact-form-step-2 .mast-head,
+#sign-in.contact-form-step-3 .mast-head {
   background: $color-remotely-primary;
   border-radius: 3px 3px 0 0;
 }
 
-#sign-in.contact-form-step-1 .mast-head {
-  background: $color-remotely-primary;
-  border-radius: 3px 3px 0 0;
-}
+
+// #sign-in.contact-form-step-1 .mast-head {
+//   background: $color-remotely-primary;
+//   border-radius: 3px 3px 0 0;
+// }
 
 img.logo-reversed-lrg {
   @extend .logo-image;
