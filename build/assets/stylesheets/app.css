@@ -3871,6 +3871,9 @@ body#sign-in {
   -webkit-box-shadow: none;
   box-shadow: none; }
 
+#edit-state input[type="button"].edit-done {
+  color: #e5544c; }
+
 @media only screen and (max-width: 767px) {
   .automation .panel {
     border: none; } }

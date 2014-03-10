@@ -456,6 +456,10 @@ body#sign-in {
   box-shadow: none;
 }
 
+#edit-state input[type="button"].edit-done {
+  color: $color-remotely-primary;
+}
+
 //
 @media only screen and (max-width: 767px) {
 //   .show-for-small,
