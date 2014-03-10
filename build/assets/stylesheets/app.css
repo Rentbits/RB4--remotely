@@ -3819,6 +3819,10 @@ div.alert-box.secondary {
   background: #e5544c;
   border-radius: 3px 3px 0 0; }
 
+#sign-in.contact-form-step-1 .mast-head {
+  background: #e5544c;
+  border-radius: 3px 3px 0 0; }
+
 body#sign-in {
   background: #FFF; }
 
@@ -3829,3 +3833,44 @@ body#sign-in {
   background: #f2f4f5;
   border: 1px solid HSLA(202, 14%, 85%, 1);
   margin-top: 10px; }
+
+.mobile-menu .nav-bar > li:hover,
+.mobile-menu .nav-bar > li.active {
+  background: #eb7f79;
+  border-color: #c8261d; }
+
+.mobile-menu ul.nav-bar li {
+  border-color: #c8261d; }
+
+#menu-mini li a.button.small.show_hide {
+  border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background: #e7655d; }
+
+#menu-mini li a.button.small.special-m {
+  background: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: none;
+  background: #e7655d;
+  text-shadow: none; }
+
+.sign-out-m {
+  margin: 20px 0; }
+
+.homepage dl.tabs.show-for-small dd.active {
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+  .homepage dl.tabs.show-for-small dd.active a.devicesTab-hor, .homepage dl.tabs.show-for-small dd.active #user-dd.button a.devicesTab-hor, #user-dd.button .homepage dl.tabs.show-for-small dd.active a.devicesTab-hor {
+    background-color: #e97666;
+    border: none; }
+
+.homepage dl.tabs.show-for-small dd {
+  background: none;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+@media only screen and (max-width: 767px) {
+  .automation .panel {
+    border: none; } }
