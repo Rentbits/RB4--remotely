@@ -1,6 +1,10 @@
-$color-remotely-primary  : #e4534c;
-$color-remotely-accent   : #56C8E1;
-$color-remotely-success  : #8FCA6E;
+$color-remotely-primary  : #e5544c;
+$color-remotely-accent   : #59c8e0;
+
+$color-remotely-green  : #8fc96e;
+$color-remotely-orange  : #e47d25;
+
+$color-remotely-gray     : #D4DBDE;
 
 
 // typography
@@ -26,10 +30,16 @@ h6, %h6 {
 }
 
 a {
-  color: tint($color-remotely-primary, 10%);
+  // color: shade($color-remotely-accent, 5%);
+  color: $color-remotely-accent;
 
   &:hover {
-    color: tint($color-remotely-primary, 20%);
+    // color: tint($color-remotely-accent, 10%);
+    color: #7fd1e5;
 
   }
+}
+
+#user-dd.button a {
+  @extend a;
 }
