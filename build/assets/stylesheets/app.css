@@ -27,11 +27,9 @@
 /* -----------------------------------------
    Import web-fonts
 ----------------------------------------- */
-@import url("web-fonts.css") screen;
 /* -----------------------------------------
    Import iphone-checkbox styles
 ----------------------------------------- */
-@import url("iphone.css") screen;
 /* -----------------------------------------
    Foundation over writes
 ----------------------------------------- */
@@ -3526,6 +3524,10 @@ ul.inline-list-edit li:last-child {
 
   .homepage.automation .tabs-content {
     height: 660px !important; } }
+html,
+body {
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif; }
+
 h1 {
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif; }
 
@@ -3542,6 +3544,7 @@ h5 {
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif; }
 
 h6 {
+  font-weight: bold;
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   color: #7f7f7f; }
 
@@ -3626,9 +3629,7 @@ input.special-button[type="submit"] {
   background: #59c8e0;
   -webkit-box-shadow: none;
   box-shadow: none;
-  border: 0;
-  display: block;
-  margin: 11% 12px auto 15px; }
+  border: 0; }
 
 .button.special-button:focus,
 .button.special-button:hover,
@@ -3701,14 +3702,12 @@ ul.flyout li a, ul.flyout li #user-dd.button a, #user-dd.button ul.flyout li a,
 .automation dl.tabs.vertical dd.active a.messagesTabs-vert,
 .automation dl.tabs.vertical dd.active #user-dd.button a.messagesTabs-vert,
 #user-dd.button .automation dl.tabs.vertical dd.active a.messagesTabs-vert {
-  background-color: #d4dbde; }
+  background-color: #e97666; }
 
 .homepage.payrent .panel {
-  background: none;
   border: 1px solid HSLA(202, 14%, 85%, 1); }
 
 .automation .panel {
-  background: none;
   border: 1px solid HSLA(202, 14%, 85%, 1);
   padding-bottom: 0; }
 
@@ -3741,6 +3740,12 @@ ul.flyout li a, ul.flyout li #user-dd.button a, #user-dd.button ul.flyout li a,
 
 #device-list h4 {
   padding-left: 44px; }
+
+h4 span,
+#device h4 span,
+.reveal-modal h4 span {
+  display: inline-block;
+  height: 28px; }
 
 .device-list-title {
   margin: 0;
@@ -3789,10 +3794,6 @@ dl.tabs dd a:hover, dl.tabs dd #user-dd.button a:hover, #user-dd.button dl.tabs 
 .detail #timers h6, .detail #device-events h6 {
   background: #f2f4f5; }
 
-div.review {
-  -webkit-box-shadow: none;
-  box-shadow: none; }
-
 .show-for-small.logo-m-container {
   display: none !important; }
 
@@ -3802,7 +3803,8 @@ div.review {
 .mobile-menu {
   background: #e5544c; }
 
-div.alert-box {
+div.alert-box,
+div.review {
   background: #ddf4f8;
   border-color: #ace3ef; }
 
@@ -3873,6 +3875,21 @@ body#sign-in {
 
 #edit-state input[type="button"].edit-done {
   color: #e5544c; }
+
+div.review {
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+div.review img.arrow-left-panel,
+.payrent div.review img.arrow-left-panel {
+  opacity: 0;
+  background: none;
+  display: none; }
+
+ul.pagination li.current a, ul.pagination li.current #user-dd.button a, #user-dd.button ul.pagination li.current a {
+  background: #e5544c; }
+  ul.pagination li.current a:hover, ul.pagination li.current #user-dd.button a:hover, #user-dd.button ul.pagination li.current a:hover {
+    background: #e5544c; }
 
 @media only screen and (max-width: 767px) {
   .automation .panel {

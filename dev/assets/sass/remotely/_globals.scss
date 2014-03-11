@@ -9,6 +9,11 @@ $color-remotely-gray     : #D4DBDE;
 
 // typography
 
+html,
+body {
+  font-family: $helvetica;
+}
+
 h1, %h1 {
   font-family: $helvetica;
 }
@@ -25,9 +30,12 @@ h5, %h5 {
   font-family: $helvetica;
 }
 h6, %h6 {
+  font-weight: bold;
   font-family: $helvetica;
   color: tint(#000, 50%);
 }
+
+
 
 a {
   // color: shade($color-remotely-accent, 5%);
