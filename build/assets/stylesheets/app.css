@@ -3797,7 +3797,7 @@ dl.tabs dd a:hover, dl.tabs dd #user-dd.button a:hover, #user-dd.button dl.tabs 
   border-bottom: 4px solid #d8dee1; }
 
 .detail #timers h6, .detail #device-events h6 {
-  background: #f2f4f5; }
+  background: #FFF; }
 
 .show-for-small.logo-m-container {
   display: none !important; }
@@ -3921,13 +3921,20 @@ div.alert-box.success {
   background-position: 0 -198px; }
 
 .motion-list .event-outlet span.motion-then {
-  background-position: 0 -196px; }
+  background-position: 0 -196px;
+  margin-bottom: -7px; }
+
+.motion-list .event-lock span.motion-then {
+  background-position: 0 -133px;
+  margin-bottom: -7px; }
 
 .motion-list span.event {
-  background-position: 3px -1592px; }
+  background-position: 3px -1592px;
+  margin-bottom: -7px; }
 
 .motion-list span.motion-if {
-  background-position: 0 -1479px; }
+  background-position: 0 -1479px;
+  margin-bottom: -7px; }
 
 #device h4.multi span {
   background-position: 0 -1867px; }
@@ -3942,6 +3949,31 @@ h4 span, #device h4 span,
 #device h4.door-lock span {
   background-position: 0 -137px; }
 
+#device-events h4.device-event span {
+  background-position: 0 -1534px; }
+
+.reveal-modal h4.device-event span {
+  background-position: 0 -1534px; }
+
+.modal-connect {
+  margin-bottom: 18px; }
+
+.modal-connect > h6 {
+  background: #f5f5f5;
+  padding: 14px; }
+
+.sensor-status {
+  border: 1px solid #CCCCCC; }
+
 @media only screen and (max-width: 767px) {
   .automation .panel {
-    border: none; } }
+    border: none; }
+
+  #sign-in .mast-head,
+  #sign-in .mast-head-reset,
+  #sign-in.contact-form-step-1 .mast-head,
+  #sign-in.contact-form-step-2 .mast-head,
+  #sign-in.contact-form-step-3 .mast-head {
+    background: #e5544c;
+    -webkit-box-shadow: none;
+    box-shadow: none; } }

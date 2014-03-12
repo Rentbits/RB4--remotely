@@ -361,7 +361,8 @@ dl.tabs dd a {
 }
 
 .detail #timers h6, .detail #device-events h6 {
-  background: tint(#D4DBDE, 70%);
+  // background: tint(#D4DBDE, 70%);
+  background: #FFF;
 }
 
 .show-for-small.logo-m-container {
@@ -538,14 +539,21 @@ div.alert-box.success {
 
 .motion-list .event-outlet span.motion-then {
   background-position: 0 -196px;
+  margin-bottom: -7px;
+}
+.motion-list .event-lock span.motion-then {
+  background-position: 0 -133px;
+  margin-bottom: -7px;
 }
 
 .motion-list span.event {
   background-position: 3px -1592px;
+  margin-bottom: -7px;
 }
 
 .motion-list span.motion-if {
   background-position: 0 -1479px;
+  margin-bottom: -7px;
 }
 
 #device h4.multi span {
@@ -565,6 +573,27 @@ h4 span, #device h4 span,
   background-position: 0 -137px;
 }
 
+#device-events h4.device-event span {
+  background-position: 0 -1534px;
+}
+
+.reveal-modal h4.device-event span {
+  background-position: 0 -1534px;
+}
+
+.modal-connect {
+  margin-bottom: 18px;
+}
+
+.modal-connect > h6 {
+  background: #f5f5f5;
+  padding: 14px;
+}
+
+.sensor-status {
+  border: 1px solid #CCCCCC;
+}
+
 //
 @media only screen and (max-width: 767px) {
 //   .show-for-small,
@@ -578,4 +607,14 @@ h4 span, #device h4 span,
   .automation .panel {
     border: none;
   }
+
+  #sign-in .mast-head,
+  #sign-in .mast-head-reset,
+  #sign-in.contact-form-step-1 .mast-head,
+  #sign-in.contact-form-step-2 .mast-head,
+  #sign-in.contact-form-step-3 .mast-head {
+    background: $color-remotely-primary;
+    box-shadow: none;
+  }
+
 }
