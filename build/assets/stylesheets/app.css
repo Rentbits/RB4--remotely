@@ -88,7 +88,7 @@ ul.days li {
 .has-js .label_check, .has-js .label_radio {
   padding: 10px 24px 47px 24px;
   maring-left: -5px;
-  font-family: 'MuseoSans-500', "Helvetica", Helvetica, Arial, sans-serif; }
+  font-family: "Helvetica", Helvetica, Arial, sans-serif; }
 
 /*.has-js .label_radio { background: url(radio-off.png) no-repeat; }*/
 .has-js .label_check {
@@ -198,14 +198,14 @@ form.custom span.custom.radio.checked:before {
   .button.show-for-touch {
     display: inline-block !important; } }
 p {
-  font-family: 'MuseoSans-500', Arial, sans-serif;
+  font-family: Arial, sans-serif;
   font-weight: normal;
   font-size: 14px;
   line-height: 1.6;
   margin-bottom: 17px; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'TisaWebPro', "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica", Helvetica, Arial, sans-serif;
   font-weight: normal;
   text-rendering: optimizeLegibility;
   line-height: 1.1;
@@ -237,14 +237,14 @@ h4 {
 
 h5 {
   font-size: 18px;
-  font-family: 'TisaWebPro', "Helvetica", gergia, serif; }
+  font-family: "Helvetica", gergia, serif; }
 
 .sans {
-  font-family: 'MuseoSans-500', "Helvetica", Helvetica, Arial, sans-serif; }
+  font-family: "Helvetica", Helvetica, Arial, sans-serif; }
 
 h6 {
   font-size: 12px;
-  font-family: 'MuseoSans-500', "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   color: #000;
   margin-bottom: 6px; }
@@ -254,7 +254,7 @@ sup {
 
 p, a, #user-dd.button a, li {
   font-size: 14px;
-  font-family: 'MuseoSans-500', "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica", Helvetica, Arial, sans-serif;
   color: #494949; }
 
 /* Links ---------------------- */
@@ -879,7 +879,7 @@ dl dd {
   color: white;
   cursor: pointer;
   display: inline-block;
-  font-family: 'MuseoSans-500', "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica", Helvetica, Arial, sans-serif;
   font-size: 16px;
   text-transform: uppercase;
   font-weight: normal;
@@ -945,7 +945,6 @@ dl dd {
 
 /*small tiny*/
 .button.secondary {
-  padding-top: 8px;
   background: whitesmoke;
   /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, whitesmoke), color-stop(100%, #dddddd));
@@ -1234,7 +1233,7 @@ a.notifications-unread span, #user-dd.button a.notifications-unread span {
   border-width: 0;
   border-right: none;
   font-size: 16px;
-  font-family: 'MuseoSans-500', "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica", Helvetica, Arial, sans-serif;
   color: #ffffff;
   font-weight: normal;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3); }
@@ -2313,16 +2312,16 @@ dl.tabs dd.active #user-dd.button .easy-pay a.button.special-button.medium,
     background-position: center -1460px; }
 
   .payrent .tabs.show-for-small .bankTabs-hor {
-    background-position: center -1007px; }
+    background-position: 70% -1007px; }
 
   .payrent .tabs.show-for-small .active .bankTabs-hor {
-    background-position: center -1385px; }
+    background-position: 70% -1385px; }
 
   .payrent .tabs.show-for-small .creditTabs-hor {
-    background-position: center -1042px; }
+    background-position: 70% -1042px; }
 
   .payrent .tabs.show-for-small .active .creditTabs-hor {
-    background-position: center -1420px; }
+    background-position: 70% -1420px; }
 
   .payrent .special-button {
     margin: 0 0 20px 0;
@@ -2379,11 +2378,19 @@ img.thumb {
 /* -----------------------------------------
    Market Place
 ----------------------------------------- */
+.reveal-modal .button-container input, .reveal-modal .button-container a.button, .reveal-modal .button-container #user-dd.button a.button, #user-dd.button .reveal-modal .button-container a.button {
+  margin: 0 0 0 15px; }
+
+/*border: 1px solid #ccc;*/
+.form-sumbit-ui .button.right {
+  float: right;
+  margin-left: 10px; }
+
 /* -----------------------------------------
    Forms
 ----------------------------------------- */
 label {
-  font-family: 'MuseoSans-500', "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-size: 12px;
   margin-top: 15px;
@@ -2413,15 +2420,15 @@ label {
 
 ::-webkit-input-placeholder {
   color: #999;
-  font-family: 'MuseoSans-500', "Helvetica", Helvetica, Arial, sans-serif; }
+  font-family: "Helvetica", Helvetica, Arial, sans-serif; }
 
 :-moz-placeholder {
   color: #999;
-  font-family: 'MuseoSans-500', "Helvetica", Helvetica, Arial, sans-serif; }
+  font-family: "Helvetica", Helvetica, Arial, sans-serif; }
 
 placeholder {
   color: #999;
-  font-family: 'MuseoSans-500', "Helvetica", Helvetica, Arial, sans-serif; }
+  font-family: "Helvetica", Helvetica, Arial, sans-serif; }
 
 .error input, input.error, .error textarea, textarea.error {
   border-color: #e35551; }
@@ -3485,9 +3492,6 @@ ul.inline-list-edit li:last-child {
   #device-list ul.temp-control li.temp-up:before {
     margin-left: -54px; }
 
-  ul.nav-bar.show-for-small li a, ul.nav-bar.show-for-small li #user-dd.button a, #user-dd.button ul.nav-bar.show-for-small li a {
-    opacity: .5; }
-
   ul.nav-bar.show-for-small li.active a, ul.nav-bar.show-for-small li.active #user-dd.button a, #user-dd.button ul.nav-bar.show-for-small li.active a {
     opacity: 1; }
 
@@ -3760,7 +3764,8 @@ h4 span,
 
 .automation.detail .panel .panel.white-box {
   -webkit-box-shadow: none;
-  box-shadow: none; }
+  box-shadow: none;
+  background: none; }
 
 .homepage .tabs-content {
   background: none;
@@ -3814,7 +3819,6 @@ div.alert-box.alert {
   text-shadow: none; }
 
 div.alert-box.secondary {
-  border-width: 0;
   background: #def1f6; }
 
 #sign-in .mast-head,
@@ -3862,6 +3866,7 @@ body#sign-in {
   margin: 20px 0; }
 
 .homepage dl.tabs.show-for-small dd.active {
+  background-color: transparent;
   -webkit-box-shadow: none;
   box-shadow: none; }
   .homepage dl.tabs.show-for-small dd.active a.devicesTab-hor, .homepage dl.tabs.show-for-small dd.active #user-dd.button a.devicesTab-hor, #user-dd.button .homepage dl.tabs.show-for-small dd.active a.devicesTab-hor {
@@ -3890,6 +3895,50 @@ ul.pagination li.current a, ul.pagination li.current #user-dd.button a, #user-dd
   background: #e5544c; }
   ul.pagination li.current a:hover, ul.pagination li.current #user-dd.button a:hover, #user-dd.button ul.pagination li.current a:hover {
     background: #e5544c; }
+
+a.notifications-unread, #user-dd.button a.notifications-unread {
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+.breadcrumbs.progress li {
+  color: #FFF; }
+
+.breadcrumbs.progress li.active {
+  color: #FFF; }
+
+.breadcrumbs.progress li > span {
+  background-color: #ea766f;
+  border-color: #d94f48; }
+
+div.alert-box.success {
+  background: #E5F1DD;
+  border: none; }
+
+#device h4.outlet span {
+  background-position: 0 -198px; }
+
+.motion-list .event-outlet span.motion-then {
+  background-position: 0 -196px; }
+
+.motion-list span.event {
+  background-position: 3px -1592px; }
+
+.motion-list span.motion-if {
+  background-position: 0 -1479px; }
+
+#device h4.multi span {
+  background-position: 0 -1867px; }
+
+#device h4.fob span {
+  background-position: 0 -1933px; }
+
+h4 span, #device h4 span,
+.reveal-modal h4 span {
+  height: 30px; }
+
+#device h4.door-lock span {
+  background-position: 0 -137px; }
 
 @media only screen and (max-width: 767px) {
   .automation .panel {

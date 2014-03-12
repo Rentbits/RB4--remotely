@@ -311,6 +311,7 @@ h4 span,
 
 .automation.detail .panel .panel.white-box {
   box-shadow:none;
+  background: none;
   // background: tint(#D4DBDE, 70%);
 }
 
@@ -386,7 +387,7 @@ div.alert-box.alert {
 }
 
 div.alert-box.secondary {
-  border-width: 0;
+  // border-width: 0;
   background: #def1f6;
 }
 
@@ -462,6 +463,7 @@ body#sign-in {
 }
 
 .homepage dl.tabs.show-for-small dd.active {
+  background-color: transparent;
   box-shadow: none;
 
   a.devicesTab-hor {
@@ -497,6 +499,62 @@ ul.pagination li.current a {
   &:hover {
     background: $color-remotely-primary;
   }
+}
+
+
+a.notifications-unread {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.breadcrumbs.progress li {
+  color: #FFF;
+}
+
+.breadcrumbs.progress li.active {
+  color: #FFF;
+}
+.breadcrumbs.progress li > span {
+  background-color: tint($color-remotely-primary, 20%);
+  border-color: shade($color-remotely-primary, 5%);
+}
+
+div.alert-box.success {
+  background: #E5F1DD;
+  border: none;
+}
+
+#device h4.outlet span {
+  background-position: 0 -198px;
+}
+
+.motion-list .event-outlet span.motion-then {
+  background-position: 0 -196px;
+}
+
+.motion-list span.event {
+  background-position: 3px -1592px;
+}
+
+.motion-list span.motion-if {
+  background-position: 0 -1479px;
+}
+
+#device h4.multi span {
+  background-position: 0 -1867px;
+}
+
+#device h4.fob span {
+  background-position: 0 -1933px;
+}
+
+h4 span, #device h4 span,
+.reveal-modal h4 span {
+  height: 30px;
+}
+
+#device h4.door-lock span {
+  background-position: 0 -137px;
 }
 
 //
