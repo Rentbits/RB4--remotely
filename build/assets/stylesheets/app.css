@@ -2555,7 +2555,7 @@ img.logo-reversed-lrg {
   float: right; }
 
 #sign-in .mast-head {
-  background: url(../images/sign-ing-header.png) 0 0 no-repeat;
+  background: url(../images/sign-in-header.png) 0 0 no-repeat;
   height: 192px;
   width: 740px;
   z-index: 9; }
@@ -3803,7 +3803,11 @@ dl.tabs dd a:hover, dl.tabs dd #user-dd.button a:hover, #user-dd.button dl.tabs 
   display: none !important; }
 
 .mobile-menu-container {
-  background: #e5544c; }
+  background: #e5544c no-repeat;
+  background-image: url("../img/svg/remotely-logo-small.svg");
+  background-position: 4% center;
+  -webkit-background-size: auto 60%;
+  background-size: auto 60%; }
 
 .mobile-menu {
   background: #e5544c; }
@@ -3826,7 +3830,6 @@ div.alert-box.secondary {
 #sign-in.contact-form-step-1 .mast-head,
 #sign-in.contact-form-step-2 .mast-head,
 #sign-in.contact-form-step-3 .mast-head {
-  background: #e5544c;
   border-radius: 3px 3px 0 0; }
 
 body#sign-in {
@@ -3901,15 +3904,14 @@ a.notifications-unread, #user-dd.button a.notifications-unread {
   -webkit-box-shadow: none;
   box-shadow: none; }
 
+#sign-in .breadcrumbs.progress {
+  height: 42px; }
+
 .breadcrumbs.progress li {
-  color: #FFF; }
+  color: #666; }
 
 .breadcrumbs.progress li.active {
-  color: #FFF; }
-
-.breadcrumbs.progress li > span {
-  background-color: #ea766f;
-  border-color: #d94f48; }
+  color: #333; }
 
 div.alert-box.success {
   background: #E5F1DD;

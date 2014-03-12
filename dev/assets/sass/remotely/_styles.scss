@@ -368,7 +368,10 @@ dl.tabs dd a {
   display: none !important;
 }
 .mobile-menu-container {
-  background: $color-remotely-primary;
+  background: $color-remotely-primary no-repeat;
+  background-image: url('../img/svg/remotely-logo-small.svg');
+  background-position: 4% center;
+  background-size: auto 60%;
 }
 .mobile-menu {
   background: $color-remotely-primary;
@@ -403,7 +406,7 @@ div.alert-box.secondary {
 #sign-in.contact-form-step-1 .mast-head,
 #sign-in.contact-form-step-2 .mast-head,
 #sign-in.contact-form-step-3 .mast-head {
-  background: $color-remotely-primary;
+  // background: $color-remotely-primary;
   border-radius: 3px 3px 0 0;
 }
 
@@ -507,17 +510,22 @@ a.notifications-unread {
   box-shadow: none;
 }
 
+#sign-in .breadcrumbs.progress {
+  height: 42px;
+}
+
 .breadcrumbs.progress li {
-  color: #FFF;
+  color: #666;
 }
 
 .breadcrumbs.progress li.active {
-  color: #FFF;
+  color: #333;
 }
-.breadcrumbs.progress li > span {
-  background-color: tint($color-remotely-primary, 20%);
-  border-color: shade($color-remotely-primary, 5%);
-}
+
+// .breadcrumbs.progress li > span {
+//   background-color: tint($color-remotely-primary, 20%);
+//   border-color: shade($color-remotely-primary, 5%);
+// }
 
 div.alert-box.success {
   background: #E5F1DD;
