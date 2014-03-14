@@ -700,7 +700,7 @@
 	"sassUseLibsass": 0,
 	"shouldRunAutoprefixer": 1,
 	"shouldRunBless": 0,
-	"skippedItemsString": "_cache, logs, \/build, _logs, cache, .git, log, .svn, .hg",
+	"skippedItemsString": "_cache, logs, _logs, cache, .git, log, .svn, .hg",
 	"slimAutoOutputPathRelativePath": "",
 	"slimAutoOutputPathReplace1": "",
 	"slimAutoOutputPathReplace2": "",
