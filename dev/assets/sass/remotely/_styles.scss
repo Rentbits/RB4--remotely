@@ -360,9 +360,16 @@ dl.tabs dd a {
   }
 }
 
-.detail #timers h6, .detail #device-events h6 {
+.detail #timers h6,
+.detail #device-events h6,
+.detail .device-events h6 {
   // background: tint(#D4DBDE, 70%);
   background: #FFF;
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+  font-size: 11px;
+  // padding-bottom: 10px;
 }
 
 .show-for-small.logo-m-container {
@@ -537,6 +544,10 @@ div.alert-box.success {
   background-position: 0 -198px;
 }
 
+.motion-list {
+  list-style: none;
+}
+
 .motion-list .event-outlet span.motion-then {
   background-position: 0 -196px;
   margin-bottom: -7px;
@@ -592,6 +603,18 @@ h4 span, #device h4 span,
 
 .sensor-status {
   border: 1px solid #CCCCCC;
+}
+
+
+#device h4.thermostat span {
+  background-position: 0 -68px;
+}
+
+.device-events .new-event-sm {
+  background: transparent url(../img/automation-icon-sprite.png) 0 -1171px no-repeat;
+  padding: 8px;
+  margin-top: -21px;
+  float: right;
 }
 
 //

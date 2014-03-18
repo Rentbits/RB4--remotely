@@ -1,0 +1,99 @@
+// ui styles for increment controller
+
+.increment-control {
+  position: relative;
+
+  // background: skyblue;
+
+  // width: 60px;
+  // height: 30px;
+
+  @include clearfix;
+
+  .increase,
+  .decrease {
+    @include size(30px);
+    // background: skyblue;
+    position: relative;
+
+    display: block;
+    float: left;
+
+    // height: 100%;
+    // width: 50%;
+    margin-right: 4px;
+
+    border: 1px solid #ccc;
+    border-radius: 50%;
+
+    cursor: pointer;
+    user-select: none;
+    // overflow: hidden;
+
+    @include hide-text;
+
+    background: center no-repeat;
+    background-image: url('../img/svg/arrow-01.svg');
+    background-size: 50%;
+
+  }
+
+  .decrease {
+    transform: rotate(180deg);
+  }
+
+}
+
+input.form-field-temp {
+
+  box-shadow: none;
+  background: none;
+
+  border-radius: 30px;
+  text-align: center;
+
+  height: 30px;
+
+  width: 100px;
+  margin: 0;
+}
+
+.cntrl-operating-state {
+  float: right;
+  margin-right: 20px;
+
+  .sensor-status {
+    margin-right: 0;
+  }
+}
+
+.cntrl-thermostat-mode {
+  display: block;
+  float: left;
+// text-align: center;
+  // width: 140px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.cntrl-fan-mode {
+  display: block;
+  float: left;
+
+  // width: 140px;
+}
+
+.cntrl-temperature {
+  margin-left: 90px;
+  // @include clearfix;
+  display: block;
+  float: left;
+  // width: 400px;
+  // margin: 10px auto;
+
+  >form>div, input {
+    margin-right: 10px;
+    display: block;
+    float: left;
+  }
+}

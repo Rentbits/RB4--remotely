@@ -148,7 +148,7 @@
                       <div class="row">
                         <div id="door-lock-1" class="twelve columns">
                           <div class="default-state">
-                            <h4 class="door-lock edit"><span></span>Thermotron</h4>
+                            <h4 class="thermostat edit"><span></span>Thermotron</h4>
                           </div>
                           <div id="edit-state" class="row">
                             <div class="twelve columns clear-fix">
@@ -157,14 +157,71 @@
                             </div>
                           </div>
                           <div class="row">
-                            <div class="three columns centered">
+                            <div class="centered">
 
                               <div class="sensor-status">
                                 <h6>76<span>°</span></h6>
                               </div>
 
-                              <div class="sensor-status">
-                                <h6>61<span>°</span></h6>
+
+                              <div class="cntrl-thermostat-mode">
+                                <form id="form_id" class="custom" action="" method="">
+                                  <label for="customDropdown">Thermostat Mode</label>
+                                  <select class="support attribute" style="display:none;" id="customDropdown">
+                                    <option SELECTED>Heat</option>
+                                    <option>Cool</option>
+                                    <option>Off</option>
+                                  </select>
+
+                                  <div class="custom dropdown">
+                                    <a href="#" class="current">Off</a>
+                                    <a href="#" class="selector"></a>
+                                    <ul>
+                                      <li>Heat</li>
+                                      <li>Cool</li>
+                                      <li>Off</li>
+                                    </ul>
+                                  </div>
+                                </form>
+                              </div>
+
+                              <div class="cntrl-fan-mode">
+                                <form id="form_id" class="custom" action="" method="">
+                                  <label for="customDropdown">Fan Mode</label>
+                                  <select class="support attribute" style="display:none;" id="customDropdown">
+                                    <option SELECTED>On</option>
+                                    <option>Circulate</option>
+                                    <option>Auto</option>
+                                  </select>
+
+                                  <div class="custom dropdown">
+                                    <a href="#" class="current">On</a>
+                                    <a href="#" class="selector"></a>
+                                    <ul>
+                                      <li>On</li>
+                                      <li>Circulate</li>
+                                      <li>Auto</li>
+                                    </ul>
+                                  </div>
+                                </form>
+                              </div>
+
+                              <div class="cntrl-temperature">
+                                <form id="" action="" method="post">
+                                  <label for="target-temp">Target Temp</label>
+                                  <input type="text" name="target-temp" class="form-field-temp" id="target-temp" value="67°">
+                                  <div class="thermostat-control increment-control">
+                                    <span class="decrease cntrl-button">-</span>
+                                    <span class="increase cntrl-button">+</span>
+                                  </div>
+                                </form>
+                              </div>
+
+                              <div class="cntrl-operating-state">
+                                <label for="operating-state">Operating State</label>
+                                <div class="sensor-status">
+                                  <h6>heating</h6>
+                                </div>
                               </div>
 
                             </div>
@@ -271,23 +328,27 @@
         $(this).parents('#edit-state').siblings('.default-state').toggle('fast');
         $(this).parents('#edit-state').toggle('fast').delay(500);
       });
-      //foundation 4 flip switch
-    //   set_custom_markup: function (sel) {
-    //       var $this = $(sel),
-    //           type = $this.attr('type'),
-    //           $span = $this.next('span.custom.' + type);
 
-    //       if (!$this.parent().hasClass('switch')) {
-    //         $this.addClass('hidden-field');
-    //       }
+      // increase, decrease temp value
+      $(".cntrl-button").on("click", function() {
 
-    //       if ($span.length === 0) {
-    //         $span = $('<span class="custom ' + type + '"></span>').insertAfter($this);
-    //       }
+        var $button = $(this);
+        var oldValue = $('.cntrl-temperature').find("input").val().replace(/\D/g,'');
 
-    //       $span.toggleClass('checked', $this.is(':checked'));
-    //       $span.toggleClass('disabled', $this.is(':disabled'));
-    //     }
+        if ($button.text() == "+") {
+      	  var newVal = parseFloat(oldValue) + 1;
+      	} else {
+         // Don't allow decrementing below zero
+          if (oldValue > 0) {
+            var newVal = parseFloat(oldValue) - 1;
+          } else {
+            newVal = 0;
+          }
+        }
+
+        $('.cntrl-temperature').find("input").val(newVal + '°');
+
+      });
     });
   </script>
 
