@@ -4293,7 +4293,7 @@ form.custom span.custom.radio.checked:before {
 
 /* line 81, ../../../dev/assets/sass/remotely/_styles.scss */
 img.logo-image, img.logo-reversed-lrg {
-  background: url("../img/svg/remotely-logo.svg") center no-repeat;
+  background: url("../img/remotely-logo.svg") center no-repeat;
   -webkit-background-size: contain;
   background-size: contain; }
 
@@ -4534,7 +4534,7 @@ dl.tabs dd a:hover, dl.tabs dd #user-dd.button a:hover, #user-dd.button dl.tabs 
 /* line 378, ../../../dev/assets/sass/remotely/_styles.scss */
 .mobile-menu-container {
   background: #e5544c no-repeat;
-  background-image: url("../img/svg/remotely-logo-small.svg");
+  background-image: url("../img/remotely-logo-small.svg");
   background-position: 4% center;
   -webkit-background-size: auto 60%;
   background-size: auto 60%; }
@@ -4744,7 +4744,7 @@ h4 span, #device h4 span,
   background-position: 0 -68px; }
 
 /* line 613, ../../../dev/assets/sass/remotely/_styles.scss */
-.device-events .new-event-sm {
+#device-events .new-event-sm {
   background: transparent url(../img/automation-icon-sprite.png) 0 -1171px no-repeat;
   padding: 8px;
   margin-top: -21px;
@@ -4790,7 +4790,7 @@ h4 span, #device h4 span,
     user-select: none;
     overflow: hidden;
     background: center no-repeat;
-    background-image: url("../img/svg/arrow-01.svg");
+    background-image: url("../img/arrow-01.svg");
     -webkit-background-size: 50%;
     background-size: 50%; }
     /* line 4, ../../../../../../../../../../Applications/CodeKit 2.app/Contents/Resources/engines/bourbon/bourbon/app/assets/stylesheets/addons/_hide-text.scss */
@@ -4847,5 +4847,3 @@ input.form-field-temp {
     margin-right: 10px;
     display: block;
     float: left; }
-
-/*# sourceMappingURL=app.css.map */
