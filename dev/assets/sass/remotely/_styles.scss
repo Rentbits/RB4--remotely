@@ -363,6 +363,7 @@ dl.tabs dd a {
 .detail #timers h6,
 .detail #device-events h6,
 .detail .device-events h6 {
+
   // background: tint(#D4DBDE, 70%);
   background: #FFF;
   margin: 0;
@@ -619,6 +620,11 @@ h4 span, #device h4 span,
 
 //
 @media only screen and (max-width: 767px) {
+  .detail #timers h6,
+  .detail #device-events h6,
+  .detail .device-events h6 {
+    background: tint(#D4DBDE, 70%);
+  }
 //   .show-for-small,
 //   .hide-for-medium,
 //   .show-for-medium-down,

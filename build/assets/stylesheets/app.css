@@ -1123,13 +1123,15 @@ dl dd {
 /* line 308, ../../../dev/assets/sass/_rb4-app.scss */
 .button.secondary {
   background: whitesmoke;
+  /* Old browsers */
   /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, whitesmoke), color-stop(100%, #dddddd));
   /* Chrome,Safari4+ */
   background: -webkit-linear-gradient(top, whitesmoke 0%, #dddddd 100%);
+  /* Chrome10+,Safari5.1+ */
+  /* Opera 11.10+ */
   /* IE10+ */
   background: -webkit-gradient(linear, left top, left bottom, from(whitesmoke), to(#dddddd));
-  /* IE10+ */
   background: linear-gradient(to bottom, whitesmoke 0%, #dddddd 100%);
   /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f5f5f5', endColorstr='#dddddd',GradientType=0 );
@@ -1390,13 +1392,15 @@ a.notifications-unread span, #user-dd.button a.notifications-unread span {
   height: 63px;
   /*border: 1px solid #1e728c; */
   background: #68a2df;
+  /* Old browsers */
   /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #68a2df), color-stop(100%, #2879ca));
   /* Chrome,Safari4+ */
   background: -webkit-linear-gradient(top, #68a2df 0%, #2879ca 100%);
+  /* Chrome10+,Safari5.1+ */
+  /* Opera 11.10+ */
   /* IE10+ */
   background: -webkit-gradient(linear, left top, left bottom, from(#68a2df), to(#2879ca));
-  /* IE10+ */
   background: linear-gradient(to bottom, #68a2df 0%, #2879ca 100%);
   /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#68a2df', endColorstr='#2879ca',GradientType=0 );
@@ -1472,13 +1476,15 @@ input.special-button[type="submit"] {
   padding: 10px 20px 8px;
   margin: 0 0 0 15px;
   background: #a3cb4c;
+  /* Old browsers */
   /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #a3cb4c), color-stop(100%, #6b8f1a));
   /* Chrome,Safari4+ */
   background: -webkit-linear-gradient(top, #a3cb4c 0%, #6b8f1a 100%);
+  /* Chrome10+,Safari5.1+ */
+  /* Opera 11.10+ */
   /* IE10+ */
   background: -webkit-gradient(linear, left top, left bottom, from(#a3cb4c), to(#6b8f1a));
-  /* IE10+ */
   background: linear-gradient(to bottom, #a3cb4c 0%, #6b8f1a 100%);
   /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a3cb4c', endColorstr='#6b8f1a',GradientType=0 );
@@ -1628,13 +1634,15 @@ li.has-flyout ul.flyout li a.petCare, li.has-flyout ul.flyout li #user-dd.button
   padding: 8px 12px;
   margin: 0 0 0 5px;
   background: #a3cb4c;
+  /* Old browsers */
   /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #a3cb4c), color-stop(100%, #6b8f1a));
   /* Chrome,Safari4+ */
   background: -webkit-linear-gradient(top, #a3cb4c 0%, #6b8f1a 100%);
+  /* Chrome10+,Safari5.1+ */
+  /* Opera 11.10+ */
   /* IE10+ */
   background: -webkit-gradient(linear, left top, left bottom, from(#a3cb4c), to(#6b8f1a));
-  /* IE10+ */
   background: linear-gradient(to bottom, #a3cb4c 0%, #6b8f1a 100%);
   /* W3C */
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a3cb4c', endColorstr='#6b8f1a',GradientType=0 );
@@ -1807,13 +1815,15 @@ li.has-flyout ul.flyout li a.petCare, li.has-flyout ul.flyout li #user-dd.button
     -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
     background: #68a2df;
+    /* Old browsers */
     /* FF3.6+ */
     background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #68a2df), color-stop(100%, #2879ca));
     /* Chrome,Safari4+ */
     background: -webkit-linear-gradient(top, #68a2df 0%, #2879ca 100%);
+    /* Chrome10+,Safari5.1+ */
+    /* Opera 11.10+ */
     /* IE10+ */
     background: -webkit-gradient(linear, left top, left bottom, from(#68a2df), to(#2879ca));
-    /* IE10+ */
     background: linear-gradient(to bottom, #68a2df 0%, #2879ca 100%);
     /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#68a2df', endColorstr='#2879ca',GradientType=0 );
@@ -4527,11 +4537,11 @@ dl.tabs dd a:hover, dl.tabs dd #user-dd.button a:hover, #user-dd.button dl.tabs 
   text-align: center;
   font-size: 11px; }
 
-/* line 375, ../../../dev/assets/sass/remotely/_styles.scss */
+/* line 376, ../../../dev/assets/sass/remotely/_styles.scss */
 .show-for-small.logo-m-container {
   display: none !important; }
 
-/* line 378, ../../../dev/assets/sass/remotely/_styles.scss */
+/* line 379, ../../../dev/assets/sass/remotely/_styles.scss */
 .mobile-menu-container {
   background: #e5544c no-repeat;
   background-image: url("../img/remotely-logo-small.svg");
@@ -4539,27 +4549,27 @@ dl.tabs dd a:hover, dl.tabs dd #user-dd.button a:hover, #user-dd.button dl.tabs 
   -webkit-background-size: auto 60%;
   background-size: auto 60%; }
 
-/* line 384, ../../../dev/assets/sass/remotely/_styles.scss */
+/* line 385, ../../../dev/assets/sass/remotely/_styles.scss */
 .mobile-menu {
   background: #e5544c; }
 
-/* line 388, ../../../dev/assets/sass/remotely/_styles.scss */
+/* line 389, ../../../dev/assets/sass/remotely/_styles.scss */
 div.alert-box,
 div.review {
   background: #ddf4f8;
   border-color: #ace3ef; }
 
-/* line 394, ../../../dev/assets/sass/remotely/_styles.scss */
+/* line 395, ../../../dev/assets/sass/remotely/_styles.scss */
 div.alert-box.alert {
   border-width: 0;
   background: #f8d8cd;
   text-shadow: none; }
 
-/* line 400, ../../../dev/assets/sass/remotely/_styles.scss */
+/* line 401, ../../../dev/assets/sass/remotely/_styles.scss */
 div.alert-box.secondary {
   background: #def1f6; }
 
-/* line 412, ../../../dev/assets/sass/remotely/_styles.scss */
+/* line 413, ../../../dev/assets/sass/remotely/_styles.scss */
 #sign-in .mast-head,
 #sign-in .mast-head-reset,
 #sign-in.contact-form-step-1 .mast-head,
@@ -4567,38 +4577,38 @@ div.alert-box.secondary {
 #sign-in.contact-form-step-3 .mast-head {
   border-radius: 3px 3px 0 0; }
 
-/* line 431, ../../../dev/assets/sass/remotely/_styles.scss */
+/* line 432, ../../../dev/assets/sass/remotely/_styles.scss */
 body#sign-in {
   background: #FFF; }
 
-/* line 435, ../../../dev/assets/sass/remotely/_styles.scss */
+/* line 436, ../../../dev/assets/sass/remotely/_styles.scss */
 #sign-in #footer, #sign-in footer {
   background: #FFF; }
 
-/* line 439, ../../../dev/assets/sass/remotely/_styles.scss */
+/* line 440, ../../../dev/assets/sass/remotely/_styles.scss */
 #sign-in .dark-round-link {
   background: #f2f4f5;
   border: 1px solid HSLA(202, 14%, 85%, 1);
   margin-top: 10px; }
 
-/* line 448, ../../../dev/assets/sass/remotely/_styles.scss */
+/* line 449, ../../../dev/assets/sass/remotely/_styles.scss */
 .mobile-menu .nav-bar > li:hover,
 .mobile-menu .nav-bar > li.active {
   background: #eb7f79;
   border-color: #c8261d; }
 
-/* line 454, ../../../dev/assets/sass/remotely/_styles.scss */
+/* line 455, ../../../dev/assets/sass/remotely/_styles.scss */
 .mobile-menu ul.nav-bar li {
   border-color: #c8261d; }
 
-/* line 458, ../../../dev/assets/sass/remotely/_styles.scss */
+/* line 459, ../../../dev/assets/sass/remotely/_styles.scss */
 #menu-mini li a.button.small.show_hide {
   border: none;
   -webkit-box-shadow: none;
   box-shadow: none;
   background: #e7655d; }
 
-/* line 464, ../../../dev/assets/sass/remotely/_styles.scss */
+/* line 465, ../../../dev/assets/sass/remotely/_styles.scss */
 #menu-mini li a.button.small.special-m {
   background: none;
   -webkit-box-shadow: none;
@@ -4607,143 +4617,143 @@ body#sign-in {
   background: #e7655d;
   text-shadow: none; }
 
-/* line 472, ../../../dev/assets/sass/remotely/_styles.scss */
+/* line 473, ../../../dev/assets/sass/remotely/_styles.scss */
 .sign-out-m {
   margin: 20px 0; }
 
-/* line 476, ../../../dev/assets/sass/remotely/_styles.scss */
+/* line 477, ../../../dev/assets/sass/remotely/_styles.scss */
 .homepage dl.tabs.show-for-small dd.active {
   background-color: transparent;
   -webkit-box-shadow: none;
   box-shadow: none; }
-  /* line 480, ../../../dev/assets/sass/remotely/_styles.scss */
+  /* line 481, ../../../dev/assets/sass/remotely/_styles.scss */
   .homepage dl.tabs.show-for-small dd.active a.devicesTab-hor, .homepage dl.tabs.show-for-small dd.active #user-dd.button a.devicesTab-hor, #user-dd.button .homepage dl.tabs.show-for-small dd.active a.devicesTab-hor {
     background-color: #e97666;
     border: none; }
 
-/* line 486, ../../../dev/assets/sass/remotely/_styles.scss */
+/* line 487, ../../../dev/assets/sass/remotely/_styles.scss */
 .homepage dl.tabs.show-for-small dd {
   background: none;
   -webkit-box-shadow: none;
   box-shadow: none; }
 
-/* line 491, ../../../dev/assets/sass/remotely/_styles.scss */
+/* line 492, ../../../dev/assets/sass/remotely/_styles.scss */
 #edit-state input[type="button"].edit-done {
   color: #e5544c; }
 
-/* line 496, ../../../dev/assets/sass/remotely/_styles.scss */
+/* line 497, ../../../dev/assets/sass/remotely/_styles.scss */
 div.review {
   -webkit-box-shadow: none;
   box-shadow: none; }
 
-/* line 500, ../../../dev/assets/sass/remotely/_styles.scss */
+/* line 501, ../../../dev/assets/sass/remotely/_styles.scss */
 div.review img.arrow-left-panel,
 .payrent div.review img.arrow-left-panel {
   opacity: 0;
   background: none;
   display: none; }
 
-/* line 507, ../../../dev/assets/sass/remotely/_styles.scss */
+/* line 508, ../../../dev/assets/sass/remotely/_styles.scss */
 ul.pagination li.current a, ul.pagination li.current #user-dd.button a, #user-dd.button ul.pagination li.current a {
   background: #e5544c; }
-  /* line 510, ../../../dev/assets/sass/remotely/_styles.scss */
+  /* line 511, ../../../dev/assets/sass/remotely/_styles.scss */
   ul.pagination li.current a:hover, ul.pagination li.current #user-dd.button a:hover, #user-dd.button ul.pagination li.current a:hover {
     background: #e5544c; }
 
-/* line 516, ../../../dev/assets/sass/remotely/_styles.scss */
+/* line 517, ../../../dev/assets/sass/remotely/_styles.scss */
 a.notifications-unread, #user-dd.button a.notifications-unread {
   background-color: transparent;
   -webkit-box-shadow: none;
   box-shadow: none; }
 
-/* line 521, ../../../dev/assets/sass/remotely/_styles.scss */
+/* line 522, ../../../dev/assets/sass/remotely/_styles.scss */
 #sign-in .breadcrumbs.progress {
   height: 42px; }
 
-/* line 525, ../../../dev/assets/sass/remotely/_styles.scss */
+/* line 526, ../../../dev/assets/sass/remotely/_styles.scss */
 .breadcrumbs.progress li {
   color: #666; }
 
-/* line 529, ../../../dev/assets/sass/remotely/_styles.scss */
+/* line 530, ../../../dev/assets/sass/remotely/_styles.scss */
 .breadcrumbs.progress li.active {
   color: #333; }
 
-/* line 538, ../../../dev/assets/sass/remotely/_styles.scss */
+/* line 539, ../../../dev/assets/sass/remotely/_styles.scss */
 div.alert-box.success {
   background: #E5F1DD;
   border: none; }
 
-/* line 543, ../../../dev/assets/sass/remotely/_styles.scss */
+/* line 544, ../../../dev/assets/sass/remotely/_styles.scss */
 #device h4.outlet span {
   background-position: 0 -198px; }
 
-/* line 547, ../../../dev/assets/sass/remotely/_styles.scss */
+/* line 548, ../../../dev/assets/sass/remotely/_styles.scss */
 .motion-list {
   list-style: none; }
 
-/* line 551, ../../../dev/assets/sass/remotely/_styles.scss */
+/* line 552, ../../../dev/assets/sass/remotely/_styles.scss */
 .motion-list .event-outlet span.motion-then {
   background-position: 0 -196px;
   margin-bottom: -7px; }
 
-/* line 555, ../../../dev/assets/sass/remotely/_styles.scss */
+/* line 556, ../../../dev/assets/sass/remotely/_styles.scss */
 .motion-list .event-lock span.motion-then {
   background-position: 0 -133px;
   margin-bottom: -7px; }
 
-/* line 560, ../../../dev/assets/sass/remotely/_styles.scss */
+/* line 561, ../../../dev/assets/sass/remotely/_styles.scss */
 .motion-list span.event {
   background-position: 3px -1592px;
   margin-bottom: -7px; }
 
-/* line 565, ../../../dev/assets/sass/remotely/_styles.scss */
+/* line 566, ../../../dev/assets/sass/remotely/_styles.scss */
 .motion-list span.motion-if {
   background-position: 0 -1479px;
   margin-bottom: -7px; }
 
-/* line 570, ../../../dev/assets/sass/remotely/_styles.scss */
+/* line 571, ../../../dev/assets/sass/remotely/_styles.scss */
 #device h4.multi span {
   background-position: 0 -1867px; }
 
-/* line 574, ../../../dev/assets/sass/remotely/_styles.scss */
+/* line 575, ../../../dev/assets/sass/remotely/_styles.scss */
 #device h4.fob span {
   background-position: 0 -1933px; }
 
-/* line 578, ../../../dev/assets/sass/remotely/_styles.scss */
+/* line 579, ../../../dev/assets/sass/remotely/_styles.scss */
 h4 span, #device h4 span,
 .reveal-modal h4 span {
   height: 30px; }
 
-/* line 583, ../../../dev/assets/sass/remotely/_styles.scss */
+/* line 584, ../../../dev/assets/sass/remotely/_styles.scss */
 #device h4.door-lock span {
   background-position: 0 -137px; }
 
-/* line 587, ../../../dev/assets/sass/remotely/_styles.scss */
+/* line 588, ../../../dev/assets/sass/remotely/_styles.scss */
 #device-events h4.device-event span {
   background-position: 0 -1534px; }
 
-/* line 591, ../../../dev/assets/sass/remotely/_styles.scss */
+/* line 592, ../../../dev/assets/sass/remotely/_styles.scss */
 .reveal-modal h4.device-event span {
   background-position: 0 -1534px; }
 
-/* line 595, ../../../dev/assets/sass/remotely/_styles.scss */
+/* line 596, ../../../dev/assets/sass/remotely/_styles.scss */
 .modal-connect {
   margin-bottom: 18px; }
 
-/* line 599, ../../../dev/assets/sass/remotely/_styles.scss */
+/* line 600, ../../../dev/assets/sass/remotely/_styles.scss */
 .modal-connect > h6 {
   background: #f5f5f5;
   padding: 14px; }
 
-/* line 604, ../../../dev/assets/sass/remotely/_styles.scss */
+/* line 605, ../../../dev/assets/sass/remotely/_styles.scss */
 .sensor-status {
   border: 1px solid #CCCCCC; }
 
-/* line 609, ../../../dev/assets/sass/remotely/_styles.scss */
+/* line 610, ../../../dev/assets/sass/remotely/_styles.scss */
 #device h4.thermostat span {
   background-position: 0 -68px; }
 
-/* line 613, ../../../dev/assets/sass/remotely/_styles.scss */
+/* line 614, ../../../dev/assets/sass/remotely/_styles.scss */
 #device-events .new-event-sm {
   background: transparent url(../img/automation-icon-sprite.png) 0 -1171px no-repeat;
   padding: 8px;
@@ -4751,11 +4761,17 @@ h4 span, #device h4 span,
   float: right; }
 
 @media only screen and (max-width: 767px) {
-  /* line 630, ../../../dev/assets/sass/remotely/_styles.scss */
+  /* line 623, ../../../dev/assets/sass/remotely/_styles.scss */
+  .detail #timers h6,
+  .detail #device-events h6,
+  .detail .device-events h6 {
+    background: #f2f4f5; }
+
+  /* line 636, ../../../dev/assets/sass/remotely/_styles.scss */
   .automation .panel {
     border: none; }
 
-  /* line 634, ../../../dev/assets/sass/remotely/_styles.scss */
+  /* line 640, ../../../dev/assets/sass/remotely/_styles.scss */
   #sign-in .mast-head,
   #sign-in .mast-head-reset,
   #sign-in.contact-form-step-1 .mast-head,
